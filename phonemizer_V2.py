@@ -37,7 +37,11 @@ from playsound import playsound
 import tempfile
 import sys
 import os
-import vlc
+
+import os
+import ctypes
+
+
 
 from langchain_core.runnables import RunnableLambda
 
@@ -299,23 +303,33 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
 
 
     words_with_punct = re.findall(r'\w+|[^\w\s]|\s+', gpt_output)
-    print(f"[TESTT!!] Words: {words_with_punct}")
 
     words = [w.strip(string.punctuation) for w in gpt_output.split()]
     words = [w for w in words if w]  # Remove empty strings
-    
 
     all_phonemes = []
-    phonemes_for_display = []
-
     for w in words_with_punct:
-        # print(f"[TESTT!!] Word: {w}")
         ph = get_phonemes_any(w)
-        phonemes_for_display.append(ph[0])
         all_phonemes.append(ph[0])
 
-    output_display = '\n'.join([f"{w}: {' '.join(ph_list)}" for w, ph_list in zip(words, phonemes_for_display)])
+    words_display_only = [w for w in words_with_punct if w.strip() and w.strip() not in string.punctuation]
+
+    phonemes_display_only = []
+    phoneme_idx = 0
+    for w in words_with_punct:
+        if w.strip() and w.strip() not in string.punctuation:
+            phonemes_display_only.append(all_phonemes[phoneme_idx])
+        phoneme_idx += 1
+
+    
+    output_display = '\n'.join([
+    f"{w}: {' '.join(ph_list)}"
+    for w, ph_list in zip(words_display_only, phonemes_display_only)
+])
+
+
     result_label.configure(text=f"Phonemes:\n{output_display}")
+
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
     output_folder = os.path.join(base_dir, "eeg_culmination_csv")
