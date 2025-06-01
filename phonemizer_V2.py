@@ -599,21 +599,27 @@ def analyze_eeg_input(selected_variable):
                 for fname in os.listdir(output_dir)
                 if fname.endswith(".png")
             ])
+
+            folder_name = "saved_metabolic_videos"
+            os.makedirs(folder_name, exist_ok=True)  
             video_filename = f"EEG_{choice}_{safe_phrase}.mp4"
+            full_path = os.path.join(folder_name, video_filename)
+
+            
             clip = ImageSequenceClip(image_files, fps=2)
-            clip.write_videofile(video_filename, codec='libx264')
+            clip.write_videofile(full_path, codec='libx264')
 
             global last_rendered_video_path
-            last_rendered_video_path = video_filename
+            last_rendered_video_path = full_path
 
 # Auto-play the video after saving
             try:
-                embed_video(video_filename, frame_delay_ms=1000)
+                embed_video(full_path, frame_delay_ms=1000)
             except Exception as e:
                 print(f"[WARNING] Could not auto-play video: {e}")
 
 
-            result_label.configure(text=f"✅ Done! Saved as {video_filename}")
+            result_label.configure(text=f"✅ Done! Saved as {full_path}")
 
         except Exception as e:
             result_label.configure(text=f"[ERROR] EEG analysis failed:\n{e}")
