@@ -61,7 +61,6 @@ class EEGVisualizer:
             cov = mne.compute_raw_covariance(raw, method="shrunk", n_jobs=self.n_jobs)
         else:
             cov = mne.compute_raw_covariance(raw, method="empirical", n_jobs=self.n_jobs)
-            raw.crop(tmin=0, tmax=5)
 
         # Compute inverse operator and apply
         inverse_operator = mne.minimum_norm.make_inverse_operator(raw.info, fwd, cov)
@@ -88,7 +87,7 @@ class EEGVisualizer:
         new_cam = [
             (300, 300, 200),    # camera XYZ location (move farther “out” and “up”)
             (0, 0, 0),          # focal point (center of the brain)
-            (0, 0, 1)           # “up” direction: +Y axis
+            (0, 0, 0)           # “up” direction: +Y axis
         ]
         brain.plotter.camera_position = new_cam
         

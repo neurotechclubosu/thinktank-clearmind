@@ -596,6 +596,38 @@ def analyze_eeg_input(selected_variable):
             result_label.configure(text=f"[ERROR] EEG analysis failed:\n{e}")
 
     threading.Thread(target=worker).start()
+    
+    
+def convert_eeg_tsv_to_csv(input_tsv_path: str, output_csv_path: str):
+    """
+    Convert EEG .tsv file into .csv with original Index and cumulative Time in seconds.
+    Each 256 samples = 1 second of EEG data.
+    """
+    headers = [
+        "Index", "Fp1", "Fp2", "F3", "F4", "T5", "T6", "O1", "O2", "F7", "F8", "C3", "C4",
+        "T3", "T4", "P3", "P4", "Accel Channel 0", "Accel Channel 1", "Accel Channel 2",
+        "Other", "Other", "Other", "Other", "Other", "Other", "Other",
+        "Analog Channel 0", "Analog Channel 1", "Analog Channel 2", "Timestamp", "Other"
+    ]
+
+    eeg_channels = [
+        "Fp1", "Fp2", "F3", "F4", "T5", "T6", "O1", "O2",
+        "F7", "F8", "C3", "C4", "T3", "T4", "P3", "P4"
+    ]
+
+    df = pd.read_table(input_tsv_path, sep="\t", header=None)
+    df.columns = headers
+
+    num_rows = len(df)
+
+    # Time in seconds: 256 rows = 1 second
+    time_col = [round(i / 256, 8) for i in range(num_rows)]
+
+    # Extract EEG + add Time, keep original Index from TSV
+    df_eeg = df[["Index"] + eeg_channels].copy()
+    df_eeg.insert(1, "Timestamp", time_col)
+
+    df_eeg.to_csv(output_csv_path, index=False)
  
 def embed_video(video_path, frame_delay_ms=1000):
     """
@@ -791,7 +823,6 @@ analyze_frame = ctk.CTkScrollableFrame(
 result_label = ctk.CTkLabel(analyze_frame, text="", wraplength=500, font=("Consolas", 13), text_color="#000000")
 
 
-
 root = ctk.CTk()
 root.title("🎙️ Phoneme Pronouncer Pro")
 root.geometry(f"{root.winfo_screenwidth()}x{root.winfo_screenheight()-100}")
@@ -838,43 +869,6 @@ btn1.pack(side="left", padx=10)
 btn4 = ctk.CTkButton(btn_frame, text="🧠 Ask LaRocco", command=ask_larocco_gpt, font=FONT_NORMAL,
                      width=120, height=35)
 btn4.pack(side="left", padx=10)
-
-
-
-
-
-
-
-def convert_eeg_tsv_to_csv(input_tsv_path: str, output_csv_path: str):
-    """
-    Convert EEG .tsv file into .csv with original Index and cumulative Time in seconds.
-    Each 256 samples = 1 second of EEG data.
-    """
-    headers = [
-        "Index", "Fp1", "Fp2", "F3", "F4", "T5", "T6", "O1", "O2", "F7", "F8", "C3", "C4",
-        "T3", "T4", "P3", "P4", "Accel Channel 0", "Accel Channel 1", "Accel Channel 2",
-        "Other", "Other", "Other", "Other", "Other", "Other", "Other",
-        "Analog Channel 0", "Analog Channel 1", "Analog Channel 2", "Timestamp", "Other"
-    ]
-
-    eeg_channels = [
-        "Fp1", "Fp2", "F3", "F4", "T5", "T6", "O1", "O2",
-        "F7", "F8", "C3", "C4", "T3", "T4", "P3", "P4"
-    ]
-
-    df = pd.read_table(input_tsv_path, sep="\t", header=None)
-    df.columns = headers
-
-    num_rows = len(df)
-
-    # Time in seconds: 256 rows = 1 second
-    time_col = [round(i / 256, 8) for i in range(num_rows)]
-
-    # Extract EEG + add Time, keep original Index from TSV
-    df_eeg = df[["Index"] + eeg_channels].copy()
-    df_eeg.insert(1, "Timestamp", time_col)
-
-    df_eeg.to_csv(output_csv_path, index=False)
 
 
 # Run Application
