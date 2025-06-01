@@ -46,8 +46,30 @@ class CustomVideoPlayer:
             else:
                 return
 
-        # Resize to (width×height) and convert BGR → RGB
-        frame = cv2.resize(frame, (self.width, self.height), interpolation=cv2.INTER_AREA)
+        # Get current label dimensions
+        label_width = self.label.winfo_width()
+        label_height = self.label.winfo_height()
+
+# Fallback if width or height is still 1 (not fully rendered)
+        if label_width <= 1 or label_height <= 1:
+            label_width = self.width
+            label_height = self.height
+
+# Get original frame size
+        original_height, original_width = frame.shape[:2]
+        aspect_ratio = original_width / original_height
+
+# Determine target size preserving aspect ratio
+        if label_width / aspect_ratio <= label_height:
+            new_width = label_width
+            new_height = int(label_width / aspect_ratio)
+        else:
+            new_height = label_height
+            new_width = int(label_height * aspect_ratio)
+
+# Resize while maintaining aspect ratio
+        frame = cv2.resize(frame, (new_width, new_height), interpolation=cv2.INTER_AREA)
+
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Convert to PIL Image → PhotoImage
