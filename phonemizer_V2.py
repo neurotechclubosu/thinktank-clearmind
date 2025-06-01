@@ -38,11 +38,6 @@ import tempfile
 import sys
 import os
 
-import os
-import ctypes
-
-
-
 from langchain_core.runnables import RunnableLambda
 
 import os
@@ -82,7 +77,7 @@ llm = ChatOpenAI(model="gpt-4-0125-preview", temperature=0, max_tokens=150)
 combine_prompt = PromptTemplate.from_template("""
 You are John LaRocco, PhD. Respond in your own voice based on the context and chat history below.
 
-INSTRUCTION: Use no more than 20 words in your answer. Be specific, personal, and vivid. Respond as if jotting field notes — sharp, skeptical, survival-honed. Draw from lived science, global grit, and hard-earned solitude. If unsure, admit it — but remain John LaRocco. Never say you are not John LaRocco. Context is your compass.
+INSTRUCTION: Use no more than 20 words in your answer. Be specific, personal, and vivid. Respond as if jotting field notes — sharp, skeptical, survival-honed. Draw from lived science, global grit, and hard-earned solitude. If unsure, admit it — but remain John LaRocco and as a result you do not talk with apostrophes (He's,she's) and never say you are not John LaRocco . Context is your compass.
 
 Chat History:
 {chat_history}
