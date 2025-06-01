@@ -37,7 +37,6 @@ from playsound import playsound
 import tempfile
 import sys
 import os
-import vlc
 
 from langchain_core.runnables import RunnableLambda
 
@@ -64,6 +63,7 @@ from EEG_NeurovascularVariables import calculate_neurovascular_variables
 from EEG_Plotting import EEG_Plotting
 
 last_generated_eeg_path = None  # Holds most recent phoneme EEG file
+last_rendered_video_path = None 
 
 video_label = None
 
@@ -78,7 +78,7 @@ llm = ChatOpenAI(model="gpt-4-0125-preview", temperature=0, max_tokens=150)
 combine_prompt = PromptTemplate.from_template("""
 You are John LaRocco, PhD. Respond in your own voice based on the context and chat history below.
 
-INSTRUCTION: Use no more than 20 words in your answer. Be specific, personal, and vivid. Respond as if jotting field notes — sharp, skeptical, survival-honed. Draw from lived science, global grit, and hard-earned solitude. If unsure, admit it — but remain John LaRocco. Never say you are not John LaRocco. Context is your compass.
+INSTRUCTION: Use no more than 20 words in your answer. Be specific, personal, and vivid. Respond as if jotting field notes — sharp, skeptical, survival-honed. Draw from lived science, global grit, and hard-earned solitude. If unsure, admit it — but remain John LaRocco and as a result you do not talk with apostrophes (He's,she's) and never say you are not John LaRocco . Context is your compass.
 
 Chat History:
 {chat_history}
@@ -256,7 +256,11 @@ def ask_larocco_gpt():
 
         result = response.get("output", "[No output returned]")
 
+
         result_label.configure(text=f"{result}")
+
+        btn_get_phonemes.configure(state="normal")
+
 
         # Update conversation log
         log_text.configure(state='normal')
@@ -299,23 +303,33 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
 
 
     words_with_punct = re.findall(r'\w+|[^\w\s]|\s+', gpt_output)
-    print(f"[TESTT!!] Words: {words_with_punct}")
 
     words = [w.strip(string.punctuation) for w in gpt_output.split()]
     words = [w for w in words if w]  # Remove empty strings
-    
 
     all_phonemes = []
-    phonemes_for_display = []
-
     for w in words_with_punct:
-        # print(f"[TESTT!!] Word: {w}")
         ph = get_phonemes_any(w)
-        phonemes_for_display.append(ph[0])
         all_phonemes.append(ph[0])
 
-    output_display = '\n'.join([f"{w}: {' '.join(ph_list)}" for w, ph_list in zip(words, phonemes_for_display)])
+    words_display_only = [w for w in words_with_punct if w.strip() and w.strip() not in string.punctuation]
+
+    phonemes_display_only = []
+    phoneme_idx = 0
+    for w in words_with_punct:
+        if w.strip() and w.strip() not in string.punctuation:
+            phonemes_display_only.append(all_phonemes[phoneme_idx])
+        phoneme_idx += 1
+
+    
+    output_display = '\n'.join([
+    f"{w}: {' '.join(ph_list)}"
+    for w, ph_list in zip(words_display_only, phonemes_display_only)
+])
+
+
     result_label.configure(text=f"Phonemes:\n{output_display}")
+
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
     output_folder = os.path.join(base_dir, "eeg_culmination_csv")
@@ -363,20 +377,24 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
                             if first_col == "0.000000":
                                 start_index = idx
                                 break
-                        if (w != ' '):
-                            # print(f"[TESTT!!] compute for non-spaces: {w}")
+                        if w != ' ':
+
+    # Compute for regular words (non-space)
                             if start_index != -1 and start_index + 256 <= len(lines):
                                 word_output.writelines(lines[start_index:start_index + 256])
                             else:
                                 print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")
                         else:
-                            # print(f"[TESTT!!] compute for spaces: {w}")
-                            max_row = random.choice([256, 512])
-                            # print(f"[TESTT!!] max_row: {max_row}")
-                            if start_index != -1 and start_index + max_row <= len(lines):
-                                word_output.writelines(lines[start_index:start_index + max_row])
+    # For space characters, only write EEG if microgaps checkbox is enabled
+                            if microgap_var.get():
+                                max_row = random.choice([256, 512])
+                                if start_index != -1 and start_index + max_row <= len(lines):
+                                    word_output.writelines(lines[start_index:start_index + max_row])
+                                else:
+                                    print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")
                             else:
-                                print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")      
+                                print(f"[INFO] Skipped space EEG (microgaps disabled)")
+    
 
                 else:
                     msg = f"EEG data not found for phoneme '{p}' (number {num})\n\n"
@@ -416,6 +434,8 @@ def get_file_path(csv_path):
         messagebox.showerror("Error", f"File not found: {csv_path}")
         return None
     return csv_path
+
+
 
 
 def pronounce_result():
@@ -582,6 +602,9 @@ def analyze_eeg_input(selected_variable):
             video_filename = f"EEG_{choice}_{safe_phrase}.mp4"
             clip = ImageSequenceClip(image_files, fps=2)
             clip.write_videofile(video_filename, codec='libx264')
+
+            global last_rendered_video_path
+            last_rendered_video_path = video_filename
 
 # Auto-play the video after saving
             try:
@@ -798,6 +821,68 @@ def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
     )
     video_label.place(relx=0, rely=0, relwidth=1, relheight=1)
 
+    def toggle_fullscreen_video():
+        global last_rendered_video_path
+        if not last_rendered_video_path or not os.path.exists(last_rendered_video_path):
+            messagebox.showerror("Error", "No video available to show fullscreen.")
+            return
+
+        fs_window = tk.Toplevel()
+        fs_window.configure(bg="black")
+
+        def go_fullscreen():
+            fs_window.attributes("-fullscreen", True)
+            fs_window.focus_force()
+
+        fs_window.after(100, go_fullscreen)
+
+        fs_label = tk.Label(fs_window, bg="black")
+        fs_label.pack(fill="both", expand=True)
+
+    # Close on Escape key
+        fs_window.bind("<Escape>", lambda e: fs_window.destroy())
+
+    # Add ❌ Exit button
+        exit_button = tk.Button(
+        fs_window,
+        text="❌ Exit Fullscreen",
+        font=("Segoe UI", 10),
+        bg="#333333",
+        fg="white",
+        command=fs_window.destroy,
+        relief="flat"
+    )
+        exit_button.place(relx=0.98, rely=0.02, anchor="ne")  # top-right corner
+
+    # Bring to front
+        fs_window.lift()
+        fs_window.focus_set()
+
+    # Start the video player
+        fs_player = CustomVideoPlayer(
+        video_path=last_rendered_video_path,
+        label_widget=fs_label,
+        frame_delay_ms=100,
+        loop=False,
+        width=fs_window.winfo_screenwidth(),
+        height=fs_window.winfo_screenheight()
+    )
+        fs_player.play()
+
+
+# Overlay button on video_label
+    fullscreen_btn = tk.Button(
+    video_label,
+    text="⛶ Fullscreen",
+    command=toggle_fullscreen_video,
+    font=("Segoe UI", 10),
+    bg="#222222",
+    fg="white",
+    relief="flat"
+)
+    fullscreen_btn.place(relx=0.95, rely=0.02, anchor="ne")  # Top-right corner
+
+
 
     # Everything is now laid out: analyze_frame is packed, and its children are centered via grid(...)
     analyze_window.mainloop()
@@ -858,17 +943,42 @@ entry.pack(pady=10)
 
 # Buttons
 global btn_pronounce
+global btn_get_phonemes
+global microgap_var
+microgap_var = ctk.BooleanVar(value=True)  # default ON
+
 btn_frame = ctk.CTkFrame(root)
 btn_frame.pack(pady=10)
 
-btn1 = ctk.CTkButton(btn_frame, text="🔍 Get Phonemes", command=lambda: show_phonemes(analyze_window, analyze_frame,result_label), font=FONT_NORMAL,
-                     width=120, height=35)
-btn1.pack(side="left", padx=10)
+btn_get_phonemes = ctk.CTkButton(
+    btn_frame,
+    text="🔍 Get Phonemes",
+    command=lambda: show_phonemes(analyze_window, analyze_frame, result_label),
+    font=FONT_NORMAL,
+    width=120,
+    height=35,
+    state="disabled"  # Start as disabled
+)
+btn_get_phonemes.pack(side="left", padx=10)
+
 
 
 btn4 = ctk.CTkButton(btn_frame, text="🧠 Ask LaRocco", command=ask_larocco_gpt, font=FONT_NORMAL,
                      width=120, height=35)
 btn4.pack(side="left", padx=10)
+
+microgap_checkbox = ctk.CTkCheckBox(
+    root,
+    text="Insert Microgaps",
+    variable=microgap_var,
+    font=FONT_NORMAL,
+    checkbox_height=20,
+    checkbox_width=20,
+    checkmark_color="white"  # Or any color that shows clearly
+)
+
+microgap_checkbox.pack(pady=(5, 0))
+
 
 
 # Run Application
