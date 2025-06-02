@@ -67,7 +67,6 @@ last_generated_tsv_path = None
 last_rendered_video_path = None 
 
 video_label = None
-video_label2 = None  # Add global for second video label
 
 # Load .env
 load_dotenv()
@@ -502,7 +501,6 @@ def show_eeg_visualization():
 
 
     csv_output_path = last_generated_tsv_path.replace(".tsv", "_eeg.csv")
-    num_rows = len(pd.read_csv(csv_output_path)) - 1
     print(f"[INFO] CSV output path: {csv_output_path}")
 
     if not os.path.exists(csv_output_path):
@@ -510,12 +508,7 @@ def show_eeg_visualization():
         return
 
     from visualizer import launch_in_subprocess
-    video_path = launch_in_subprocess(csv_output_path, num_rows)
-    directory = os.path.join("brain_eeg_videos", csv_output_path.split("\\")[-1].split(".")[0].replace("eeg_culmination_csv\\", ""))
-    os.makedirs(directory, exist_ok=True)
-    
-    # video_path = os.path.join(directory, "brain_eeg_video.mp4")
-    embed_video(video_path)
+    video_path = launch_in_subprocess(csv_output_path)
 
 
 def analyze_eeg_input(selected_variable):
@@ -622,7 +615,8 @@ def analyze_eeg_input(selected_variable):
 
 # Auto-play the video after saving
             try:
-                embed_video(full_path, frame_delay_ms=1000)
+                global video_label
+                embed_video(full_path, video_label, frame_delay_ms=1000)
             except Exception as e:
                 print(f"[WARNING] Could not auto-play video: {e}")
 
@@ -666,13 +660,12 @@ def convert_eeg_tsv_to_csv(input_tsv_path: str, output_csv_path: str):
 
     df_eeg.to_csv(output_csv_path, index=False)
  
-def embed_video(video_path, frame_delay_ms=1000):
+def embed_video(video_path, video_label, frame_delay_ms=1000):
     """
     Starts playing `video_path` inside the global `video_label`.
     - frame_delay_ms: how many milliseconds between frames (100 ms ≈ 10 FPS).
     """
-    global video_label
-    global video_label2  # Add global for second video label
+    
     
     if video_label is None:
         # If the placeholder doesn't exist yet, nothing to do.
@@ -842,7 +835,7 @@ def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
     )
     video_label.place(relx=0, rely=0, relwidth=1, relheight=1)
 
-    
+   
 
     def toggle_fullscreen_video(video_path, label_widget):
         if not video_path or not os.path.exists(video_path):
