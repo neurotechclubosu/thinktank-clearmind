@@ -63,9 +63,11 @@ from EEG_NeurovascularVariables import calculate_neurovascular_variables
 from EEG_Plotting import EEG_Plotting
 
 last_generated_eeg_path = None  # Holds most recent phoneme EEG file
+last_generated_tsv_path = None
 last_rendered_video_path = None 
 
 video_label = None
+video_label2 = None  # Add global for second video label
 
 # Load .env
 load_dotenv()
@@ -500,6 +502,7 @@ def show_eeg_visualization():
 
 
     csv_output_path = last_generated_tsv_path.replace(".tsv", "_eeg.csv")
+    num_rows = len(pd.read_csv(csv_output_path)) - 1
     print(f"[INFO] CSV output path: {csv_output_path}")
 
     if not os.path.exists(csv_output_path):
@@ -507,7 +510,12 @@ def show_eeg_visualization():
         return
 
     from visualizer import launch_in_subprocess
-    launch_in_subprocess(csv_output_path)
+    video_path = launch_in_subprocess(csv_output_path, num_rows)
+    directory = os.path.join("brain_eeg_videos", csv_output_path.split("\\")[-1].split(".")[0].replace("eeg_culmination_csv\\", ""))
+    os.makedirs(directory, exist_ok=True)
+    
+    # video_path = os.path.join(directory, "brain_eeg_video.mp4")
+    embed_video(video_path)
 
 
 def analyze_eeg_input(selected_variable):
@@ -658,8 +666,10 @@ def embed_video(video_path, frame_delay_ms=1000):
     - frame_delay_ms: how many milliseconds between frames (100 ms ≈ 10 FPS).
     """
     global video_label
+    global video_label2  # Add global for second video label
+    
     if video_label is None:
-        # If the placeholder doesn’t exist yet, nothing to do.
+        # If the placeholder doesn't exist yet, nothing to do.
         return
 
     # If you want to stop an existing player first, store it in a global.
@@ -681,7 +691,7 @@ def embed_video(video_path, frame_delay_ms=1000):
     )
     _CURRENT_VIDEO_PLAYER = player
     player.play()
-    
+        
 def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
 
     # 1) Make sure analyze_frame appears in analyze_window, centered with some padding:
@@ -801,18 +811,23 @@ def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
     
     global video_label
     
+    # Create a container frame for both video frames
+    videos_container = ctk.CTkFrame(analyze_frame)
+    videos_container.grid(row=5, column=0, pady=(0, 20), sticky="n")
+    
+    # First video frame
     video_frame = ctk.CTkFrame(
-        analyze_frame,
+        videos_container,
         width=640,
         height=360,
         fg_color="#000000"
     )
-    video_frame.grid(row=5, column=0, pady=(0, 20), sticky="n")
+    video_frame.grid(row=0, column=0, padx=(0, 10), sticky="n")
     video_frame.grid_propagate(False)  # Prevent auto-resizing
     
     video_label = tk.Label(
         video_frame,
-        text="Video will appear here",
+        text="Video 1 will appear here",
         bg="black",
         fg="white",
         width=80,
@@ -821,9 +836,10 @@ def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
     )
     video_label.place(relx=0, rely=0, relwidth=1, relheight=1)
 
-    def toggle_fullscreen_video():
-        global last_rendered_video_path
-        if not last_rendered_video_path or not os.path.exists(last_rendered_video_path):
+    
+
+    def toggle_fullscreen_video(video_path, label_widget):
+        if not video_path or not os.path.exists(video_path):
             messagebox.showerror("Error", "No video available to show fullscreen.")
             return
 
@@ -839,50 +855,47 @@ def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
         fs_label = tk.Label(fs_window, bg="black")
         fs_label.pack(fill="both", expand=True)
 
-    # Close on Escape key
+        # Close on Escape key
         fs_window.bind("<Escape>", lambda e: fs_window.destroy())
 
-    # Add ❌ Exit button
+        # Add ❌ Exit button
         exit_button = tk.Button(
-        fs_window,
-        text="❌ Exit Fullscreen",
-        font=("Segoe UI", 10),
-        bg="#333333",
-        fg="white",
-        command=fs_window.destroy,
-        relief="flat"
-    )
+            fs_window,
+            text="❌ Exit Fullscreen",
+            font=("Segoe UI", 10),
+            bg="#333333",
+            fg="white",
+            command=fs_window.destroy,
+            relief="flat"
+        )
         exit_button.place(relx=0.98, rely=0.02, anchor="ne")  # top-right corner
 
-    # Bring to front
+        # Bring to front
         fs_window.lift()
         fs_window.focus_set()
 
-    # Start the video player
+        # Start the video player
         fs_player = CustomVideoPlayer(
-        video_path=last_rendered_video_path,
-        label_widget=fs_label,
-        frame_delay_ms=100,
-        loop=False,
-        width=fs_window.winfo_screenwidth(),
-        height=fs_window.winfo_screenheight()
-    )
+            video_path=video_path,
+            label_widget=fs_label,
+            frame_delay_ms=100,
+            loop=False,
+            width=fs_window.winfo_screenwidth(),
+            height=fs_window.winfo_screenheight()
+        )
         fs_player.play()
 
-
-# Overlay button on video_label
+    # Overlay button on first video_label
     fullscreen_btn = tk.Button(
-    video_label,
-    text="⛶ Fullscreen",
-    command=toggle_fullscreen_video,
-    font=("Segoe UI", 10),
-    bg="#222222",
-    fg="white",
-    relief="flat"
-)
+        video_label,
+        text="⛶ Fullscreen",
+        command=lambda: toggle_fullscreen_video(last_rendered_video_path, video_label),
+        font=("Segoe UI", 10),
+        bg="#222222",
+        fg="white",
+        relief="flat"
+    )
     fullscreen_btn.place(relx=0.95, rely=0.02, anchor="ne")  # Top-right corner
-
-
 
     # Everything is now laid out: analyze_frame is packed, and its children are centered via grid(...)
     analyze_window.mainloop()
@@ -897,12 +910,12 @@ ctk.set_default_color_theme("theme.json")
 # Create a new window for the analyze GUI
 analyze_window = ctk.CTk()
 analyze_window.title("🧠 Analyze EEG")
-analyze_window.geometry(f"{analyze_window.winfo_screenwidth()}x{analyze_window.winfo_screenheight()-100}")
+analyze_window.geometry(f"{analyze_window.winfo_screenwidth()/1.3}x{analyze_window.winfo_screenheight()-50}")
 analyze_window.resizable(False, False)
 analyze_frame = ctk.CTkScrollableFrame(
     analyze_window,
-    width=analyze_window.winfo_screenwidth(),
-    height=analyze_window.winfo_screenheight() - 100,
+    width=analyze_window.winfo_screenwidth() / 1.3,
+    height=analyze_window.winfo_screenheight() /1.3,
     fg_color="transparent"
 )
 result_label = ctk.CTkLabel(analyze_frame, text="", wraplength=500, font=("Consolas", 13), text_color="#000000")
@@ -910,7 +923,7 @@ result_label = ctk.CTkLabel(analyze_frame, text="", wraplength=500, font=("Conso
 
 root = ctk.CTk()
 root.title("🎙️ Phoneme Pronouncer Pro")
-root.geometry(f"{root.winfo_screenwidth()}x{root.winfo_screenheight()-100}")
+root.geometry(f"{root.winfo_screenwidth()/1.5}x{root.winfo_screenheight()-50}")
 root.resizable(False, False)
 
 # Fonts & Colors
@@ -974,7 +987,7 @@ microgap_checkbox = ctk.CTkCheckBox(
     font=FONT_NORMAL,
     checkbox_height=20,
     checkbox_width=20,
-    checkmark_color="white"  # Or any color that shows clearly
+    checkmark_color="white"
 )
 
 microgap_checkbox.pack(pady=(5, 0))

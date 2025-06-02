@@ -9,9 +9,11 @@ import os
 import threading
 import sys
 import subprocess
+import pyvista
+
 
 class EEGVisualizer:
-    def __init__(self, csv_path: str, subjects_dir: str = "C:/Users/anik2/mne_data/MNE-fsaverage-data/"):
+    def __init__(self, csv_path: str, csv_length: int, subjects_dir: str = "C:/Users/anik2/mne_data/MNE-fsaverage-data/"):
         """
         Initialize the EEG visualizer.
         
@@ -20,6 +22,7 @@ class EEGVisualizer:
             subjects_dir (str): Path to the fsaverage subject directory
         """
         self.csv_path = csv_path
+        self.csv_length = csv_length
         self.subjects_dir = subjects_dir
         self.channels = ["Fp1", "Fp2", "F3", "F4", "T5", "T6", "O1", "O2",
                         "F7", "F8", "C3", "C4", "T3", "T4", "P3", "P4"]
@@ -68,10 +71,15 @@ class EEGVisualizer:
 
         # Create brain visualization
         brain_kwargs = dict(alpha=0.4, background="white", cortex="classic")
+        
+        output_width = 800
+        output_height = 608
+        
         brain = mne.viz.Brain(subject, subjects_dir=self.subjects_dir, **brain_kwargs)
 
         # Crop and prepare data for visualization
-        stc.crop(0.5, 3.55)
+        max_range = round(self.csv_length / self.sfreq, 2)
+        stc.crop(0.01, max_range)
         kwargs = dict(
             fmin=stc.data.min(),
             fmax=stc.data.max(),
@@ -84,24 +92,29 @@ class EEGVisualizer:
         brain.add_data(stc.lh_data, hemi="lh", vertices=stc.lh_vertno, **kwargs)
         brain.add_data(stc.rh_data, hemi="rh", vertices=stc.rh_vertno, **kwargs)
         
+        
         new_cam = [
-            (300, 300, 200),    # camera XYZ location (move farther “out” and “up”)
+            (300, 300, 200),    # camera XYZ location (move farther "out" and "up")
             (0, 0, 0),          # focal point (center of the brain)
-            (0, 0, 0)           # “up” direction: +Y axis
+            (0, 0, 0)           # "up" direction: +Y axis
         ]
         brain.plotter.camera_position = new_cam
         
-        brain.save_movie("dspm_movie.mp4", framerate=30)
-        plt.show(block=True)
+        directory = os.path.join("brain_eeg_videos", self.csv_path.split("\\")[-1].split(".")[0].replace("eeg_culmination_csv\\", ""))
+        os.makedirs(directory, exist_ok=True)
+        
+        video_path = os.path.join(directory, "brain_eeg_video.mp4")
+        
+        brain.save_movie(video_path, framerate=15)
+        brain.close()
+        return video_path  # Return the video path for use in the main application
 
 
-def launch_in_subprocess(csv_path: str):
+def launch_in_subprocess(csv_path: str, csv_length: int):
     subprocess.Popen(
-        [sys.executable, __file__, csv_path]
+        [sys.executable, __file__, csv_path, csv_length]
         # creationflags=subprocess.CREATE_NO_WINDOW  # optional: hide terminal popup
     )
-
-        
 
 
 
@@ -110,4 +123,5 @@ if __name__ == "__main__":
         print("Usage: python visualizer.py <csv_path>")
     else:
         path = sys.argv[1]
-        EEGVisualizer(path).visualize()
+        csv_length = sys.argv[2]
+        EEGVisualizer(path, csv_length).visualize()
