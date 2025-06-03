@@ -444,44 +444,39 @@ def get_file_path(csv_path):
         return None
     return csv_path
 
-
-
-
-def pronounce_result():
-    text = result_label.cget("text")
-    if not text:
+def pronounce_result(label_widget, button_widget):
+    full_text = label_widget.cget("text")
+    if not full_text:
         messagebox.showerror("Error", "No result to pronounce.")
         return
 
-    btn_pronounce.configure(state="disabled", text="🔊 Generating...")
+    if full_text.startswith("Phonemes:\n"):
+        lines = full_text.splitlines()[1:]  # Skip "Phonemes:"
+        original_words = [line.split(":")[0].strip() for line in lines if ":" in line]
+        text_to_speak = " ".join(original_words)
+    else:
+        text_to_speak = full_text.strip()
+
+    button_widget.configure(state="disabled", text="🔊 Speaking...")
 
     def speak():
         try:
-            # Create a named temp file path (not open)
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as fp:
-                temp_path = fp.name
+            local_engine = pyttsx3.init()
+            local_engine.setProperty('rate', 150)
+            local_engine.setProperty('volume', 1.0)
 
-            # Generate audio to the path
-            tts = gTTS(text)
-            tts.save(temp_path)
+            # Choose male voice
+            for voice in local_engine.getProperty('voices'):
+                if "male" in voice.name.lower():
+                    local_engine.setProperty('voice', voice.id)
+                    break
 
-            # Update button before playing
-            root.after(0, lambda: btn_pronounce.configure(text="🔊 Playing..."))
-
-            # Play sound
-            playsound(temp_path)
-
+            local_engine.say(text_to_speak)
+            local_engine.runAndWait()
         except Exception as e:
-            print(f"[ERROR] gTTS failed: {e}")
+            print(f"[ERROR] pyttsx3 failed: {e}")
         finally:
-            # Cleanup temp file
-            try:
-                os.remove(temp_path)
-            except Exception as e:
-                print(f"[WARNING] Could not delete temp file: {e}")
-
-            # Re-enable button
-            root.after(0, lambda: btn_pronounce.configure(state="normal", text="🔊 Pronounce"))
+            label_widget.after(0, lambda: button_widget.configure(state="normal", text="🔊 Pronounce"))
 
     threading.Thread(target=speak, daemon=True).start()
 
@@ -751,13 +746,13 @@ def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
 
     # 7a) "🔊 Pronounce" button in btn_frame (column 0)
     btn2 = ctk.CTkButton(
-        btn_frame,
-        text="🔊 Pronounce",
-        command=pronounce_result,
-        font=FONT_NORMAL,
-        width=120,
-        height=35
-    )
+    btn_frame,
+    text="🔊 Pronounce",
+    command=lambda: pronounce_result(result_label, btn2),
+    font=FONT_NORMAL,
+    width=120,
+    height=35
+)
     btn2.grid(row=0, column=0, padx=5)
 
     # 7b) "📋 Copy Phonemes" button in btn_frame (column 1)
