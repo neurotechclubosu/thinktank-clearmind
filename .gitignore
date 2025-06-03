@@ -1,1 +1,6 @@
 .env
+.venv/
+eeg_culmination_txt/
+eeg_culmination_csv/
+brain_eeg_videos/
+saved_metabolic_videos/
