@@ -17,7 +17,7 @@ cycler==0.12.1
 darkdetect==0.8.0
 dataclasses-json==0.6.7
 debugpy==1.8.13
-decorator==5.1.1
+decorator==4.4.2
 Distance==0.1.3
 distro==1.9.0
 executing==2.2.0
@@ -62,7 +62,7 @@ matplotlib==3.10.0
 matplotlib-inline==0.1.7
 mne==1.9.0
 more-itertools==10.7.0
-moviepy==2.2.1
+moviepy==1.0.3
 multidict==6.4.4
 mypy_extensions==1.1.0
 nest-asyncio==1.6.0
