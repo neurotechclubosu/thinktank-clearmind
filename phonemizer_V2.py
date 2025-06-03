@@ -540,14 +540,12 @@ def analyze_eeg_input(selected_variable):
             base_name = os.path.basename(eeg_path)
             safe_name = os.path.splitext(base_name)[0]
             if microgap_var.get():
-                output_path = os.path.join(output_dir, f"{safe_name}_mg1_neurovascular.json")
+                output_path = os.path.join(output_dir, f"{safe_name}_neurovascular.json")
             else:
-                output_path = os.path.join(output_dir, f"{safe_name}_mg2_neurovascular.json")
+                output_path = os.path.join(output_dir, f"{safe_name}_neurovascular.json")
             
             with open(output_path, 'w') as f:
                 json.dump(Neuro_data, f, indent=4)
-            
-            
 
             # Step 2: Variable selection from dropdown
             choice = selected_variable.get()
