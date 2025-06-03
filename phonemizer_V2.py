@@ -283,20 +283,30 @@ def ask_larocco_gpt():
 
 
 def get_phonemes_any(word):
-    
     word_lower = word.lower()
-    # print(f"[TESTT!!] Word: {word_lower}")
+    
     if not ((word_lower == ' ') or (word_lower in string.punctuation)):
+        print(f"[TESTT!!] Word: {word_lower}")
         if word_lower in cmu:
             return [strip_stress(cmu[word_lower][0])]
         else:
             return [strip_stress(g2p(word))]
     else:
-        stuff =  random.choice([["rand1"], ["rand2"], ["rand3"], ["rand4"], ["rand5"]])
-        # print(f"[TESTT!!] Stuff: {stuff}")
-        return stuff
+        stuff = random.choice([["rand1"], ["rand2"], ["rand3"], ["rand4"], ["rand5"]])
+        return stuff # Return empty phoneme list for spaces/punctuation when microgaps disabled
     
 def show_phonemes(analyze_window, analyze_frame,result_label):
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    output_folder = os.path.join(base_dir, "eeg_culmination_csv")
+    eeg_base_path = os.path.join(base_dir, "eeg")
+    try:
+        os.makedirs(output_folder, exist_ok=True)
+    except Exception as e:
+        messagebox.showerror("Error", f"Could not create output folder: {e}")
+        return
+    txt_output_folder = os.path.join(base_dir, "eeg_culmination_txt")
+    os.makedirs(txt_output_folder, exist_ok=True)
 
     global gpt_output
     
@@ -304,63 +314,51 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
         messagebox.showerror("Error", "No valid GPT response to process.")
         return
 
-
-    words_with_punct = re.findall(r'\w+|[^\w\s]|\s+', gpt_output)
-
-    words = [w.strip(string.punctuation) for w in gpt_output.split()]
-    words = [w for w in words if w]  # Remove empty strings
-
-    all_phonemes = []
-    for w in words_with_punct:
-        ph = get_phonemes_any(w)
-        all_phonemes.append(ph[0])
-
-    words_display_only = [w for w in words_with_punct if w.strip() and w.strip() not in string.punctuation]
-
-    phonemes_display_only = []
-    phoneme_idx = 0
-    for w in words_with_punct:
-        if w.strip() and w.strip() not in string.punctuation:
+    if microgap_var.get():
+        words = re.findall(r'\w+|[^\w\s]|\s+', gpt_output)
+        words_display_only = [w for w in words if w.strip() and w.strip() not in string.punctuation]
+        all_phonemes = []
+        for w in words:
+            ph = get_phonemes_any(w)
+            all_phonemes.append(ph[0])
+        phonemes_display_only = []
+        phoneme_idx = 0
+        for w in words_display_only:
             phonemes_display_only.append(all_phonemes[phoneme_idx])
-        phoneme_idx += 1
-
-    
-    output_display = '\n'.join([
-    f"{w}: {' '.join(ph_list)}"
-    for w, ph_list in zip(words_display_only, phonemes_display_only)
-])
-
-
-    result_label.configure(text=f"Phonemes:\n{output_display}")
-
-
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    output_folder = os.path.join(base_dir, "eeg_culmination_csv")
-    eeg_base_path = os.path.join(base_dir, "eeg")
-
-    try:
-        os.makedirs(output_folder, exist_ok=True)
-    except Exception as e:
-        messagebox.showerror("Error", f"Could not create output folder: {e}")
-        return
-
-    safe_words = [w[:10] for w in words[:5]]
-    if microgap_var.get():
+            phoneme_idx += 1
+        output_display = '\n'.join([
+            f"{w}: {' '.join(ph_list)}"
+            for w, ph_list in zip(words_display_only, phonemes_display_only)
+        ])
+        result_label.configure(text=f"Phonemes:\n{output_display}")
+        safe_words = [w[:10] for w in words_display_only[:5]]
         output_file_path = os.path.join(output_folder, f"{'_'.join(safe_words)}_mg1.tsv")
-    else:
-        output_file_path = os.path.join(output_folder, f"{'_'.join(safe_words)}_mg2.tsv")
-
-    txt_output_folder = os.path.join(base_dir, "eeg_culmination_txt")
-    os.makedirs(txt_output_folder, exist_ok=True)
-    if microgap_var.get():
         txt_output_file_path = os.path.join(txt_output_folder, f"{'_'.join(safe_words)}_mg1.txt")
+        
     else:
+        words = [w.strip(string.punctuation) for w in gpt_output.split()]
+        words = [w for w in words if w]  # Remove empty strings
+        all_phonemes = []
+        for w in words:
+            ph = get_phonemes_any(w)
+            all_phonemes.append(ph[0])
+        phonemes_display_only = []
+        phoneme_idx = 0
+        for w in words:
+            phonemes_display_only.append(all_phonemes[phoneme_idx])
+            phoneme_idx += 1
+        output_display = '\n'.join([
+            f"{w}: {' '.join(ph_list)}"
+            for w, ph_list in zip(words, phonemes_display_only)
+        ])
+        result_label.configure(text=f"Phonemes:\n{output_display}")
+        safe_words = [w[:10] for w in words[:5]]
+        output_file_path = os.path.join(output_folder, f"{'_'.join(safe_words)}_mg2.tsv")
         txt_output_file_path = os.path.join(txt_output_folder, f"{'_'.join(safe_words)}_mg2.txt")
-
-
+        
 
     with open(output_file_path, "w", encoding="utf-8") as word_output:
-        for word_idx, (w, phoneme_list) in enumerate(zip(words_with_punct, all_phonemes)):
+        for word_idx, (w, phoneme_list) in enumerate(zip(words, all_phonemes)):
             print(f"[INFO] Processing word: {w}")
             if phoneme_list not in ["rand1", "rand2", "rand3", "rand4", "rand5"]:
                 for p in phoneme_list:
@@ -374,38 +372,40 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
                     print(f"[WARNING] Unrecognized phoneme: {p}")
                     continue
 
-                eeg_file_path = os.path.join(eeg_base_path, f"DLR_{num}_1.txt")
-                if os.path.exists(eeg_file_path):
-                    with open(eeg_file_path, "r", encoding="utf-8") as eeg_file:
-                        lines = eeg_file.readlines()
+            eeg_file_path = os.path.join(eeg_base_path, f"DLR_{num}_1.txt")
+            if os.path.exists(eeg_file_path):
+                with open(eeg_file_path, "r", encoding="utf-8") as eeg_file:
+                    lines = eeg_file.readlines()
 
-                        # Find the first line where the first column is "0.000000"
-                        start_index = -1
-                        for idx, line in enumerate(lines):
-                            first_col = line.strip().split("\t")[0]
-                            if first_col == "0.000000":
-                                start_index = idx
-                                break
-                        if w != ' ' and not w in string.punctuation:
-    # Compute for regular words (non-space)
-                            if start_index != -1 and start_index + 256 <= len(lines):
+                    # Find the first line where the first column is "0.000000"
+                    start_index = -1
+                    for idx, line in enumerate(lines):
+                        first_col = line.strip().split("\t")[0]
+                        if first_col == "0.000000":
+                            start_index = idx
+                            break
+                    if w != ' ' and (not (w in string.punctuation)):
+                        if start_index != -1 and start_index + 256 <= len(lines):
+                            try:
                                 word_output.writelines(lines[start_index:start_index + 256])
-                            else:
-                                print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")
+                            except Exception as e:
+                                print(f"[ERROR] Failed to write EEG data: {e}")
                         else:
-    # For space characters, only write EEG if microgaps checkbox is enabled
-                            if microgap_var.get():
-                                max_row = random.choice([256, 512])
-                                if start_index != -1 and start_index + max_row <= len(lines):
-                                    word_output.writelines(lines[start_index:start_index + max_row])
-                                else:
-                                    print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")
-                            else:
-                                print(f"[INFO] Skipped space EEG (microgaps disabled)")
-                else:
-                    msg = f"EEG data not found for phoneme '{p}' (number {num})\n\n"
-                    word_output.write(msg)
-                    print(f"[ERROR] EEG data not found for phoneme '{p}' (number {num})")
+                            print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")
+                    else:
+                        max_row = random.choice([256, 512])
+                        if start_index != -1 and start_index + max_row <= len(lines):
+                            try:
+                                word_output.writelines(lines[start_index:start_index + max_row])
+                            except Exception as e:
+                                print(f"[ERROR] Failed to write EEG data: {e}")
+                        else:
+                            print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")
+                        
+            else:
+                msg = f"EEG data not found for phoneme '{p}' (number {num})\n\n"
+                word_output.write(msg)
+                print(f"[ERROR] EEG data not found for phoneme '{p}' (number {num})")
 
         # Write the same content to .txt file
     with open(txt_output_file_path, "w", encoding="utf-8") as txt_output:
@@ -424,9 +424,9 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
     print(f"[INFO] Processing complete for: {gpt_output}")
     messagebox.showinfo("Success", f"Output saved to:\n{output_file_path}")
     if microgap_var.get():
-        csv_output_path = output_file_path.replace(".tsv", "_mg1_eeg.csv")
+        csv_output_path = output_file_path.replace("_mg1.tsv", "_mg1_eeg.csv")
     else:
-        csv_output_path = output_file_path.replace(".tsv", "_mg2_eeg.csv")
+        csv_output_path = output_file_path.replace("_mg2.tsv", "_mg2_eeg.csv")
     try:
         convert_eeg_tsv_to_csv(output_file_path, csv_output_path)
         print(f"[INFO] Converted EEG TSV to CSV at: {csv_output_path}")
@@ -494,16 +494,11 @@ def copy_phonemes():
         
         
 def show_eeg_visualization():
-    word_input = entry.get().strip()
-    words = [w.strip(string.punctuation) for w in word_input.split()]
-    words = [w for w in words if w]  # Remove empty strings
 
-    if not words:
-        messagebox.showerror("Error", "Please enter a valid word or phrase first.")
-        return
-
-
-    csv_output_path = last_generated_tsv_path.replace(".tsv", "_eeg.csv")
+    if microgap_var.get():
+        csv_output_path = last_generated_tsv_path.replace("_mg1.tsv", "_mg1_eeg.csv")
+    else:
+        csv_output_path = last_generated_tsv_path.replace("_mg2.tsv", "_mg2_eeg.csv")
     print(f"[INFO] CSV output path: {csv_output_path}")
 
     if not os.path.exists(csv_output_path):
