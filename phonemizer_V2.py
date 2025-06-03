@@ -342,12 +342,18 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
         messagebox.showerror("Error", f"Could not create output folder: {e}")
         return
 
-    safe_words = [w[:10] for w in words]
-    output_file_path = os.path.join(output_folder, f"{'_'.join(safe_words)}.tsv")
+    safe_words = [w[:10] for w in words[:5]]
+    if microgap_var.get():
+        output_file_path = os.path.join(output_folder, f"{'_'.join(safe_words)}_mg1.tsv")
+    else:
+        output_file_path = os.path.join(output_folder, f"{'_'.join(safe_words)}_mg2.tsv")
 
     txt_output_folder = os.path.join(base_dir, "eeg_culmination_txt")
     os.makedirs(txt_output_folder, exist_ok=True)
-    txt_output_file_path = os.path.join(txt_output_folder, f"{'_'.join(safe_words)}.txt")
+    if microgap_var.get():
+        txt_output_file_path = os.path.join(txt_output_folder, f"{'_'.join(safe_words)}_mg1.txt")
+    else:
+        txt_output_file_path = os.path.join(txt_output_folder, f"{'_'.join(safe_words)}_mg2.txt")
 
 
 
@@ -378,8 +384,7 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
                             if first_col == "0.000000":
                                 start_index = idx
                                 break
-                        if w != ' ':
-
+                        if w != ' ' and not w in string.punctuation:
     # Compute for regular words (non-space)
                             if start_index != -1 and start_index + 256 <= len(lines):
                                 word_output.writelines(lines[start_index:start_index + 256])
@@ -418,7 +423,10 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
 
     print(f"[INFO] Processing complete for: {gpt_output}")
     messagebox.showinfo("Success", f"Output saved to:\n{output_file_path}")
-    csv_output_path = output_file_path.replace(".tsv", "_eeg.csv")
+    if microgap_var.get():
+        csv_output_path = output_file_path.replace(".tsv", "_mg1_eeg.csv")
+    else:
+        csv_output_path = output_file_path.replace(".tsv", "_mg2_eeg.csv")
     try:
         convert_eeg_tsv_to_csv(output_file_path, csv_output_path)
         print(f"[INFO] Converted EEG TSV to CSV at: {csv_output_path}")
