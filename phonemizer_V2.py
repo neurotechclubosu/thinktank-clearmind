@@ -14,6 +14,7 @@ import string
 import pandas as pd
 import pyperclip
 import re
+import json
 from dotenv import load_dotenv
 from video_player import CustomVideoPlayer
 
@@ -259,6 +260,8 @@ def ask_larocco_gpt():
 
 
         result_label.configure(text=f"{result}")
+        global gpt_output
+        gpt_output = f"{result}"
 
         btn_get_phonemes.configure(state="normal")
 
@@ -295,8 +298,7 @@ def get_phonemes_any(word):
     
 def show_phonemes(analyze_window, analyze_frame,result_label):
 
-    gpt_output = result_label.cget("text")
-    # gpt_output = "Hey what's up?"
+    global gpt_output
     
     if not gpt_output or gpt_output.startswith("Phonemes:"):
         messagebox.showerror("Error", "No valid GPT response to process.")
@@ -400,8 +402,6 @@ def show_phonemes(analyze_window, analyze_frame,result_label):
                                     print(f"[WARNING] Not enough lines after start index {start_index} in file {eeg_file_path}")
                             else:
                                 print(f"[INFO] Skipped space EEG (microgaps disabled)")
-    
-
                 else:
                     msg = f"EEG data not found for phoneme '{p}' (number {num})\n\n"
                     word_output.write(msg)
@@ -537,6 +537,22 @@ def analyze_eeg_input(selected_variable):
                 Trials=TrialCount
             )
             Neuro_data = calculate_neurovascular_variables(CMRO2_data)
+            
+            # Save neurovascular data to file
+            output_dir = "neurovascular_data"
+            os.makedirs(output_dir, exist_ok=True)
+            
+            base_name = os.path.basename(eeg_path)
+            safe_name = os.path.splitext(base_name)[0]
+            if microgap_var.get():
+                output_path = os.path.join(output_dir, f"{safe_name}_mg1_neurovascular.json")
+            else:
+                output_path = os.path.join(output_dir, f"{safe_name}_mg2_neurovascular.json")
+            
+            with open(output_path, 'w') as f:
+                json.dump(Neuro_data, f, indent=4)
+            
+            
 
             # Step 2: Variable selection from dropdown
             choice = selected_variable.get()
