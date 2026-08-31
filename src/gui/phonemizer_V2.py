@@ -1,4 +1,13 @@
 # --- All import statements ---
+import os
+import sys
+
+# Repo root on sys.path so this file works both as a module
+# (python -m src.gui.phonemizer_V2) and by path (python src/gui/phonemizer_V2.py).
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 from g2p_en import G2p
 import nltk
 from nltk.corpus import cmudict
@@ -16,7 +25,7 @@ import pyperclip
 import re
 import json
 from dotenv import load_dotenv
-from video_player import CustomVideoPlayer
+from src.gui.video_player import CustomVideoPlayer
 
 from langchain_core.runnables.history import RunnableWithMessageHistory
 
@@ -34,35 +43,22 @@ from langchain.chains.retrieval import create_retrieval_chain
 
 import time
 from gtts import gTTS
-from playsound import playsound
 import tempfile
 import sys
 import os
 
 from langchain_core.runnables import RunnableLambda
 
-import os
-from EEG_Implement_Welch import EEG_Implement_Welch
-from EEG_normalizedGamma_CMRO2 import plot_normalized_gamma_across_channels
-from EEG_NeurovascularVariables import calculate_neurovascular_variables
-from EEG_Plotting import EEG_Plotting
+from src.eeg.EEG_Implement_Welch import EEG_Implement_Welch
+from src.eeg.EEG_normalizedGamma_CMRO2 import plot_normalized_gamma_across_channels
+from src.eeg.EEG_NeurovascularVariables import calculate_neurovascular_variables
+from src.eeg.EEG_Plotting import EEG_Plotting
 from moviepy.video.io.ImageSequenceClip import ImageSequenceClip
 from tkvideo import tkvideo
 import matplotlib.pyplot as plt
 import webbrowser
 
-from visualizer import EEGVisualizer
-
-
-
-# Tell Python to look in the EEG folder
-sys.path.append(os.path.join(os.path.dirname(__file__), "thinkthank_with_changes_and_clearmind"))
-
-from EEG_Implement_Welch import EEG_Implement_Welch
-from EEG_normalizedGamma_CMRO2 import plot_normalized_gamma_across_channels
-from EEG_NeurovascularVariables import calculate_neurovascular_variables
-from EEG_Plotting import EEG_Plotting
-
+from src.viz.visualizer import EEGVisualizer
 last_generated_eeg_path = None  # Holds most recent phoneme EEG file
 last_generated_tsv_path = None
 last_rendered_video_path = None 
@@ -119,8 +115,8 @@ global result_label
 global result
 global analyze_window
 
-DATA_FILE = "data/larocco_combined.txt"
-VECTOR_DB_PATH = "vector_db_larocco"
+DATA_FILE = os.path.join(PROJECT_ROOT, "data", "corpus", "larocco_combined.txt")
+VECTOR_DB_PATH = os.path.join(PROJECT_ROOT, "data", "vector_db")
 
 if os.path.exists(VECTOR_DB_PATH):
     vectorstore = FAISS.load_local(VECTOR_DB_PATH, embedding_model, allow_dangerous_deserialization=True)
@@ -297,15 +293,15 @@ def get_phonemes_any(word):
     
 def show_phonemes(analyze_window, analyze_frame,result_label):
 
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    output_folder = os.path.join(base_dir, "eeg_culmination_csv")
-    eeg_base_path = os.path.join(base_dir, "eeg")
+    base_dir = PROJECT_ROOT
+    output_folder = os.path.join(base_dir, "outputs", "eeg_culmination_csv")
+    eeg_base_path = os.path.join(base_dir, "data", "eeg_recordings")
     try:
         os.makedirs(output_folder, exist_ok=True)
     except Exception as e:
         messagebox.showerror("Error", f"Could not create output folder: {e}")
         return
-    txt_output_folder = os.path.join(base_dir, "eeg_culmination_txt")
+    txt_output_folder = os.path.join(base_dir, "outputs", "eeg_culmination_txt")
     os.makedirs(txt_output_folder, exist_ok=True)
 
     global gpt_output
@@ -505,7 +501,7 @@ def show_eeg_visualization():
         messagebox.showerror("Error", "Please generate phonemes first using 'Get Phonemes' button.")
         return
 
-    from visualizer import launch_in_subprocess
+    from src.viz.visualizer import launch_in_subprocess
     video_path = launch_in_subprocess(csv_output_path)
 
 
@@ -534,7 +530,7 @@ def analyze_eeg_input(selected_variable):
             Neuro_data = calculate_neurovascular_variables(CMRO2_data)
             
             # Save neurovascular data to file
-            output_dir = "neurovascular_data"
+            output_dir = os.path.join(PROJECT_ROOT, "outputs", "neurovascular")
             os.makedirs(output_dir, exist_ok=True)
             
             base_name = os.path.basename(eeg_path)
@@ -580,7 +576,7 @@ def analyze_eeg_input(selected_variable):
             # Now it's safe to overwrite result_label
             result_label.configure(text=f"📥 Loading EEG from: {eeg_path}")
 
-            output_dir = f"frames_{choice}_{safe_phrase}"
+            output_dir = os.path.join(PROJECT_ROOT, "outputs", "frames", f"{choice}_{safe_phrase}")
             os.makedirs(output_dir, exist_ok=True)
 
             # Step 4: Plot and save frames
@@ -613,7 +609,7 @@ def analyze_eeg_input(selected_variable):
                 if fname.endswith(".png")
             ])
 
-            folder_name = "saved_metabolic_videos"
+            folder_name = os.path.join(PROJECT_ROOT, "outputs", "metabolic_videos")
             os.makedirs(folder_name, exist_ok=True)  
             video_filename = f"EEG_{choice}_{safe_phrase}.mp4"
             full_path = os.path.join(folder_name, video_filename)
@@ -916,7 +912,7 @@ def create_analyze_gui(analyze_window, analyze_frame,result_label, gpt_output):
     
 # GUI Setup
 ctk.set_appearance_mode("light")
-ctk.set_default_color_theme("theme.json")    
+ctk.set_default_color_theme(os.path.join(os.path.dirname(os.path.abspath(__file__)), "theme.json"))    
     
 # Create a new window for the analyze GUI
 analyze_window = ctk.CTk()

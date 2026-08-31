@@ -1,4 +1,9 @@
 import json
+import os
+import sys
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+NEURO_DIR = os.path.join(PROJECT_ROOT, "outputs", "neurovascular")
 import numpy as np
 import pandas as pd
 from scipy.stats import ttest_rel, wilcoxon
@@ -23,10 +28,10 @@ def compute_channel_means(data):
     return channel_means
 
 # ——— Load JSONs for both conditions ———
-with open(r"neurovascular_data\Wu_Tang_Clan_s_raw_mg1_neurovascular.json", "r") as f:
+with open(os.path.join(NEURO_DIR, "Wu_Tang_Clan_s_raw_mg1_neurovascular.json"), "r") as f:
     data_with = json.load(f)
 
-with open(r"neurovascular_data\Wu-Tang_Clan's_raw_unfiltered_narratives_mg2_neurovascular.json", "r") as f:
+with open(os.path.join(NEURO_DIR, "Wu-Tang_Clan's_raw_unfiltered_narratives_mg2_neurovascular.json"), "r") as f:
     data_without = json.load(f)
 
 # ——— Compute per-channel averages per metric ———

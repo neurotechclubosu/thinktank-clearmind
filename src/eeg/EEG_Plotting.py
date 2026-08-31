@@ -1,4 +1,4 @@
-from EEG_DistanceFunc import DistanceFunc
+from .EEG_DistanceFunc import DistanceFunc
 
 def EEG_Plotting(Data_val, Timestep_Select, Trial_Select = 1, NodeNum = 100, ElectrodeList = ['Fp1', 'Fp2', 'F3', 'F4', 'T5', 'T6', 'O1', 'O2', 'F7', 'F8', 'C3', 'C4', 'T3', 'T4', 'P3', 'P4'], ax=None):
     """

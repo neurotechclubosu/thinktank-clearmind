@@ -1,3 +1,8 @@
+import os
+import sys
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import matplotlib.pyplot as plt
 from matplotlib.cm import ScalarMappable
 from matplotlib.colors import Normalize
@@ -14,8 +19,15 @@ from moviepy.editor import VideoFileClip, clips_array, vfx
 
 
 class EEGVisualizer:
-    def __init__(self, csv_path: str, subjects_dir: str = "C:/Users/anik2/mne_data/MNE-fsaverage-data/"):
+    def __init__(self, csv_path: str, subjects_dir: str = None):
         self.csv_path = csv_path
+        # fsaverage location: explicit argument, else the SUBJECTS_DIR environment
+        # variable, else MNE's own data directory (fetched on first use).
+        if subjects_dir is None:
+            subjects_dir = os.environ.get("SUBJECTS_DIR")
+        if subjects_dir is None:
+            from mne.datasets import fetch_fsaverage
+            subjects_dir = os.path.dirname(fetch_fsaverage(verbose=False))
         self.subjects_dir = subjects_dir
         self.channels = [
             "Fp1", "Fp2", "F3", "F4", "T5", "T6",
@@ -94,7 +106,7 @@ class EEGVisualizer:
 
     def visualize(self):
         base_name = os.path.splitext(os.path.basename(self.csv_path))[0]
-        out_dir = os.path.join("brain_eeg_videos", base_name)
+        out_dir = os.path.join(PROJECT_ROOT, "outputs", "brain_videos", base_name)
         os.makedirs(out_dir, exist_ok=True)
 
         # 2) Define each view as a function that takes a Brain instance 'b'
@@ -145,7 +157,7 @@ def make_collage(video_paths: list[str], csv_path: str):
 
     # 6) Write out the final collage (using a reasonable codec/bitrate):
     base_name = os.path.splitext(os.path.basename(csv_path))[0]
-    out_dir = os.path.join("brain_eeg_videos", base_name)
+    out_dir = os.path.join(PROJECT_ROOT, "outputs", "brain_videos", base_name)
     output_path = os.path.join(out_dir, "collage_brain.mp4")
     grid.write_videofile(
         output_path,
