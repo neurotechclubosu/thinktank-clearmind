@@ -12,12 +12,16 @@ def DistanceFunc(selectedPoint, pointArray, responseArray, nNearest):
     distances.sort(key=lambda x: x[0])
     nearest = distances[:nNearest]
 
-    # Calculate weighted average
-    total_distance = sum([d[0] for d in nearest])
-    if total_distance == 0:
-        weighted_average = np.mean([d[1] for d in nearest])
+    # Inverse-distance weighting: nearer neighbours must count for more. The
+    # previous form weighted each neighbour by d / sum(d), which gave the most
+    # distant neighbour the largest share.
+    if any(d[0] == 0 for d in nearest):
+        # Selected point coincides with an electrode; take the exact value(s).
+        weighted_average = np.mean([d[1] for d in nearest if d[0] == 0])
     else:
-        weighted_average = sum([(d[0] / total_distance) * d[1] for d in nearest])
+        inv = [1.0 / d[0] for d in nearest]
+        total_inv = sum(inv)
+        weighted_average = sum(w / total_inv * d[1] for w, d in zip(inv, nearest))
 
     # For standard deviation, use only the response values of nearest neighbors
     responses = [d[1] for d in nearest]

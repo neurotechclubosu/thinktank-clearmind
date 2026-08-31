@@ -1,5 +1,5 @@
 def EEG_Implement_Welch(EEG_raw, RecordedColumns=32, Channels=16, Timestep=256,
-                        TestDuration=2, TimeColumn=1, ElectrodeList=['Fp1', 'Fp2', 'F3', 'F4', 'T5', 'T6', 'O1', 'O2', 'F7', 'F8', 'C3', 'C4', 'T3', 'T4', 'P3', 'P4']):
+                        TestDuration=4, TimeColumn=1, num_segments=32, ElectrodeList=['Fp1', 'Fp2', 'F3', 'F4', 'T5', 'T6', 'O1', 'O2', 'F7', 'F8', 'C3', 'C4', 'T3', 'T4', 'P3', 'P4']):
     """
     
 
@@ -61,8 +61,11 @@ def EEG_Implement_Welch(EEG_raw, RecordedColumns=32, Channels=16, Timestep=256,
     
     for Trials in range(1,int(len(EEG_use[0])/(Timestep*TestDuration))+1):
     
-        segment_size = 32  
-        num_segments = 32  
+        # One trial is Timestep * TestDuration samples, divided evenly into
+        # num_segments analysis windows. Deriving the window length keeps the
+        # segmentation consistent with the 32-frame rendering loop in the GUI.
+        trial_length = Timestep * TestDuration
+        segment_size = trial_length // num_segments
     
         # Define EEG frequency bands
         bands = {
@@ -76,7 +79,10 @@ def EEG_Implement_Welch(EEG_raw, RecordedColumns=32, Channels=16, Timestep=256,
         #Creates the individual welch spectras based on "segments" or individual electrodes in the system
         for H, electrode in enumerate(ElectrodeList):
             trial_key = f'{electrode} trial ' + str(Trials)
-            signal = np.array(EEG_use[H])
+            # Slice this trial's own samples. Previously the whole channel was
+            # used for every trial, which made all trials identical.
+            trial_start = (Trials - 1) * trial_length
+            signal = np.array(EEG_use[H][trial_start:trial_start + trial_length])
     
             #This will be our final output and combines the data as a dict of lists for our data to pull from on other functions
             EEG_Welch_Spectra[trial_key] = {'segments': []}
@@ -94,7 +100,9 @@ def EEG_Implement_Welch(EEG_raw, RecordedColumns=32, Channels=16, Timestep=256,
                 # Compute power in each EEG band
                 band_power = {}
                 for band, (low, high) in bands.items():
-                    indices = np.where((freqs >= low) & (freqs <= high))
+                    # Upper bound exclusive: an inclusive bound assigned a bin
+                    # sitting on a boundary (e.g. 8 Hz) to two adjacent bands.
+                    indices = np.where((freqs >= low) & (freqs < high))
                     band_power[band] = float(np.sum(psd[indices]))
     
                 EEG_Welch_Spectra[trial_key]['segments'].append({
