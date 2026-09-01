@@ -34,7 +34,9 @@ def plot_normalized_gamma_across_channels(
     all_gamma_values = []
     trial_gamma_map = {}  # Store per trial for later if per-trial normalization
 
-    for TrialsKeep in range(Trials):
+    # Trial keys are 1-based ('... trial 1' .. '... trial N'); range(Trials)
+    # looked for a nonexistent trial 0 and dropped the last trial.
+    for TrialsKeep in range(1, Trials + 1):
         for electrode in ElectrodeList:
             trial_key = f'{electrode} trial {TrialsKeep}'
             if trial_key not in EEG_Welch_Spectra:
