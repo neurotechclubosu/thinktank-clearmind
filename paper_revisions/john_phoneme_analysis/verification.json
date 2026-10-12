@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "verified_utc": "2026-10-06T23:00:59.326545+00:00",
+  "source_hashes": 572,
+  "unique_full_task_hashes": 2860,
+  "independent_feature_checks": 80,
+  "replayed_predictions": 21120,
+  "replayed_session_scores": 96,
+  "null_arrays": 8,
+  "train_recalls": 880,
+  "heldout_recalls": 1980,
+  "participants": 4,
+  "independent_test_sessions": 9,
+  "code_sha256": "dcde29d478f9efc4fa067f9c0bafad27ea7b96e240486ab9d24787681602c4d7",
+  "files": {
+    "features.npz": "562ea6bd84f4b55463eb034be4c0965c1cf7b6e690a2d81c5bf85a4c36fdbc4c",
+    "epochs.csv": "f3476b8d6465aa35dbb022a518365a30f00adeea3381a84f0f768bde110b95b8",
+    "scores.csv": "c696208f1ea3b86171e36c8929ae44aa1812ec63663d9b85aedb50dbea9c2915",
+    "predictions.csv": "0ace95931adc2bd8d3c82716c9f5b80e02a72ce703eb42d0d782bae628b9b743",
+    "alignment_nulls.npz": "7b7e21314dcf7fdc64ef9c0c9da9e3c4f8f0e88a7caa86168798812823fe3bda",
+    "label_permutations.npz": "cd80b7a978518c074584c48a06aadec9bb2c1788a56474786021198967b126d7",
+    "evaluation.json": "63eb20f4fe02a5e993a433282c87c1a6a49170cb14fc681bcec0c9d865ffe9ee"
+  },
+  "figure_inspection": "PASS: all three PNG figures visually inspected for correct values, readable labels, legends and clipping. PDFs exported from the same Matplotlib figure objects.",
+  "report_sha256": "f8f19f3b41559170d9008fc3bf37668749b87a00dd879ccd3cd81f0e16703585",
+  "figure_inspected_utc": "2026-10-06T23:03:03.092803+00:00",
+  "figure_files": {
+    "task_controls.png": {
+      "sha256": "b84cd26a49c26ee26def8b43f4b4300ac91203560b2846c27b0fe6c8174d0c37",
+      "bytes": 139282,
+      "dimensions": [
+        1980,
+        827
+      ]
+    },
+    "task_controls.pdf": {
+      "sha256": "55ecf412524e8e805bfffe53123107906b5dd36c6dabda993ad4f7df156a7614",
+      "bytes": 18188
+    },
+    "sensitivities.png": {
+      "sha256": "43160597da18ac2df2f7b38513a79802966b0cb8ead8b17e2c49162bbaae0477",
+      "bytes": 76444,
+      "dimensions": [
+        1980,
+        846
+      ]
+    },
+    "sensitivities.pdf": {
+      "sha256": "6a7707b6bf7351019b03d9c7644dc7b2b0ad1b9281ebcc39989aae6f39336461",
+      "bytes": 17857
+    },
+    "session_results.png": {
+      "sha256": "927a09afd31f667b96991c86318333f10c94f02d4ef8ce2ad93ef0fdd18082c9",
+      "bytes": 55875,
+      "dimensions": [
+        1980,
+        882
+      ]
+    },
+    "session_results.pdf": {
+      "sha256": "18fc0d4152cf59566a7b4a58ed982c2a3883c27309ca7c0db0de8a6183a6c377",
+      "bytes": 14383
+    }
+  },
+  "report_artifact_hashes": {
+    "condition_summary.csv": "57aa39e2474f957f8b429b2cb79c138ee1f1dd68ef7035eed588597d5fe8f6cf",
+    "participant_results.csv": "538f1250bcf1dcd455ec2d511e6a42bcdf4cdaea51739d2fa77b0f5d4d3f4be2",
+    "prediction_class_use.csv": "febcf2fa865075a558cda6afee2a99c0415f8e940fd007aca766c955d430bf6e",
+    "REPORT.md": "f8f19f3b41559170d9008fc3bf37668749b87a00dd879ccd3cd81f0e16703585",
+    "screen_thresholds.csv": "3d7d3d3bb083e1a48d2e8d4d39b1b9629d3bf19099bd4cf887e5693fad17e8f4",
+    "session_results.csv": "58e7e6cd73d87fb8a078111fc34ee5a37f669a6845443252166212ac02dad46b",
+    "STATUS.md": "a9eb9eb8d7cbdcc0e9fe679834c5aeb46b2e920b28f0f97bcdff8eaceb0e4237",
+    "summary.json": "9b5766827cf4fd9985b9681ddc9eb7e54215f571e22f64ed9d75c059cca9fc42"
+  }
+}

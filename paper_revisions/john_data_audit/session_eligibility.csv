@@ -1,0 +1,17 @@
+subject,session_suffix,recording_files,usable_indices,complete,excluded_files,reason
+GTP000,1,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP000,2,44,43,False,DLR_27_2.txt,Incomplete after glitch or copied-recording exclusions
+GTP000,3,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP000,4,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP000,5,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP000,6,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP000,7,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP003,1,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP003,2,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP003,3,44,42,False,GTP003_18_3.txt;GTP003_2_3.txt,Incomplete after glitch or copied-recording exclusions
+GTP004,1,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP004,2,44,43,False,GTP004_11_2.txt,Incomplete after glitch or copied-recording exclusions
+GTP004,3,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP007,1,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP007,2,44,44,True,,Complete index/marker coverage; raw quality not certified
+GTP007,3,44,44,True,,Complete index/marker coverage; raw quality not certified

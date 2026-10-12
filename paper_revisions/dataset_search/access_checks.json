@@ -1,0 +1,400 @@
+{
+  "checked_at_utc": "2026-10-04T00:25:36.647305+00:00",
+  "scope": "public metadata; no EEG recordings downloaded",
+  "records": [
+    {
+      "name": "chisco_tags",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/tags",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/tags",
+      "bytes": 3011,
+      "sha256": "bb6d137791f99326fa8cc735dc606feec2dee4d161f0d0f29e1c444303c59f0c",
+      "tags": [
+        {
+          "name": "1.1.2",
+          "sha": "fdab7bbace39e2195893c8b29bafd860cedc5114"
+        },
+        {
+          "name": "1.1.1",
+          "sha": "05da9d6618744b394d9a253896de1c9aefa3c44c"
+        },
+        {
+          "name": "1.1.0",
+          "sha": "285d6ad14a604f38f6f47b79f1ae1999d5060f31"
+        },
+        {
+          "name": "1.0.3",
+          "sha": "63effed1d2dd8c743c8d6f43eb624a52499e1181"
+        },
+        {
+          "name": "1.0.2",
+          "sha": "a283e245df6e3de8e46b6fdc6d18c26104ea9704"
+        },
+        {
+          "name": "1.0.1",
+          "sha": "1852bc52696e528846012ea62af6c18a8884aae3"
+        },
+        {
+          "name": "1.0.0",
+          "sha": "68ee8c519863bd898db94e22951d9978eaaeada8"
+        }
+      ]
+    },
+    {
+      "name": "chisco_description",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/contents/dataset_description.json",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/contents/dataset_description.json",
+      "bytes": 2913,
+      "sha256": "9420319201507cc20bb80bc86d7828775c4416142659c4fa91372ab9b9c25313",
+      "git_blob_sha": "accc4430498147c2f5021dee86c25072c9e39874",
+      "decoded_preview": "{\n    \"Name\": \"Chisco\",\n    \"BIDSVersion\": \"1.6.0\",\n    \"License\": \"CC0\",\n    \"Authors\": [\n        \"Zihan Zhang\",\n        \"Yi Zhao\",\n        \"Yu Bao\",\n        \"Xiao Ding\"\n    ],\n    \"Acknowledgements\": \"We would like to express our heartfelt gratitude to everyone who supported and assisted in the research and construction of this dataset. First and foremost, we thank the Social Computing and Information Retrieval Laboratory at Harbin Institute of Technology for their support and resources, which made this research possible. We are especially grateful to our advisor, Professor Xiao Ding, for his guidance, advice, and encouragement throughout the entire research process. We also extend our thanks to all the volunteers who participated in the data collection process, providing valuable data and time. Without their active participation, the completion of our dataset would not have been possible.Finally, we thank all the members of our team, who made significant contributions to data collection, experimental design, and data processing. Without their efforts, the construction of this dataset would not have been achievable.\",\n    \"HowToAcknowledge\": \"Please refer to https://github.com/zhangzihan-is-good/Chisco\",\n    \"Funding\": [\n        \"National Natural Science Foundation of China under Grants 62176079\"\n    ],\n    \"EthicsApprovals\": [\n        \"HIT2024035\"\n    ],\n    \"DatasetDOI\": \"doi:10.18112/openneuro.ds005170.v1.1.2\"\n}"
+    },
+    {
+      "name": "chisco_readme",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/contents/README",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/contents/README",
+      "bytes": 4631,
+      "sha256": "1b3a25baa0e2c43607c91dcc681ebfd82c5b07f6fbd6877334570322b4bc1001",
+      "git_blob_sha": "cef568b69643ce833649f424d3bb013faef1afa6",
+      "decoded_preview": "# Chisco Dataset\n\nThis dataset is a Chinese imagined speech dataset with five participants, identified as sub-01 to sub-05. The dataset includes raw data and preprocessed data in both fif and pkl formats. Information also can be found in https://github.com/zhangzihan-is-good/Chisco\n\n## Supplementary Information\n\nThe initial dataset release encompassed data from three participants (sub-01 to sub-03) as detailed in related Chisco publications. Subsequently, data from two additional subjects (sub-04 and sub-05) were incorporated. During the interval between the original dataset release and the addition of the new data, the BIDS protocol underwent updates. To preserve the integrity of the data processing code presented in our publications, the supplementary data continue to adhere to the previous version of the BIDS protocol. Consequently, the BIDS validator on our website may report errors; however, these do not compromise the usability of the dataset.\n\nFuture releases will include data from sub-06 and sub-07, who participated under a new experimental paradigm. These will be published as part of a new dataset, Chisco 2.0. We invite you to stay tuned for further updates.\n\n## Dataset Structure\n\n### Root Directory\n\n- `dataset_description.json`\n- `participants.tsv`\n- `README`\n- `derivatives/`\n- `sub-01/` to `sub-05/`\n- `textdataset/`\n- `json/`\n\n### Raw Data\n\nThe root directory contains folders `sub-01` to `sub-05` with raw data. Each participant's folder contains 5-6 session folders, corresponding to data collected over 5-6 days.\n\n### Preprocessed Data\n\nPreprocessed data is stored in the `derivatives` folder in both fif and pkl formats.\n\n### Text Data\n\nThe `textdataset` folder and `json` folder contain text data used to stimulate the participants.\n\n### File Structure\n```\n/Chisco\n    /sub-01\n        /ses-01\n            /eeg\n                sub-01_ses-01_task-imagine_eeg.edf\n        ...\n    /sub-02\n        ...\n    /sub-03\n        ...\n    /derivatives\n        /fif\n            /sub-01\n                ...\n            /sub-02\n                ...\n            /sub-03\n                ...\n        /pkl\n            /sub-01\n                ...\n            /sub-02\n                ...\n            /sub-03\n                ...\n    /textdataset\n        ...\n    /json\n        ...\n    dataset_description.json\n    README\n    participants.tsv\n\n```\n## License\nThis dataset is licensed under the CC0 license. You are free to use the dataset for non-commercial purposes, but the original author needs to be properly indicated.\n\n## Citation\nIf you use this dataset in your research, please cite the following link:\n\nhttps://github.com/zhangzihan-is-good/Chisco\n\n## Contact Information\nFor any questions, please contact the dataset authors.\nThank you for using the Chisco!"
+    },
+    {
+      "name": "chisco_tree",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/git/trees/main?recursive=1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/git/trees/main?recursive=1",
+      "bytes": 355534,
+      "sha256": "b56e47e9fa65b6162249abfd11ea9b27676641983e227f8e03e8ec4502327b96",
+      "tree_sha": "fdab7bbace39e2195893c8b29bafd860cedc5114",
+      "tree_truncated": false,
+      "entry_count": 1262,
+      "examples": [
+        {
+          "path": "participants.tsv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "665af7a43171e8dd337fb69566a77b96b3f862c7",
+          "size": 83,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds005170/git/blobs/665af7a43171e8dd337fb69566a77b96b3f862c7"
+        }
+      ]
+    },
+    {
+      "name": "inner_speech_description",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds003626/contents/dataset_description.json?ref=2.1.2",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds003626/contents/dataset_description.json?ref=2.1.2",
+      "bytes": 1827,
+      "sha256": "862760082ee2d6c3e9a5909e6098d5227c9891426508701f4903e893d637eb98",
+      "git_blob_sha": "ebaffc2f8c3848c74d525ade1ce02d680d76eedd",
+      "decoded_preview": "{\n    \"Name\": \"Inner Speech\",\n    \"BIDSVersion\": \"1.4\",\n    \"License\": \"CC0\",\n    \"Authors\": [\n        \"Nicolas Nieto\",\n        \"Victoria Peterson\",\n        \"Hugo Rufiner\",\n        \"Juan Kamienkowski\",\n        \"Ruben Spies\"\n    ],\n    \"HowToAcknowledge\": \"\",\n    \"ReferencesAndLinks\": [\n        \"https://www.nature.com/articles/s41597-022-01147-2\",\n        \"https://github.com/N-Nieto/Inner_Speech_Dataset\"\n    ],\n    \"DatasetDOI\": \"doi:10.18112/openneuro.ds003626.v2.1.2\",\n    \"DatasetType\": \"raw\",\n    \"EthicsApprovals\": [\n        \"Comit\\u00e9 Asesor de \\u00c9tica y Seguridad en el Trabajo Experimental (CEySTE), CCT-CONICET, Santa Fe,\"\n    ]\n}"
+    },
+    {
+      "name": "inner_speech_tree",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds003626/git/trees/2.1.2?recursive=1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds003626/git/trees/2.1.2?recursive=1",
+      "bytes": 75044,
+      "sha256": "102662cb2099e1f1059eb8eae84031898580c6cd26125d913b1a49f4ee7db3fb",
+      "tree_sha": "d96743351ae4e5d0ee7a1384320ea8d52a2ce698",
+      "tree_truncated": false,
+      "entry_count": 298,
+      "examples": []
+    },
+    {
+      "name": "feis_zenodo",
+      "url": "https://zenodo.org/api/records/3554128",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/3554128",
+      "bytes": 12995,
+      "sha256": "8a062fa830d36ab09e993ea764ece558825bf79822be61efd32f65c186d42991",
+      "license": {
+        "id": "odc-by"
+      },
+      "access_right": "open",
+      "files": [
+        {
+          "key": "scottwellington/FEIS-v1.1.zip",
+          "size": 1647825020,
+          "checksum": "md5:9e7d74253e3c14d090dd076288383a42",
+          "links": {
+            "self": "https://zenodo.org/api/records/3554128/files/scottwellington/FEIS-v1.1.zip/content"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vocalmind_zenodo",
+      "url": "https://zenodo.org/api/records/14696348",
+      "status": 200,
+      "final_url": "https://zenodo.org/api/records/14696348",
+      "bytes": 9409,
+      "sha256": "22c6ff009c6cf870f69448bb285f12178f7c9fca2ba3c74a5adfb32c8b513cfb",
+      "license": {
+        "id": "cc-by-4.0"
+      },
+      "access_right": "open",
+      "files": [
+        {
+          "key": "Processed_Audio_Sentence.zip",
+          "size": 13859587,
+          "checksum": "md5:b93fc81cd841d85832e9ee83c30b9aca",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_Audio_Sentence.zip/content"
+          }
+        },
+        {
+          "key": "Original_sEEG_Imagined_Sentence.zip",
+          "size": 520323305,
+          "checksum": "md5:76a21aa7f6119662b5e84f77bfc29ee5",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_sEEG_Imagined_Sentence.zip/content"
+          }
+        },
+        {
+          "key": "Original_Audio_Word.zip",
+          "size": 34300728,
+          "checksum": "md5:504755a852fd0cb47f0f829b3da44daa",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_Audio_Word.zip/content"
+          }
+        },
+        {
+          "key": "Processed_Audio_Word.zip",
+          "size": 4890684,
+          "checksum": "md5:89339a2fb8e2e4725c42938108e225ae",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_Audio_Word.zip/content"
+          }
+        },
+        {
+          "key": "Processed_sEEG_Mimed_Word.zip",
+          "size": 120696550,
+          "checksum": "md5:4b6710048a824e7acb442e5f8dac0e3e",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_sEEG_Mimed_Word.zip/content"
+          }
+        },
+        {
+          "key": "Original_sEEG_Mimed_Word.zip",
+          "size": 187595153,
+          "checksum": "md5:9dfd978d3c4595cdb5a3adb472d5bc4d",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_sEEG_Mimed_Word.zip/content"
+          }
+        },
+        {
+          "key": "Processed_sEEG_Mimed_Sentence.zip",
+          "size": 337989340,
+          "checksum": "md5:adcffafcf6c0a7fe084196002baadbc2",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_sEEG_Mimed_Sentence.zip/content"
+          }
+        },
+        {
+          "key": "Original_sEEG_Vocalized_Word.zip",
+          "size": 190182847,
+          "checksum": "md5:1cf951dca48cea887eedf414fdd736e6",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_sEEG_Vocalized_Word.zip/content"
+          }
+        },
+        {
+          "key": "Original_sEEG_Vocalized_Sentence.zip",
+          "size": 506473225,
+          "checksum": "md5:efe65b86a55899cf14184e4c8c09696a",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_sEEG_Vocalized_Sentence.zip/content"
+          }
+        },
+        {
+          "key": "Processed_sEEG_Vocalized_Word.zip",
+          "size": 120695383,
+          "checksum": "md5:31ebd68a28d6af7e89f30efe527c93af",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_sEEG_Vocalized_Word.zip/content"
+          }
+        },
+        {
+          "key": "Processed_sEEG_Vocalized_Sentence.zip",
+          "size": 338008082,
+          "checksum": "md5:068ac1055fb7993a37173e271bb7d61e",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_sEEG_Vocalized_Sentence.zip/content"
+          }
+        },
+        {
+          "key": "Original_sEEG_Imagined_Word.zip",
+          "size": 188671934,
+          "checksum": "md5:302bc108c913914cc7ab748b7e3f519c",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_sEEG_Imagined_Word.zip/content"
+          }
+        },
+        {
+          "key": "Processed_sEEG_Imagined_Word.zip",
+          "size": 120695692,
+          "checksum": "md5:dd7ee3a086e7755e110485bd3f5af15e",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_sEEG_Imagined_Word.zip/content"
+          }
+        },
+        {
+          "key": "Processed_sEEG_Imagined_Sentence.zip",
+          "size": 337994987,
+          "checksum": "md5:e153009b4e4a9868d5bb7e4f05b48878",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Processed_sEEG_Imagined_Sentence.zip/content"
+          }
+        },
+        {
+          "key": "Original_Audio_Sentence.zip",
+          "size": 110847454,
+          "checksum": "md5:6539216a75561b5c7b35c6152f46916c",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_Audio_Sentence.zip/content"
+          }
+        },
+        {
+          "key": "Original_sEEG_Mimed_Sentence.zip",
+          "size": 518971114,
+          "checksum": "md5:058a3296902caa26d7793925395a1a4f",
+          "links": {
+            "self": "https://zenodo.org/api/records/14696348/files/Original_sEEG_Mimed_Sentence.zip/content"
+          }
+        }
+      ]
+    },
+    {
+      "name": "feis_tree",
+      "url": "https://api.github.com/repos/scottwellington/FEIS/git/trees/v1.1?recursive=1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/scottwellington/FEIS/git/trees/v1.1?recursive=1",
+      "bytes": 434386,
+      "sha256": "05efd59e9929b6317dee2b35c5e0db55375427291646835c3fdd89fa7ddd2bad",
+      "tree_sha": "7e726fd4759931da36bdd699cc8a0b1a085c1409",
+      "tree_truncated": false,
+      "entry_count": 1712,
+      "examples": []
+    },
+    {
+      "name": "chisco2_description",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006317/contents/dataset_description.json?ref=1.1.1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds006317/contents/dataset_description.json?ref=1.1.1",
+      "bytes": 1483,
+      "sha256": "58cb6218a8be914f5f1dfd0fa69165ede07d029e4f85aa9433563b822290a1a2",
+      "git_blob_sha": "64d8d4018a26da4ef0fcc0d409187431d61f7ce5",
+      "decoded_preview": "{\n    \"Name\": \"Chisco-2.0\",\n    \"BIDSVersion\": \"1.10.0\",\n    \"DatasetType\": \"raw\",\n    \"Authors\": [\n        \"Zihan Zhang\",\n        \"Yu Bao\",\n        \"Tianyi Jiang\",\n        \"Xiao Ding\",\n        \"Xia Liang\",\n        \"Juntong Du\",\n        \"Yi Zhao\",\n        \"Kai Xiong\",\n        \"Bing Qin\",\n        \"Ting Liu\"\n    ],\n    \"License\": \"CC0\",\n    \"DatasetDOI\": \"doi:10.18112/openneuro.ds006317.v1.1.1\"\n}"
+    },
+    {
+      "name": "chisco2_readme",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006317/contents/README?ref=1.1.1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds006317/contents/README?ref=1.1.1",
+      "bytes": 2053,
+      "sha256": "aa49c87380b01e774c7f46902a31f328f8d6ba33d9358c91d4a0d3e0643a63b5",
+      "git_blob_sha": "00523fc3fa0b2b4882d1c3bd5811a109f445a312",
+      "decoded_preview": "This dataset is a imagined speech dataset with two participants, identified as sub-01 to sub-02. The dataset includes raw data in edf formats. Information also can be found in https://github.com/baoyudu/COFETT .\n\n\nReferences\n----------\nAppelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896).https://doi.org/10.21105/joss.01896\n\nPernet, C. R., Appelhoff, S., Gorgolewski, K. J., Flandin, G., Phillips, C., Delorme, A., Oostenveld, R. (2019). EEG-BIDS, an extension to the brain imaging data structure for electroencephalography. Scientific Data, 6, 103.https://doi.org/10.1038/s41597-019-0104-8\n\n"
+    },
+    {
+      "name": "synchronous_description",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/contents/dataset_description.json?ref=1.0.1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/contents/dataset_description.json?ref=1.0.1",
+      "bytes": 2670,
+      "sha256": "719a17ff715adef993ca0deeba3e0f173525dc2e524fc2134291a0e5ade0005f",
+      "git_blob_sha": "aa506958e3ca5d68783bd534016873affe2d87a9",
+      "decoded_preview": "{\n    \"Name\": \"Synchronous EEG and fMRI dataset on inner speech\",\n    \"BIDSVersion\": \"1.7.0\",\n    \"HEDVersion\": \"8.3.0\",\n    \"DatasetType\": \"raw\",\n    \"Authors\": [\n        \"Foteini Simistira Liwicki\"\n    ],\n    \"License\": \"CC0\",\n    \"Funding\": [\n        \"Kompetensutveckling till professor, Lulea University of Technology, Sweden [LTU-154-2023]\",\n        \"Labbfonden Medel för infrastruktur vid Luleå tekniska universitet, 2023 [LTU-4908-2022]\",\n        \"Kempe Foundation, Sweden [JCSMK23-0102]\"\n    ],\n    \"Acknowledgements\": \"We thank the participants and research staff involved in data collection.\",\n    \"HowToAcknowledge\": \"Please cite: [Your Publication or DOI]\",\n    \"ReferencesAndLinks\": [\n        \" https://your-lab-website.com\"\n    ],\n    \"DatasetDOI\": \"doi:10.18112/openneuro.ds006033.v1.0.1\",\n    \"GeneratedBy\": [\n        {\n            \"Name\": \"MNE-BIDS\",\n            \"Version\": \"0.12\",\n            \"Description\": \"BIDS conversion of EEG data.\"\n        }\n    ],\n    \"SourceDatasets\": [],\n    \"EthicsApprovals\": [\n        \"The study was approved by the Swedish Ethical Review Authority (Etikprövning myndigheden, ID: 2023-05177-01) (https://etikprovningsmyndigheten.se/) in accordance with the Swedish Ethical Review Act (SFS 2003:460). \"\n    ]\n}"
+    },
+    {
+      "name": "synchronous_readme",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/contents/README?ref=1.0.1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/contents/README?ref=1.0.1",
+      "bytes": 2222,
+      "sha256": "b4dd0951e131634e3f4fb8531725d6bd8b2cba5b45356a31df5035731ec8c028",
+      "git_blob_sha": "5f42348c24211e7c1c3bcfa54878f7f346625d02",
+      "decoded_preview": "# Inner Speech EEG-fMRI Dataset\n\n## Description\nThis dataset contains simultaneous EEG-fMRI recordings for inner speech experiments. Data were collected using a 3T MRI scanner and 64-channel BrainProducts EEG system. The EEG data have undergone preprocessing, including pulse artifact removal, using the BrainVision Analyzer software. No further data transformations have been applied to ensure the dataset remains BIDS-compliant as \"raw\".\n\n## Subjects\n- Number of subjects: 3\n- Sessions per subject: 2\n- Tasks: Inner speech\n\n## Experimental Protocol\n- Each trial includes a fixation period (2s), stimulus display (2s), and rest (12s).\n- 8 words were presented in random order, each repeated 40 times.\n- EEG sampled at 5000 Hz, fMRI acquired with TR=2s.\n\n## Data Organization\n- Functional MRI data: `sub-xx/ses-xx/func/`\n- EEG data: `sub-xx/ses-xx/eeg/`\n- Event markers: `events.tsv`\n- BIDS-compatible metadata included in JSON sidecars.\n\n## Contact\nFor inquiries, contact: Foteini Simistira Liwicki (Foteini.liwicki@ltu.se)\n"
+    },
+    {
+      "name": "synchronous_tree",
+      "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/trees/1.0.1?recursive=1",
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/trees/1.0.1?recursive=1",
+      "bytes": 23434,
+      "sha256": "9291ddfc88c72bdc7fb3844552091f1e4a034458793107036d19ac3df2cd8790",
+      "tree_sha": "3af0502b0664b80dacf015e76c436c9ba371527c",
+      "tree_truncated": false,
+      "entry_count": 92,
+      "examples": [
+        {
+          "path": "participants.tsv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "9f0221f575dc2ddc85b8db1bc15726e4a0fb238d",
+          "size": 134,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/9f0221f575dc2ddc85b8db1bc15726e4a0fb238d"
+        },
+        {
+          "path": "sub-01/ses-01/func/sub-01_ses-01_task-innerspeech_events.tsv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "303465a52a929c10f2f94de83254e48320b2d6a5",
+          "size": 2159,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/303465a52a929c10f2f94de83254e48320b2d6a5"
+        },
+        {
+          "path": "sub-01/ses-02/eeg/sub-01_ses-02_task-innerspeech_eeg.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f54b0892fcec1ed45dd547e4666bf887eeab5900",
+          "size": 760,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/f54b0892fcec1ed45dd547e4666bf887eeab5900"
+        },
+        {
+          "path": "sub-01/ses-02/eeg/sub-01_ses-02_task-innerspeech_events.tsv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "ec571c34a74b7e8cdad64a7bb2bf2cb7f3be9932",
+          "size": 4823,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/ec571c34a74b7e8cdad64a7bb2bf2cb7f3be9932"
+        },
+        {
+          "path": "sub-01/ses-02/func/sub-01_ses-02_task-innerspeech_events.tsv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "760e62a4fcf5a1681ffee918aa8053f36b9144ee",
+          "size": 4529,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/760e62a4fcf5a1681ffee918aa8053f36b9144ee"
+        },
+        {
+          "path": "sub-02/ses-01/eeg/sub-02_ses-01_task-innerspeech_eeg.json",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7ce3001824c3a6d34700a4b011b0ee550179117a",
+          "size": 760,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/7ce3001824c3a6d34700a4b011b0ee550179117a"
+        },
+        {
+          "path": "sub-02/ses-01/eeg/sub-02_ses-01_task-innerspeech_events.tsv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "af9b28db3bbceabf3e8141d4f78a941ae1e7aa63",
+          "size": 6098,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/af9b28db3bbceabf3e8141d4f78a941ae1e7aa63"
+        },
+        {
+          "path": "sub-02/ses-01/func/sub-02_ses-01_task-innerspeech_events.tsv",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "7b8ead38dd727bfb01962e4c40de2f57a2b32ae8",
+          "size": 5740,
+          "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/7b8ead38dd727bfb01962e4c40de2f57a2b32ae8"
+        }
+      ]
+    }
+  ]
+}

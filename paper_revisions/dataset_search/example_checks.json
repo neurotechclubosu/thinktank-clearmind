@@ -1,0 +1,51 @@
+[
+  {
+    "name": "sync_eeg_events",
+    "source_path": "sub-02/ses-01/eeg/sub-02_ses-01_task-innerspeech_events.tsv",
+    "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/af9b28db3bbceabf3e8141d4f78a941ae1e7aa63",
+    "status": 200,
+    "sha256": "7576c7f3639126aa4e49c65d60ffe1865a3e29833ba729fe93c11246ce94757b",
+    "bytes": 6098,
+    "git_blob_sha": "af9b28db3bbceabf3e8141d4f78a941ae1e7aa63",
+    "preview": "onset\tduration\ttrial_type\r\n0.0156\t0.013\tfixation\r\n0.0286\t0.013\tfather\r\n0.0416\t0.013\trest\r\n0.0546\t0.014\twife\r\n0.0686\t0.026\trest\r\n0.0946\t0.014\twife\r\n0.1086\t0.013\trest\r\n0.1216\t0.013\tfour\r\n0.1346\t0.013\trest\r\n0.1476\t0.013\twife\r\n0.1606\t0.013\trest\r\n0.1736\t0.014\tdaughter\r\n0.1876\t0.013\trest\r\n0.2006\t0.013\twife\r\n0.2136\t0.013\trest\r\n0.2266\t0.013\tfather\r\n0.2396\t0.013\trest\r\n0.2526\t0.014\tthree\r\n0.2666\t0.013\trest\r\n0.2796\t0.013\tsix\r\n0.2926\t0.013\trest\r\n0.3056\t0.013\tfather\r\n0.3186\t0.013\trest\r\n0.3316\t0.014\tfour\r\n0.3456\t0.013\trest\r\n0.3586\t0.013\tsix\r\n0.3716\t0.013\trest\r\n0.3846\t0.013\tthree\r\n0.3976\t0.013\trest\r\n0.4106\t0.014\tsix\r\n0.4246\t0.013\trest\r\n0.4376\t0.013\tthree\r\n0.4506\t0.013\trest\r\n0.4636\t0.013\tfather\r\n0.4766\t0.013\trest\r\n0.4896\t0.014\tthree\r\n0.5036\t0.013\trest\r\n0.5166\t0.013\tfather\r\n0.5296\t0.013\trest\r\n0.5426\t0.013\tfather\r\n0.5556\t0.013\trest\r\n0.5686\t0.014\tsix\r\n0.5826\t0.013\trest\r\n0.5956\t0.013\tfour\r\n0.6086\t0.013\trest\r\n0.6216\t0.013\tfather\r\n0.6346\t0.013\trest\r\n0.6476\t0.014\tsix\r\n0.6616\t0.013\trest\r\n0.6746\t0.013\tdaughter\r\n0.6876\t0.013\trest\r\n0.7006\t0.013\twife\r\n0.7136\t0.013\trest\r\n0.7266\t0.014\tfather\r\n0.7406\t0.013\trest\r\n0.7536\t0.013\tdaughter\r\n0.7666\t0.013\trest\r\n0.7796\t0.013\tchild\r\n0.7926\t0.013\trest\r\n0.8056\t0.014\twife\r\n0.8196\t0.026\trest\r\n0.8456\t0.014\tchild\r\n0.8596\t0.013\trest\r\n0.8726\t0.013\tdaughter\r\n0.8856\t0.013\trest\r\n0.8986\t0.013\tten\r\n0.9116\t0.013\trest\r\n0.9246\t0.014\tfour\r\n0.9386\t0.013\trest\r\n0.9516\t0.013\tfour\r\n0.9646\t0.013\trest\r\n0.9776\t0.013\tthree\r\n0.9906\t0.013\trest\r\n1.0036\t0.014\tdaughter\r\n1.0176\t0.013\trest\r\n1.0306\t0.013\tthree\r\n1.0436\t0.013\trest\r\n1.0566\t0.013\tfour\r\n1.0696\t0.013\trest\r\n1.0826\t0.014\tten\r\n1.0966\t0.013"
+  },
+  {
+    "name": "sync_fmri_events",
+    "source_path": "sub-02/ses-01/func/sub-02_ses-01_task-innerspeech_events.tsv",
+    "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/7b8ead38dd727bfb01962e4c40de2f57a2b32ae8",
+    "status": 200,
+    "sha256": "74158fc20d995f228e672384831a5cad44c93002a6d4af4e72b23dcc1f7a01f2",
+    "bytes": 5740,
+    "git_blob_sha": "7b8ead38dd727bfb01962e4c40de2f57a2b32ae8",
+    "preview": "onset\tduration\ttrial_type\r\n0\t0.013\tfixation\r\n0.013\t0.013\tfather\r\n0.026\t0.013\trest\r\n0.039\t0.014\twife\r\n0.053\t0.026\trest\r\n0.079\t0.014\twife\r\n0.093\t0.013\trest\r\n0.106\t0.013\tfour\r\n0.119\t0.013\trest\r\n0.132\t0.013\twife\r\n0.145\t0.013\trest\r\n0.158\t0.014\tdaughter\r\n0.172\t0.013\trest\r\n0.185\t0.013\twife\r\n0.198\t0.013\trest\r\n0.211\t0.013\tfather\r\n0.224\t0.013\trest\r\n0.237\t0.014\tthree\r\n0.251\t0.013\trest\r\n0.264\t0.013\tsix\r\n0.277\t0.013\trest\r\n0.29\t0.013\tfather\r\n0.303\t0.013\trest\r\n0.316\t0.014\tfour\r\n0.33\t0.013\trest\r\n0.343\t0.013\tsix\r\n0.356\t0.013\trest\r\n0.369\t0.013\tthree\r\n0.382\t0.013\trest\r\n0.395\t0.014\tsix\r\n0.409\t0.013\trest\r\n0.422\t0.013\tthree\r\n0.435\t0.013\trest\r\n0.448\t0.013\tfather\r\n0.461\t0.013\trest\r\n0.474\t0.014\tthree\r\n0.488\t0.013\trest\r\n0.501\t0.013\tfather\r\n0.514\t0.013\trest\r\n0.527\t0.013\tfather\r\n0.54\t0.013\trest\r\n0.553\t0.014\tsix\r\n0.567\t0.013\trest\r\n0.58\t0.013\tfour\r\n0.593\t0.013\trest\r\n0.606\t0.013\tfather\r\n0.619\t0.013\trest\r\n0.632\t0.014\tsix\r\n0.646\t0.013\trest\r\n0.659\t0.013\tdaughter\r\n0.672\t0.013\trest\r\n0.685\t0.013\twife\r\n0.698\t0.013\trest\r\n0.711\t0.014\tfather\r\n0.725\t0.013\trest\r\n0.738\t0.013\tdaughter\r\n0.751\t0.013\trest\r\n0.764\t0.013\tchild\r\n0.777\t0.013\trest\r\n0.79\t0.014\twife\r\n0.804\t0.026\trest\r\n0.83\t0.014\tchild\r\n0.844\t0.013\trest\r\n0.857\t0.013\tdaughter\r\n0.87\t0.013\trest\r\n0.883\t0.013\tten\r\n0.896\t0.013\trest\r\n0.909\t0.014\tfour\r\n0.923\t0.013\trest\r\n0.936\t0.013\tfour\r\n0.949\t0.013\trest\r\n0.962\t0.013\tthree\r\n0.975\t0.013\trest\r\n0.988\t0.014\tdaughter\r\n1.002\t0.013\trest\r\n1.015\t0.013\tthree\r\n1.028\t0.013\trest\r\n1.041\t0.013\tfour\r\n1.054\t0.013\trest\r\n1.067\t0.014\tten\r\n1.081\t0.013\trest\r\n1.094\t0.013\tthree\r\n1.107\t0.013\trest\r\n1.12\t0.013\tdaughter\r\n1.133\t0.013\trest\r\n1.146\t0.0"
+  },
+  {
+    "name": "sync_eeg_sidecar",
+    "source_path": "sub-02/ses-01/eeg/sub-02_ses-01_task-innerspeech_eeg.json",
+    "url": "https://api.github.com/repos/OpenNeuroDatasets/ds006033/git/blobs/7ce3001824c3a6d34700a4b011b0ee550179117a",
+    "status": 200,
+    "sha256": "36d181bcc20b14fe72df9c3da09b5ee9fb26b7472481bb97b2b5ac0753e16695",
+    "bytes": 760,
+    "git_blob_sha": "7ce3001824c3a6d34700a4b011b0ee550179117a",
+    "preview": "{\n    \"TaskName\": \"innerspeech\",\n    \"Manufacturer\": \"BrainProducts\",\n    \"ManufacturersModelName\": \"BrainAmp MR plus\",\n    \"CapManufacturer\": \"BrainProducts\",\n    \"CapManufacturersModelName\": \"BrainCap MR\",\n    \"EEGReference\": \"FCz\",\n    \"SamplingFrequency\": 5000.0,\n    \"PowerLineFrequency\": 50,\n    \"EEGChannelCount\": 64,\n    \"EOGChannelCount\": 0,\n    \"ECGChannelCount\": 1,\n    \"EMGChannelCount\": 0,\n    \"MiscChannelCount\": 1,\n    \"SoftwareFilters\": \"n/a\",\n    \"RecordingType\": \"continuous\",\n    \"RecordingDuration\": 1368.5708,\n    \"EEGGround\": \"AFz\",\n    \"EEGPlacementScheme\": \"10-20\",\n    \"DataFormat\": \"BINARY\",\n    \"DataOrientation\": \"MULTIPLEXED\",\n    \"BinaryFormat\": \"IEEE_FLOAT_32\",\n    \"DigitizedLandmarks\": false,\n    \"DigitizedHeadPoints\": false\n}"
+  },
+  {
+    "name": "feis_archive_readme",
+    "source_path": "README.txt",
+    "url": "https://api.github.com/repos/scottwellington/FEIS/git/blobs/426661f1eea98fb4d3429deba593e99b3f0c7ce3",
+    "status": 200,
+    "sha256": "ca7846b2f8450491282e9d9ae0fb4115e501527841aa3a388995539342dd0c9d",
+    "bytes": 6299,
+    "git_blob_sha": "426661f1eea98fb4d3429deba593e99b3f0c7ce3",
+    "preview": "﻿\r\n><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><> ><>\r\n\r\nWelcome to the FEIS (Fourteen-channel EEG with Imagined Speech) dataset.\r\n\r\n<>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <>< <><\r\n\r\nThe FEIS dataset comprises Emotiv EPOC+ [1] EEG recordings of:\r\n\r\n* 21 participants listening to, imagining speaking, and then actually speaking\r\n  16 English phonemes (see supplementary, below)\r\n\r\n* 2 participants listening to, imagining speaking, and then actually speaking\r\n  16 Chinese syllables (see supplementary, below)\r\n\r\nFor replicability and for the benefit of further research, this dataset\r\nincludes the complete experiment set-up, including participants' recorded\r\naudio and 'flashcard' screens for audio-visual prompts, Lua script and .mxs\r\nscenario for the OpenVibe [2] environment, as well as all Python scripts\r\nfor the preparation and processing of data as used in the supporting\r\nstudies (submitted in support of completion of the MSc Speech and Language\r\nProcessing with the University of Edinburgh):\r\n\r\n* J. Clayton, \"Towards phone classification from imagined speech using\r\n  a lightweight EEG brain-computer interface,\" M.Sc. dissertation,\r\n  University of Edinburgh, Edinburgh, UK, 2019.\r\n* S. Wellington, \"An investigation into the possibilities and limitations\r\n  of decoding heard, imagined and spoken phonemes using a low-density,\r\n  mobile EEG headset,\" M.Sc. dissertation, University of Edinburgh,\r\n  Edinburgh, UK, 2019.\r\n\r\nEach participant's data comprise 5 .csv files -- these are the 'raw'\r\n(unprocessed) EEG recordings for the 'stimuli'"
+  },
+  {
+    "name": "kara_one_archive_head",
+    "url": "https://www.cs.toronto.edu/~complingweb/data/karaOne/MM05.tar.bz2",
+    "scope": "HEAD only; no body",
+    "status": 200,
+    "content_length": "2185187287",
+    "content_type": "application/x-bzip2",
+    "final_url": "https://www.cs.toronto.edu/~complingweb/data/karaOne/MM05.tar.bz2"
+  }
+]

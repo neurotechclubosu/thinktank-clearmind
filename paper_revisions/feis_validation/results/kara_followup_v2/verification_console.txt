@@ -1,0 +1,120 @@
+{
+  "status": "complete",
+  "format_only_pilot_excluded": "MM05",
+  "participants": 13,
+  "nominal_chance": 0.25,
+  "families": [
+    {
+      "model": "covariance",
+      "mean": 0.28846153846153844,
+      "participant_ci": [
+        0.23557692307692307,
+        0.3557692307692308
+      ],
+      "conditional_permutation_p": 0.092,
+      "holm_p": 0.184,
+      "signal_gate": false,
+      "sensitivities": {
+        "eye_regression": {
+          "model": "covariance",
+          "seed": 17,
+          "screening": "eye_regression",
+          "participants": 13,
+          "mean": 0.2605769230769231,
+          "ci_low": 0.1980769230769231,
+          "ci_high": 0.3317307692307692,
+          "real_test_predictions": 212
+        },
+        "global_chronology": {
+          "model": "covariance",
+          "seed": 17,
+          "screening": "global_chronology",
+          "participants": 13,
+          "mean": 0.22820512820512817,
+          "ci_low": 0.14679487179487177,
+          "ci_high": 0.31122596153846144,
+          "real_test_predictions": 212
+        },
+        "strict": {
+          "model": "covariance",
+          "seed": 17,
+          "screening": "strict",
+          "participants": 13,
+          "mean": 0.29166666666666663,
+          "ci_low": 0.23557692307692307,
+          "ci_high": 0.3605769230769231,
+          "real_test_predictions": 210
+        }
+      }
+    },
+    {
+      "model": "eegnet_style",
+      "mean": 0.25096153846153846,
+      "participant_ci": [
+        0.20673076923076922,
+        0.29423076923076924
+      ],
+      "conditional_permutation_p": 0.516,
+      "holm_p": 0.516,
+      "signal_gate": false,
+      "sensitivities": {
+        "eye_regression": {
+          "model": "eegnet_style",
+          "seed": 17,
+          "screening": "eye_regression",
+          "participants": 13,
+          "mean": 0.27692307692307694,
+          "ci_low": 0.22596153846153846,
+          "ci_high": 0.3298076923076923,
+          "real_test_predictions": 212
+        },
+        "global_chronology": {
+          "model": "eegnet_style",
+          "seed": 17,
+          "screening": "global_chronology",
+          "participants": 13,
+          "mean": 0.21190476190476187,
+          "ci_low": 0.14335966117216117,
+          "ci_high": 0.2791666666666666,
+          "real_test_predictions": 212
+        },
+        "strict": {
+          "model": "eegnet_style",
+          "seed": 17,
+          "screening": "strict",
+          "participants": 13,
+          "mean": 0.2477564102564103,
+          "ci_low": 0.20288461538461539,
+          "ci_high": 0.29583333333333334,
+          "real_test_predictions": 210
+        }
+      }
+    }
+  ],
+  "eye_only_control": {
+    "model": "eye_only",
+    "seed": 17,
+    "screening": "primary",
+    "participants": 13,
+    "mean": 0.3096153846153846,
+    "ci_low": 0.2403846153846154,
+    "ci_high": 0.38173076923076926,
+    "real_test_predictions": 212
+  },
+  "amplitude_nuisance_control": {
+    "model": "amplitude_nuisance",
+    "seed": 17,
+    "screening": "primary",
+    "participants": 13,
+    "mean": 0.23653846153846156,
+    "ci_low": 0.17884615384615385,
+    "ci_high": 0.29903846153846153,
+    "real_test_predictions": 212
+  },
+  "any_signal_gate_passed": false,
+  "additional_splicing_test": "not_run_because_both_signal_gates_failed",
+  "needs_specificity_review_before_augmentation": true,
+  "no_sentence_or_metabolism_validation": true,
+  "interpretation": "Numerical gate indicates bounded method feasibility only. Eye/mouth artifacts and cue effects remain separate questions."
+}
+Verified 156 scores and 2540 real predictions

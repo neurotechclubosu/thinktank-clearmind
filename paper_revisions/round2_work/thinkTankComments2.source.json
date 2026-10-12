@@ -1,0 +1,15 @@
+{
+  "file": "thinkTankComments2.doc",
+  "sha256": "ebfe41c31fc2a13e350fd6b805495c3415f06a9c14d67d37590059b66efc8ef8",
+  "nFib": 257,
+  "streams": [
+    "\u0001CompObj",
+    "\u0001Ole",
+    "1Table",
+    "Data",
+    "\u0005SummaryInformation",
+    "WordDocument",
+    "\u0005DocumentSummaryInformation"
+  ],
+  "extraction": "Word piece table"
+}

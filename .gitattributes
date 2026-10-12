@@ -1,0 +1,6 @@
+# Preserve exact bytes for archived sources, protocols and checksum receipts.
+# Windows checkout line-ending conversion would invalidate recorded hashes.
+paper_revisions/** -text
+research/feis_validation/** -text
+research/john_data_audit/** -text
+research/john_phoneme_analysis/** -text

@@ -1,0 +1,24 @@
+{
+  "source_doc_sha256": {
+    "thinkTankComments2.doc": "ebfe41c31fc2a13e350fd6b805495c3415f06a9c14d67d37590059b66efc8ef8",
+    "thinkTankPaper.v1.26.doc": "a799cb64111d16374a1ac612ec7c61ea6a513b05a86d83145a3a5c06baedfc09",
+    "thinkTankReply2.doc": "184c15044add7a3de65c636ee4ededf67a2916436fbe9b4066a48d93f12e2332"
+  },
+  "recorded_numerical_checks": 38,
+  "passed_numerical_checks": 38,
+  "simulation_rows": 13500,
+  "summary_rows": 144,
+  "document_count": 4,
+  "numeric_document_traceability": "tables constructed directly from results.json; primary draw means checked against summary",
+  "rendering": "Microsoft Word native PDF export, then page PNG inspection; bundled renderer unavailable because soffice.exe missing",
+  "release_status": "local author-review package, not published or submitted",
+  "research_property_tests": 6,
+  "passed_research_property_tests": 6,
+  "rendered_pages": {
+    "manuscript": 13,
+    "response": 3,
+    "changes": 2,
+    "author_decisions": 2
+  },
+  "visual_review": "All 20 pages inspected as final page images or contact sheets; critical tables and figures also inspected at full resolution; no clipping or overlap observed."
+}

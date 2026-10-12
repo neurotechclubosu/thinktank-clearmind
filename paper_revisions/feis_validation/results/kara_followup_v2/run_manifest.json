@@ -1,0 +1,48 @@
+{
+  "started_utc": "2026-10-04T02:51:11.945906+00:00",
+  "status": "complete",
+  "participants": [
+    "MM08",
+    "MM09",
+    "MM10",
+    "MM11",
+    "MM12",
+    "MM14",
+    "MM15",
+    "MM16",
+    "MM18",
+    "MM19",
+    "MM20",
+    "MM21",
+    "P02"
+  ],
+  "excluded_format_pilot": "MM05",
+  "source_sha256": {
+    "kara_benchmark.py": "0eb6208eb671977f947011f022fb87b826e113a860c5ccbd8a806c4282f4c956",
+    "kara_data.py": "dc5a569bd97c10e1c560dd1804ec03f5cd0517c0e97dd973aa376c32ead09825",
+    "followup_models.py": "a76878e2a90ae3f21a504ac1d59d171365216244139c956f68adb1aa71b482d4",
+    "FOLLOWUP_PROTOCOL.md": "9359b8189c717adeb5e3787136135a7535e16fe123c64e646275fe95c7d116f6",
+    "KARA_PARSER_PLAN.md": "3ecbd87b807ae069be929aad9728c4de94c247804a333b653312a34690f261aa"
+  },
+  "python": "3.11.0",
+  "numpy": "2.4.3",
+  "torch": "2.10.0+cu128",
+  "large_evidence_root": "D:\\ResearchData\\thinktank-clearmind\\KaraOne\\analysis\\kara_followup_v2",
+  "completed": [
+    "MM08",
+    "MM09",
+    "MM10",
+    "MM11",
+    "MM12",
+    "MM14",
+    "MM15",
+    "MM16",
+    "MM18",
+    "MM19",
+    "MM20",
+    "MM21",
+    "P02"
+  ],
+  "acquisition_audit_failures": {},
+  "completed_utc": "2026-10-04T02:56:59.033887+00:00"
+}

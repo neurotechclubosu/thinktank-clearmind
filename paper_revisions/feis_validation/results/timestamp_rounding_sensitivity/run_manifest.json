@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-10-04T01:11:32.812120+00:00",
+  "protocol_sha256": "526587af68c150a0272171323ddf5528ca00e286b39adc6dc42fad7b06924c45",
+  "primary_run_preserved": "C:\\Personal_Coding\\thinktank-clearmind\\paper_revisions\\feis_validation\\results\\initial_v1",
+  "participant": "04",
+  "timestamp_atol_seconds": 1e-06,
+  "motivation": "Source timestamps have six-decimal rounding. Maximum step deviation0.75microseconds and grid deviation0.5microseconds. No samples were missing. This audit-informed sensitivity was proposed before reading primary metrics, but is not a prespecified primary result.",
+  "source_code_sha256": {
+    "benchmark.py": "c8973fdccb9a01771703e435df9a24ec25e0f4f183931a039a299643d3be897c",
+    "data.py": "a489cd123e7ed29aaeb45bb1918a7e9e34a49ef15a05395cf35bbb69265e87ad",
+    "download.py": "15cfe375037aecae279fec5c99fbf05421811aca49c573cd7d4f8dd368893466",
+    "features.py": "6cfacde583031b3568e83da8cb9558da4690cd84148cc1ac9c71efdb515ece35",
+    "summarize.py": "342172fd071716b05846332308fd67a6d8622299a72aaf58e3d16a5a6674f14d",
+    "test_validation.py": "4ef8d83dd54ac541692a56518901465284f0e1854c014cf6b12872920bc95180",
+    "timestamp_sensitivity.py": "799acd45e40af5bacbf6c963b60ac44106d4ab69e2112bc15b7f3a4b75edcab2",
+    "__init__.py": "792d206bdb6d82f3ad4ee03ed5bcc7a7dd67bb35b7c8f813ad16b3aa2c91f45c"
+  },
+  "status": "complete",
+  "completed_utc": "2026-10-04T01:11:39.762828+00:00",
+  "cohort_primary_difference": 1.057355261547768e-17,
+  "ci_low": -0.009259259259259259,
+  "ci_high": 0.010251322751322765,
+  "provisional_gate_passed": false,
+  "participants": 21,
+  "predictions_path": "D:\\ResearchData\\thinktank-clearmind\\FEIS\\v1.1\\analysis\\timestamp_rounding_sensitivity\\predictions.csv",
+  "donor_receipts_path": "D:\\ResearchData\\thinktank-clearmind\\FEIS\\v1.1\\analysis\\timestamp_rounding_sensitivity\\donor_receipts.jsonl",
+  "predictions_sha256": "c1e7616f9e0d4834a99690f495e4f6cb0fe0878a3ea71c219f549cd3edf08db7",
+  "donor_receipts_sha256": "19ad54390adb158232f2a8549c4a614fda52d16ed644fa04ed48e15c04c74bc8"
+}

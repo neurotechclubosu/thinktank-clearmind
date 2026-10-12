@@ -1,0 +1,46 @@
+{
+  "MM05": {
+    "status": "pass",
+    "word_trials": 60
+  },
+  "MM08": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM09": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM10": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM11": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM12": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM14": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM15": {
+    "status": "fail",
+    "reason": "Supplied epochs do not map uniquely onto task sensor phases"
+  },
+  "MM16": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM18": {
+    "status": "pass",
+    "word_trials": 48
+  },
+  "MM19": {
+    "status": "pass",
+    "word_trials": 48
+  }
+}

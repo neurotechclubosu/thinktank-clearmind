@@ -1,0 +1,13 @@
+participant,model,seed,screening,n_train,n_test,balanced_accuracy
+P02,covariance,17,primary,40,20,0.25
+P02,eegnet_style,17,primary,40,20,0.2
+P02,eegnet_style,29,primary,40,20,0.25
+P02,eegnet_style,43,primary,40,20,0.30000000000000004
+P02,eye_only,17,primary,40,20,0.39999999999999997
+P02,amplitude_nuisance,17,primary,40,20,0.2
+P02,covariance,17,eye_regression,40,20,0.2
+P02,eegnet_style,17,eye_regression,40,20,0.35
+P02,covariance,17,strict,40,20,0.25
+P02,eegnet_style,17,strict,40,20,0.2
+P02,covariance,17,global_chronology,40,20,0.1
+P02,eegnet_style,17,global_chronology,40,20,0.2714285714285714

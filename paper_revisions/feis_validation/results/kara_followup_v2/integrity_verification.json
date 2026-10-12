@@ -1,0 +1,100 @@
+{
+  "all_checks_pass": true,
+  "score_rows": 156,
+  "real_prediction_rows": 2540,
+  "max_score_reconstruction_error": 5.551115123125783e-17,
+  "source_snapshot_verified": true,
+  "checks": [
+    {
+      "participant": "MM08",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM09",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM10",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM11",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM12",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM14",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM15",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM16",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM18",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM19",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM20",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "MM21",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    },
+    {
+      "participant": "P02",
+      "real_labels_verified": true,
+      "primary_and_global_trials_disjoint": true,
+      "inner_selection_train_only": true,
+      "cache_and_regression_hashes_verified": true
+    }
+  ]
+}

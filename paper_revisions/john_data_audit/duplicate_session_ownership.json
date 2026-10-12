@@ -1,0 +1,48 @@
+[
+  {
+    "pair": [
+      "DLR_27_2.txt",
+      "DLR_27_3.txt"
+    ],
+    "keep": "DLR_27_3.txt",
+    "exclude": "DLR_27_2.txt",
+    "evidence": [
+      {
+        "file": "DLR_27_2.txt",
+        "peer_start": 1679430688.243709,
+        "peer_end": 1679431886.853041,
+        "duplicate_within_peer_range": false
+      },
+      {
+        "file": "DLR_27_3.txt",
+        "peer_start": 1679432359.214391,
+        "peer_end": 1679433554.210499,
+        "duplicate_within_peer_range": true
+      }
+    ],
+    "inference": "Timestamp-consistent ownership; no task scores inspected."
+  },
+  {
+    "pair": [
+      "GTP003_2_2.txt",
+      "GTP003_2_3.txt"
+    ],
+    "keep": "GTP003_2_2.txt",
+    "exclude": "GTP003_2_3.txt",
+    "evidence": [
+      {
+        "file": "GTP003_2_2.txt",
+        "peer_start": 1686868024.066852,
+        "peer_end": 1686869244.3471,
+        "duplicate_within_peer_range": true
+      },
+      {
+        "file": "GTP003_2_3.txt",
+        "peer_start": 1686869450.556264,
+        "peer_end": 1686870675.666204,
+        "duplicate_within_peer_range": false
+      }
+    ],
+    "inference": "Timestamp-consistent ownership; no task scores inspected."
+  }
+]

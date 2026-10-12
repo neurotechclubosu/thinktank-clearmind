@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "source_files_verified": 46,
+  "csv_extractions_crc_and_sha256_verified": 43,
+  "prediction_rows_verified": 168483,
+  "score_rows_reconstructed": 3528,
+  "maximum_balanced_accuracy_reconstruction_error": 9.71445146547012e-17,
+  "donor_receipts_verified": 163260,
+  "donor_holdout_overlap": 0,
+  "synthetic_training_budgets_verified": true,
+  "initial_source_snapshot_hashes_verified": true,
+  "dataset_logical_bytes_on_D": 3039226423
+}

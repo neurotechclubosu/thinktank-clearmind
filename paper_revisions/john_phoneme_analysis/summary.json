@@ -1,0 +1,221 @@
+{
+  "exploratory": true,
+  "chance": 0.022727272727272728,
+  "gate_accuracy": 0.07272727272727272,
+  "participant_count": 4,
+  "primary": [
+    {
+      "family": "spectral",
+      "mean_balanced_accuracy": 0.020795454545454485,
+      "bootstrap_ci": [
+        0.008863636363636313,
+        0.032386363636363574
+      ],
+      "conditional_p": 0.626,
+      "above_chance_participants": 1,
+      "file_mean_accuracy": 0.019886363636363612,
+      "participants": {
+        "GTP000": {
+          "accuracy": 0.021818181818181757,
+          "conditional_p": 0.609
+        },
+        "GTP003": {
+          "accuracy": 0.0045454545454545,
+          "conditional_p": 0.997
+        },
+        "GTP004": {
+          "accuracy": 0.0363636363636363,
+          "conditional_p": 0.179
+        },
+        "GTP007": {
+          "accuracy": 0.0204545454545454,
+          "conditional_p": 0.71
+        }
+      },
+      "holm_p": 1.0,
+      "alignment_gate_pass": false
+    },
+    {
+      "family": "covariance",
+      "mean_balanced_accuracy": 0.021704545454545403,
+      "bootstrap_ci": [
+        0.019318181818181752,
+        0.02397727272727268
+      ],
+      "conditional_p": 0.607,
+      "above_chance_participants": 1,
+      "file_mean_accuracy": 0.021590909090909063,
+      "participants": {
+        "GTP000": {
+          "accuracy": 0.02090909090909086,
+          "conditional_p": 0.653
+        },
+        "GTP003": {
+          "accuracy": 0.0227272727272727,
+          "conditional_p": 1.0
+        },
+        "GTP004": {
+          "accuracy": 0.0181818181818181,
+          "conditional_p": 0.854
+        },
+        "GTP007": {
+          "accuracy": 0.024999999999999953,
+          "conditional_p": 0.459
+        }
+      },
+      "holm_p": 1.0,
+      "alignment_gate_pass": false
+    }
+  ],
+  "group_conditions": [
+    {
+      "condition": "different_day",
+      "family": "covariance",
+      "mean_balanced_accuracy": 0.019696969696969668,
+      "file_mean_accuracy": 0.022727272727272697,
+      "participants": 1
+    },
+    {
+      "condition": "different_day",
+      "family": "spectral",
+      "mean_balanced_accuracy": 0.025757575757575733,
+      "file_mean_accuracy": 0.007575757575757566,
+      "participants": 1
+    },
+    {
+      "condition": "harmonic",
+      "family": "spectral",
+      "mean_balanced_accuracy": 0.01874999999999994,
+      "file_mean_accuracy": 0.012499999999999985,
+      "participants": 4
+    },
+    {
+      "condition": "no_car",
+      "family": "covariance",
+      "mean_balanced_accuracy": 0.022954545454545425,
+      "file_mean_accuracy": 0.021590909090909063,
+      "participants": 4
+    },
+    {
+      "condition": "no_car",
+      "family": "spectral",
+      "mean_balanced_accuracy": 0.02124999999999994,
+      "file_mean_accuracy": 0.00909090909090908,
+      "participants": 4
+    },
+    {
+      "condition": "screened",
+      "family": "covariance",
+      "mean_balanced_accuracy": 0.021704545454545403,
+      "file_mean_accuracy": 0.021590909090909063,
+      "participants": 4
+    },
+    {
+      "condition": "screened",
+      "family": "spectral",
+      "mean_balanced_accuracy": 0.02079545454545449,
+      "file_mean_accuracy": 0.019886363636363612,
+      "participants": 4
+    },
+    {
+      "condition": "task",
+      "family": "covariance",
+      "mean_balanced_accuracy": 0.021704545454545403,
+      "file_mean_accuracy": 0.021590909090909063,
+      "participants": 4
+    },
+    {
+      "condition": "task",
+      "family": "spectral",
+      "mean_balanced_accuracy": 0.02079545454545449,
+      "file_mean_accuracy": 0.019886363636363612,
+      "participants": 4
+    },
+    {
+      "condition": "timing",
+      "family": "timing",
+      "mean_balanced_accuracy": 0.02409090909090903,
+      "file_mean_accuracy": 0.022159090909090892,
+      "participants": 4
+    },
+    {
+      "condition": "wait",
+      "family": "covariance",
+      "mean_balanced_accuracy": 0.034318181818181796,
+      "file_mean_accuracy": 0.032386363636363595,
+      "participants": 4
+    },
+    {
+      "condition": "wait",
+      "family": "spectral",
+      "mean_balanced_accuracy": 0.02409090909090902,
+      "file_mean_accuracy": 0.010227272727272715,
+      "participants": 4
+    }
+  ],
+  "task_control_differences": [
+    {
+      "family": "spectral",
+      "control": "wait",
+      "mean_task_minus_control_pp": -0.32954545454545325,
+      "bootstrap_ci_pp": [
+        -0.9659090909090885,
+        0.5227272727272729
+      ],
+      "participant_differences_pp": {
+        "GTP000": -0.6363636363636384,
+        "GTP003": -0.45454545454545003,
+        "GTP004": 0.9090909090909101,
+        "GTP007": -1.1363636363636347
+      }
+    },
+    {
+      "family": "spectral",
+      "control": "timing",
+      "mean_task_minus_control_pp": -0.32954545454545414,
+      "bootstrap_ci_pp": [
+        -1.25,
+        1.0795454545454548
+      ],
+      "participant_differences_pp": {
+        "GTP000": -0.6363636363636362,
+        "GTP003": -1.3636363636363602,
+        "GTP004": 1.81818181818182,
+        "GTP007": -1.1363636363636402
+      }
+    },
+    {
+      "family": "covariance",
+      "control": "wait",
+      "mean_task_minus_control_pp": -1.2613636363636396,
+      "bootstrap_ci_pp": [
+        -2.2272727272727297,
+        -0.590909090909094
+      ],
+      "participant_differences_pp": {
+        "GTP000": -0.7272727272727282,
+        "GTP003": -2.72727272727273,
+        "GTP004": -0.4545454545454599,
+        "GTP007": -1.1363636363636396
+      }
+    },
+    {
+      "family": "covariance",
+      "control": "timing",
+      "mean_task_minus_control_pp": -0.23863636363636276,
+      "bootstrap_ci_pp": [
+        -0.7045454545454555,
+        0.22727272727272996
+      ],
+      "participant_differences_pp": {
+        "GTP000": -0.7272727272727261,
+        "GTP003": 0.4545454545454599,
+        "GTP004": 0.0,
+        "GTP007": -0.6818181818181848
+      }
+    }
+  ],
+  "bootstrap_draws": 10000,
+  "conditional_draws": 999,
+  "interpretation": "Neither fixed task family meets the limited alignment gate. No augmentation/composition experiment is justified by this run."
+}

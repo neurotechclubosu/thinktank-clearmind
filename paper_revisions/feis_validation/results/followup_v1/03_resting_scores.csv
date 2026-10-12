@@ -1,0 +1,9 @@
+participant,phase,model,seed,screening,balanced_accuracy,n_train,n_test,selected_parameter
+03,resting,covariance,17,primary,0.08333333333333333,112,48,0.1
+03,resting,eegnet_style,17,primary,0.041666666666666664,112,48,30.0
+03,resting,eegnet_style,29,primary,0.08333333333333333,112,48,30.0
+03,resting,eegnet_style,43,primary,0.041666666666666664,112,48,30.0
+03,resting,mean_power_lda,17,primary,0.020833333333333332,112,48,
+03,resting,nuisance,17,primary,0.020833333333333332,112,48,0.01
+03,resting,covariance,17,strict,0.08333333333333333,112,48,0.1
+03,resting,eegnet_style,17,strict,0.041666666666666664,112,48,30.0

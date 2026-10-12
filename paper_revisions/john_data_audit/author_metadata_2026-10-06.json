@@ -1,0 +1,101 @@
+{
+  "clarification_received_local": "2026-10-06",
+  "source": "User relayed John response in this chat; author confirmation, not independently inspected acquisition log",
+  "verbatim_response": "1.\n\n1) Slides are the phones, as dialed by presentation. 2. Yes and yes. 3. You can see the order in text (the order I name them specifically in the paragraph in frontiers paper for FT). 4. Those refer to separate sessions (entire trials for all phonemes). Remove those glitch files, and you can simply stick to complete runs. ONe run per person is enough data on its own. mapo.txt was  a dummy file I made (useless). 5. No full words. No separate eye or muscle actions.\n\n1. What you see is what you get",
+  "confirmed": {
+    "recall_seconds": 2,
+    "wait_seconds": 1,
+    "matching_markers": "Beginning and end of each instructed recall",
+    "filename_suffix": "Separate acquisition sessions covering all phonemes",
+    "electrode_order": [
+      "Fp1",
+      "Fp2",
+      "F7",
+      "F3",
+      "F4",
+      "F8",
+      "T3",
+      "C3",
+      "C4",
+      "T4",
+      "T5",
+      "T6",
+      "P3",
+      "P4",
+      "O1",
+      "O2"
+    ],
+    "electrode_order_source": "https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2023.1306277/full",
+    "mapo": "Dummy, excluded",
+    "full_word_recordings_available": false,
+    "separate_eye_muscle_recordings_available": false
+  },
+  "stimulus_mapping": {
+    "status": "Author confirms presentation defines phone order; recovered phoneme deck is operational candidate; supplied16slide deck incompatibility remains documented",
+    "full_candidate_table": "stimulus_index_map.csv",
+    "exact_supplied_deck_equivalence_confirmed": false,
+    "arpabet_dialect_crosswalk_confirmed": false
+  },
+  "not_confirmed": {
+    "physical_units": null,
+    "amplifier_gain": null,
+    "physical_reference_ground": null,
+    "delivered_files_raw_or_preprocessed": null,
+    "cue_only_control_availability": null,
+    "continuous_sentence_availability": "No such recordings supplied; full words absent per author",
+    "subset_demographics": null,
+    "secondary_use_and_public_release_permissions": null
+  },
+  "prior_source_order": [
+    "Fp1",
+    "Fp2",
+    "F3",
+    "F4",
+    "T5",
+    "T6",
+    "O1",
+    "O2",
+    "F7",
+    "F8",
+    "C3",
+    "C4",
+    "T3",
+    "T4",
+    "P3",
+    "P4"
+  ],
+  "changed_channel_labels": 14,
+  "source_space_status": "v1.27 used differing channel assignment; do not treat existing spatial outputs as confirmed. Regenerate with new order and resolve reference/model assumptions.",
+  "one_run_sufficiency": "Author opinion; independent validation sufficiency not established by file counts.",
+  "complete_session_ids": {
+    "GTP000": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "GTP003": [
+      1,
+      2
+    ],
+    "GTP004": [
+      1,
+      3
+    ],
+    "GTP007": [
+      1,
+      2,
+      3
+    ]
+  },
+  "complete_sessions": 13,
+  "selected_files": 572,
+  "selected_marked_intervals": 2860,
+  "one_session_subset_files": 176,
+  "one_session_subset_intervals": 880,
+  "selection_policy": "All structurally complete sessions retained; earliest complete session per person offered as descriptive subset only. No models fit; no train/test roles assigned.",
+  "verification": "PASS:44indices/fivepairs per selected file; all2860 task hashes distinct; duplicate timestamp ownership unique",
+  "script_sha256": "11bb8be30dfe5d15c1c1c316d4ed4e554a443d66b6e2280a16ed88da02333f58"
+}

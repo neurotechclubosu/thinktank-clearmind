@@ -1,0 +1,222 @@
+[
+  {
+    "file": "DLR_0_1.txt",
+    "sha256": "d8d1f0c3bf6abef86be30295d3843c0809fd7f6c146c88298ae41dc92a742a1a",
+    "lf_git_blob_sha1": "3ce4200222f8322c4b39673f571ce35da0655010"
+  },
+  {
+    "file": "DLR_1_1.txt",
+    "sha256": "315c78a50e8e9d30a36e76787609ba2495c8c204cb0e6b9e16c7a11028da686e",
+    "lf_git_blob_sha1": "5ca9dbccf09b554e6f3a1730263b39b20397e6e7"
+  },
+  {
+    "file": "DLR_2_1.txt",
+    "sha256": "b8483be459413541cbe0b75e263d0e210189e998f5eac0692120de2fb8b4dd07",
+    "lf_git_blob_sha1": "d66502631e21e14ac8e6b3321392ce00485d53c8"
+  },
+  {
+    "file": "DLR_3_1.txt",
+    "sha256": "1cdd7c808ae3e688f91f75c64907e03b430d17bb304a909e0addae62e30c31a3",
+    "lf_git_blob_sha1": "14b7a28c791e4b226203906f539f7d3186c4bcbe"
+  },
+  {
+    "file": "DLR_4_1.txt",
+    "sha256": "8590398b5d27f1d965b654008df3ca729987654d18496f482aa656db26dee38e",
+    "lf_git_blob_sha1": "e7b293d7aa62205bff2844e9213e7fda95b6ecd0"
+  },
+  {
+    "file": "DLR_5_1.txt",
+    "sha256": "d6d782468314fdbb32c17aa0946b8e2c6d9e175add18fbd4f6c0d1b7820cab92",
+    "lf_git_blob_sha1": "15609125c42d3a34fcb2961bf3580cbc8ec604c7"
+  },
+  {
+    "file": "DLR_6_1.txt",
+    "sha256": "070d18206b88fc574492a81dc4d52c6c12516940ba88fc304a1a9608a24666a1",
+    "lf_git_blob_sha1": "f67c23780826f6456a3a0d93f4e27b2377578658"
+  },
+  {
+    "file": "DLR_7_1.txt",
+    "sha256": "1e560e4cf1bf23b5326d7cb5bf215e13dd9c577c62da0e391308c1f9a367381d",
+    "lf_git_blob_sha1": "715229722f5afbad0ae3ae0df3bfda4edd001a16"
+  },
+  {
+    "file": "DLR_8_1.txt",
+    "sha256": "0f14bc806de4e64ac8e0c0a8e2f977119e8e8ca080bc48c3f8ded59cc5d83c0d",
+    "lf_git_blob_sha1": "ca06b47afa6e29f5669538eb82530ac7039f0431"
+  },
+  {
+    "file": "DLR_9_1.txt",
+    "sha256": "0bda1bc4ffbc6b30843f39ce0411f402b892df2e9391f356432370e0190c278d",
+    "lf_git_blob_sha1": "ee27bbb3e9de1d6e94aaf4185ce49884754eec7b"
+  },
+  {
+    "file": "DLR_10_1.txt",
+    "sha256": "72bd71ba01c5b5683d5fd6ab2ee33fff99c9846367e5641cefe52ebf509c166f",
+    "lf_git_blob_sha1": "71da65b9b6197bef8e65aca7c355fac91fc26c59"
+  },
+  {
+    "file": "DLR_11_1.txt",
+    "sha256": "65b9e6fe2fa4a150377f3d24c507e222ce11453d7fa3f120381afb39588e4810",
+    "lf_git_blob_sha1": "cf5c656521ec27cc890a2328ecc96fee8e4e5bf7"
+  },
+  {
+    "file": "DLR_12_1.txt",
+    "sha256": "927a2e5dabca60a6bde9fecb881b8a3bdb74949764241e1c8cdaecc0c63ea4a1",
+    "lf_git_blob_sha1": "f2449bba2e8f138dfa6212330811e5753647fc03"
+  },
+  {
+    "file": "DLR_13_1.txt",
+    "sha256": "6f7294f3d0d3196ba37b2064ca9935d2b42a659885d1ff377f30447b4b7774f1",
+    "lf_git_blob_sha1": "9e2a41d1153dfc314b6dc7d48871d39e23345592"
+  },
+  {
+    "file": "DLR_14_1.txt",
+    "sha256": "142673d6f6b9669e8121690cfd5b5b7edaf41b60dc24d5e5df9be3a4dc195d5a",
+    "lf_git_blob_sha1": "0a00c5fa62afb99a8c4066dc4562c6b1084001b3"
+  },
+  {
+    "file": "DLR_15_1.txt",
+    "sha256": "bdc04c37cc2b5eb1512a045a7b4a9d219accb1441f6a3d0778b6ea6916a7a769",
+    "lf_git_blob_sha1": "c27a57becba35442677eb7159a5317ac2075627d"
+  },
+  {
+    "file": "DLR_16_1.txt",
+    "sha256": "05768a3657f1ff1b48b33f251473f3ed7a53d585f490ff39e0a7b6ace4b03cc3",
+    "lf_git_blob_sha1": "d710f8cbc079636fe53ed0cf6c5e3cd1a86055e5"
+  },
+  {
+    "file": "DLR_17_1.txt",
+    "sha256": "fc77f06e9e0de2087b6d14798bbadc95f9da997cdda00f12baf231ee21eb1b57",
+    "lf_git_blob_sha1": "8341bb9461db64d821d99fd5229ccf6a4c25b3e3"
+  },
+  {
+    "file": "DLR_18_1.txt",
+    "sha256": "46b6c35555b5908eb7caec7415a553ae72ec92788156e35281b84102b91fea57",
+    "lf_git_blob_sha1": "0b3622f8985bd896ff18b974f3a844c2cca16f17"
+  },
+  {
+    "file": "DLR_19_1.txt",
+    "sha256": "bc4a6793c8ba60353e574d94e2890ce28c29f74c2980ea8e67c9066d6aa6e809",
+    "lf_git_blob_sha1": "262e20391053209dffc51cf78d4604224cd9d0b7"
+  },
+  {
+    "file": "DLR_20_1.txt",
+    "sha256": "4e5a0d227fe77519d66048d1329aa2859143e3d1258d97dd53788a5668ad2409",
+    "lf_git_blob_sha1": "0a947c223233c25f68e2e4cd4b969765ab061f59"
+  },
+  {
+    "file": "DLR_21_1.txt",
+    "sha256": "b699243eeca3b03c64994a38652b857699e978c985cea031216696d45c4c3540",
+    "lf_git_blob_sha1": "06374a741cf495a102e3cf4c8862e8234d744505"
+  },
+  {
+    "file": "DLR_22_1.txt",
+    "sha256": "59f0d151032b8c237323e028635a21fb9e5739f8ea0f23079a52e5fb5d4c0e15",
+    "lf_git_blob_sha1": "11db8f195110b97c541be743f75a999d34a9b093"
+  },
+  {
+    "file": "DLR_23_1.txt",
+    "sha256": "b418070ded4f2cbd2ab8e0a2292f5e64bccb8827ebac9fad409dbf104cdd5ed3",
+    "lf_git_blob_sha1": "4e7e884a0ddcce25f2b374f843748e74008d66d4"
+  },
+  {
+    "file": "DLR_24_1.txt",
+    "sha256": "0af53e760978c2b0a10dd5a9d985b0e2c85812abb69f0b43f4bbcd468d7f3ae4",
+    "lf_git_blob_sha1": "26096a6ebb06a8ed92b1617d7ec8078c19ffb50f"
+  },
+  {
+    "file": "DLR_25_1.txt",
+    "sha256": "874bc14795ea25cee91ee9973a6e4499ca6dd53bde8c5515c9b1b37526a3ff4e",
+    "lf_git_blob_sha1": "7ca616621d5a8c70b242873fa73afe15b6de039b"
+  },
+  {
+    "file": "DLR_26_1.txt",
+    "sha256": "1b4a5bce849c78964993a24ab003a3541f4cefa951f5de1f519077a9cf64abed",
+    "lf_git_blob_sha1": "cc8a9a97fd2ffe083ee8db0213708b2a2857ed1a"
+  },
+  {
+    "file": "DLR_27_1.txt",
+    "sha256": "38cf6e08cef55c41cdffcce10d5f35a24c49168a85c2a78534610f95c2e79ac4",
+    "lf_git_blob_sha1": "7190d7ca3848d4cfa5c6048729c5e36bfa49e9c8"
+  },
+  {
+    "file": "DLR_28_1.txt",
+    "sha256": "da7b8d2cca8e5f4d067794937fa1c3e79ccc97158f6b17f5fb66fef9d19d42ff",
+    "lf_git_blob_sha1": "3a86a3d3b16b8515f38392a79cd8be57143de7cc"
+  },
+  {
+    "file": "DLR_29_1.txt",
+    "sha256": "0becf59691cd19fddc204d45a192beb4708293eab7f696ba468f937950dd43f8",
+    "lf_git_blob_sha1": "72691283fecd672eaef2503ba5249b5225fb1c81"
+  },
+  {
+    "file": "DLR_30_1.txt",
+    "sha256": "7bb92a9d561c2bc1b5b2992d455c9c755d8710d1e44659653fa88e9d896c766d",
+    "lf_git_blob_sha1": "392cf8d29f4caff0d4c902df85f5bb401e98453a"
+  },
+  {
+    "file": "DLR_31_1.txt",
+    "sha256": "867859ef59ba47234b9faf52ce3ac5da612aedb219d23a4d003fc7c3e9023403",
+    "lf_git_blob_sha1": "dfa324c0490101f37c3b9c22cdb6d4868ff5fc74"
+  },
+  {
+    "file": "DLR_32_1.txt",
+    "sha256": "f88131fe3d8df9bb3c5feddec35efd1c661385bf16af32d3f4584f7a63731dcb",
+    "lf_git_blob_sha1": "0ede6292395a5fd8f9092ce0e778060a89564fb2"
+  },
+  {
+    "file": "DLR_33_1.txt",
+    "sha256": "8f52deb6f0bb8817cecdea19f07b173bcc9a0022cf8ee979bf1dd3810b614221",
+    "lf_git_blob_sha1": "0b4570e3315e99c49235daa95df252d2bc5f15e4"
+  },
+  {
+    "file": "DLR_34_1.txt",
+    "sha256": "f11092c63f27cd883c67d9e884e363c88a37fd0eaa90fb645ebe36135b2d5571",
+    "lf_git_blob_sha1": "55ea8f84017987fba1e916a304bc1e1d85a1f784"
+  },
+  {
+    "file": "DLR_35_1.txt",
+    "sha256": "55f4276ddbf8c85ff4c673337cd497061da1b12f5b82e6b87536dccdd6dff8dd",
+    "lf_git_blob_sha1": "1604b7cc45cefaf35c70b0f1c77a687da568c61e"
+  },
+  {
+    "file": "DLR_36_1.txt",
+    "sha256": "cf12bbfdb45ad6d4201463c923f13646fa527ff6080d15fba7425b67ff78faee",
+    "lf_git_blob_sha1": "92497ad7d174eaf4b90c71552b179d0a89fc612c"
+  },
+  {
+    "file": "DLR_37_1.txt",
+    "sha256": "bcaf52ed2f0cceb5752b77bafa77fc5e0b05d2ad7d26a95a835644156a9c6233",
+    "lf_git_blob_sha1": "b99f77d5d92b5bc2bbf026d8460f7a9cb4d9c867"
+  },
+  {
+    "file": "DLR_38_1.txt",
+    "sha256": "d2712dde8ea20c546dff1d6005037dc89b6cab9357de313134d6092b029e9073",
+    "lf_git_blob_sha1": "694af84c93a7e53c2695119a1188bea3ec50e95e"
+  },
+  {
+    "file": "DLR_39_1.txt",
+    "sha256": "1ddbaf4a2be595a454a7014a7906cfb9673b02c8b2eea4245d62503274937daf",
+    "lf_git_blob_sha1": "8d82994f6babd23881d159f1b6557f5e39301812"
+  },
+  {
+    "file": "DLR_40_1.txt",
+    "sha256": "aaea691dbca073fbf47fb354fcba9b826d059cba2ca82b33d3366ded786ccc63",
+    "lf_git_blob_sha1": "e9a53e99f36db4b9d24feca34edd9dd9fd8f947d"
+  },
+  {
+    "file": "DLR_41_1.txt",
+    "sha256": "fbe295cf8b39d663629268237518af436eeaefa9e113b4b19b8dee56f593f0f1",
+    "lf_git_blob_sha1": "ca3fcffad19acc18a76a98da3d7acc912bf5f543"
+  },
+  {
+    "file": "DLR_42_1.txt",
+    "sha256": "911de8236134381d41565283f633d50a07779b8886c50759ef6c60bd225e7461",
+    "lf_git_blob_sha1": "e933d7d4fc9c725414471db3cf05b14646e18cbe"
+  },
+  {
+    "file": "DLR_43_1.txt",
+    "sha256": "8dd298f6c14d4f6706590e22908a060a22b93e4fd75523b650554d8d8d9d29ff",
+    "lf_git_blob_sha1": "515471096b82b512565124d2e018486ff1db184e"
+  }
+]

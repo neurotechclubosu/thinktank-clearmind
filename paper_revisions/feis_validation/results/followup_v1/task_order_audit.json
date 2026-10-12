@@ -1,0 +1,155 @@
+{
+  "status": "supplementary audit after baseline run; not a selected primary classifier",
+  "same_trial_id_to_label_mapping_as_participant01": {
+    "01": true,
+    "02": true,
+    "03": true,
+    "04": true,
+    "05": true,
+    "06": true,
+    "07": true,
+    "08": true,
+    "09": true,
+    "10": true,
+    "11": true,
+    "12": true,
+    "13": true,
+    "14": true,
+    "15": true,
+    "16": true,
+    "17": true,
+    "18": true,
+    "19": true,
+    "20": true,
+    "21": true
+  },
+  "order_only_controls": [
+    {
+      "participant": "01",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "02",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "03",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "04",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "05",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "06",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "07",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "08",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "09",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "10",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "11",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "12",
+      "trials": 112,
+      "order_only_mod16_accuracy": 0.125,
+      "order_only_mod32_accuracy": 0.14583333333333334
+    },
+    {
+      "participant": "13",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "14",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "15",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "16",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "17",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "18",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "19",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "20",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    },
+    {
+      "participant": "21",
+      "trials": 160,
+      "order_only_mod16_accuracy": 0.10416666666666667,
+      "order_only_mod32_accuracy": 0.041666666666666664
+    }
+  ],
+  "caution": "Shared scheduling across participants is not independent biological evidence. Modulo lookups use training labels only; chosen diagnostic periods16/32 are exploratory. Conditional permutation assumes within-block exchangeability."
+}

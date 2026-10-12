@@ -1,0 +1,13 @@
+{
+  "file": "thinkTankPaper.v1.26.doc",
+  "sha256": "a799cb64111d16374a1ac612ec7c61ea6a513b05a86d83145a3a5c06baedfc09",
+  "nFib": 101,
+  "streams": [
+    "\u0001CompObj",
+    "\u0001Ole",
+    "\u0005SummaryInformation",
+    "WordDocument",
+    "\u0005DocumentSummaryInformation"
+  ],
+  "extraction": "Word 6/95 fcMin:fcMac cp1252"
+}

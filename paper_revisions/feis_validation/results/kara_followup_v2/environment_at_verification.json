@@ -1,0 +1,12 @@
+{
+  "checked_at_verification": true,
+  "python": "3.11.0",
+  "numpy": "2.4.3",
+  "pandas": "3.0.3",
+  "scipy": "1.17.1",
+  "sklearn": "1.8.0",
+  "torch": "2.10.0+cu128",
+  "mne": "1.12.1",
+  "device": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "note": "Same system environment as the run; no packages changed during evaluation."
+}

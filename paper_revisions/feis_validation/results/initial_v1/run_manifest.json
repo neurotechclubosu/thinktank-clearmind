@@ -1,0 +1,61 @@
+{
+  "started_utc": "2026-10-04T01:05:32.118888+00:00",
+  "protocol_sha256": "526587af68c150a0272171323ddf5528ca00e286b39adc6dc42fad7b06924c45",
+  "protocol_path": "C:\\Personal_Coding\\thinktank-clearmind\\research\\feis_validation\\PROTOCOL.md",
+  "data_root": "D:\\ResearchData\\thinktank-clearmind\\FEIS\\v1.1",
+  "participants": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+  ],
+  "permutations_per_participant_phase": 100,
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "versions": {
+    "python": "3.11.0",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "pandas": "3.0.3",
+    "sklearn": "1.8.0"
+  },
+  "source_code_sha256": {
+    "benchmark.py": "c8973fdccb9a01771703e435df9a24ec25e0f4f183931a039a299643d3be897c",
+    "data.py": "e63c20a3ad78bf4fe51ccbdc6f3c472fff8c01c1bc23f046cd47f41054662c31",
+    "download.py": "15cfe375037aecae279fec5c99fbf05421811aca49c573cd7d4f8dd368893466",
+    "features.py": "6cfacde583031b3568e83da8cb9558da4690cd84148cc1ac9c71efdb515ece35",
+    "summarize.py": "342172fd071716b05846332308fd67a6d8622299a72aaf58e3d16a5a6674f14d",
+    "test_validation.py": "66e7e88fcc809892e58458372e85b29000d159dbc80806dda17e0fb2875d0478",
+    "__init__.py": "792d206bdb6d82f3ad4ee03ed5bcc7a7dd67bb35b7c8f813ad16b3aa2c91f45c"
+  },
+  "predictions_path": "D:\\ResearchData\\thinktank-clearmind\\FEIS\\v1.1\\analysis\\initial_v1\\predictions.csv",
+  "donor_receipts_path": "D:\\ResearchData\\thinktank-clearmind\\FEIS\\v1.1\\analysis\\initial_v1\\donor_receipts.jsonl",
+  "status": "complete",
+  "audit_only": false,
+  "completed_utc": "2026-10-04T01:08:05.808084+00:00",
+  "score_rows": 3528,
+  "null_rows": 4200,
+  "issue_count": 0,
+  "predictions_sha256": "56865b686397e3576826152adf8f754c76cd4b95668d9d920fb074a4bb6fb5dd",
+  "donor_receipts_sha256": "f1aa7b25e2d4e0d3bd6c59a02fe8286370a7aeeb8061cc7931aafb7747895ab7"
+}

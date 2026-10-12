@@ -1,5 +1,7 @@
 # thinktank-clearmind
 
+> **Research update, 12 October 2026:** [Revision drafts and completed EEG analyses](paper_revisions/README.md) are now included. They narrow the claims to text-guided composition and illustrative modeling. The original GUI descriptions and recording assumptions below are historical; use the audited protocols for current analysis. The working manuscript still needs corrected spatial assignments and author verification before submission.
+
 Turns a sentence into a synthetic EEG recording, derives neurovascular and
 metabolic variables from it, and renders the result as a 3D brain animation.
 

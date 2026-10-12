@@ -1,0 +1,438 @@
+{
+  "10.1109/TIM.2024.3472830": {
+    "title": [
+      "Imagined Speech Reconstruction From Neural Signals\u2014An Overview of Sources and Methods"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0008-5550-4261",
+        "authenticated-orcid": false,
+        "given": "Jiye",
+        "family": "Tang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Software, Dalian University of Technology, Dalian, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4745-8361",
+        "authenticated-orcid": false,
+        "given": "Junxin",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software, Dalian University of Technology, Dalian, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-3934-9096",
+        "authenticated-orcid": false,
+        "given": "Xu",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Software, Dalian University of Technology, Dalian, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8849-5228",
+        "authenticated-orcid": false,
+        "given": "Aiping",
+        "family": "Liu",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information Science and Technology, University of Science and Technology of China, Hefei, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-4922-8116",
+        "authenticated-orcid": false,
+        "given": "Xun",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Information Science and Technology, University of Science and Technology of China, Hefei, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "volume": "73",
+    "page": "1-21",
+    "article-number": null
+  },
+  "10.3389/fninf.2023.1306277": {
+    "title": [
+      "Evaluation of an English language phoneme-based imagined speech brain computer interface with low-cost electroencephalography"
+    ],
+    "author": [
+      {
+        "given": "John",
+        "family": "LaRocco",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qudsia",
+        "family": "Tahmina",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Sam",
+        "family": "Lecian",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jason",
+        "family": "Moore",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Cole",
+        "family": "Helbig",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Surya",
+        "family": "Gupta",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          12,
+          18
+        ]
+      ]
+    },
+    "volume": "17",
+    "page": null,
+    "article-number": "1306277"
+  },
+  "10.1111/jnc.15839": {
+    "title": [
+      "Neurovascular coupling is optimized to compensate for the increase in proton production from nonoxidative glycolysis and glycogenolysis during brain activation and maintain homeostasis of pH, <i>p</i>CO<sub>2</sub>, and <i>p</i>O<sub>2</sub>"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-0181-5597",
+        "authenticated-orcid": false,
+        "given": "Mauro",
+        "family": "DiNuzzo",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Centro Ricerche Enrico Fermi  Rome Italy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8887-3057",
+        "authenticated-orcid": false,
+        "given": "Gerald A.",
+        "family": "Dienel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Neurology University of Arkansas for Medical Sciences  Little Rock Arkansas USA"
+          },
+          {
+            "name": "Department of Cell Biology and Physiology University of New Mexico School of Medicine  Albuquerque New Mexico USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-1467-0446",
+        "authenticated-orcid": false,
+        "given": "Kevin L.",
+        "family": "Behar",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Psychiatry Yale University School of Medicine  New Haven Connecticut USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2841-1533",
+        "authenticated-orcid": false,
+        "given": "Ognen A.",
+        "family": "Petroff",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Neurology Yale University School of Medicine  New Haven Connecticut USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-2887-6667",
+        "authenticated-orcid": false,
+        "given": "Helene",
+        "family": "Benveniste",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Anesthesiology Yale University  New Haven Connecticut USA"
+          },
+          {
+            "name": "Department of Biomedical Engineering Yale University  New Haven Connecticut USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7822-4002",
+        "authenticated-orcid": false,
+        "given": "Fahmeed",
+        "family": "Hyder",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Biomedical Engineering Yale University  New Haven Connecticut USA"
+          },
+          {
+            "name": "Department of Radiology, Magnetic Resonance Research Center (MRRC) Yale University  New Haven Connecticut USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-6934-3146",
+        "authenticated-orcid": false,
+        "given": "Federico",
+        "family": "Giove",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centro Ricerche Enrico Fermi  Rome Italy"
+          },
+          {
+            "name": "Fondazione Santa Lucia IRCCS  Rome Italy"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5426-8369",
+        "authenticated-orcid": false,
+        "given": "Shalom",
+        "family": "Michaeli",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Radiology, Center for Magnetic Resonance Research (CMRR) University of Minnesota  Minneapolis Minnesota USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6341-4516",
+        "authenticated-orcid": false,
+        "given": "Silvia",
+        "family": "Mangia",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Radiology, Center for Magnetic Resonance Research (CMRR) University of Minnesota  Minneapolis Minnesota USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1765-3599",
+        "authenticated-orcid": false,
+        "given": "Suzana",
+        "family": "Herculano\u2010Houzel",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Psychology Vanderbilt University  Nashville Tennessee USA"
+          },
+          {
+            "name": "Department of Biological Sciences Vanderbilt University  Nashville Tennessee USA"
+          },
+          {
+            "name": "Vanderbilt Brain Institute Vanderbilt University  Nashville Tennessee USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9321-4195",
+        "authenticated-orcid": false,
+        "given": "Douglas L.",
+        "family": "Rothman",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Biomedical Engineering Yale University  New Haven Connecticut USA"
+          },
+          {
+            "name": "Department of Radiology, Magnetic Resonance Research Center (MRRC) Yale University  New Haven Connecticut USA"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          6,
+          21
+        ]
+      ]
+    },
+    "volume": "168",
+    "page": "632-662",
+    "article-number": null
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "all_checks_pass": true,
+  "archives": 14,
+  "archive_bytes": 24824165739,
+  "listed_extracted_files_verified": 151,
+  "additional_delivery_metadata_receipts_verified": 12,
+  "publisher_authenticated_checksums": false,
+  "checksum_scope": "Stored local download receipts and extracted bytes; source TLS/ETag/size logged at acquisition; no publisher checksum supplied.",
+  "checks": [
+    {
+      "participant": "MM05",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 8
+    },
+    {
+      "participant": "MM08",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 9
+    },
+    {
+      "participant": "MM09",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM10",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM11",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM12",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM14",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM15",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM16",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM18",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM19",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM20",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "MM21",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 11
+    },
+    {
+      "participant": "P02",
+      "archive_sha256_verified": true,
+      "listed_extractions_verified": 13
+    }
+  ]
+}

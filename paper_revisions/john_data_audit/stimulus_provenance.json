@@ -1,0 +1,444 @@
+{
+  "supplied": {
+    "sha256": "79155070b19ba4587285ef3f740bef9d6be623eb50daa587d807a353e80a5909",
+    "slides": [
+      {
+        "slide": 1,
+        "text": "Stimulus Presentation | Created by:  | Team #9 | 1"
+      },
+      {
+        "slide": 2,
+        "text": "There are a total of 6 pairs of |  images | Each Image will be tested 10  | times | NOTE:  | Try not to  | move.  | If you must move or shift during the test make sure it is during the wait or the image slides. | 2 | Rules"
+      },
+      {
+        "slide": 3,
+        "text": "3"
+      },
+      {
+        "slide": 4,
+        "text": "4"
+      },
+      {
+        "slide": 5,
+        "text": "5"
+      },
+      {
+        "slide": 6,
+        "text": "6"
+      },
+      {
+        "slide": 7,
+        "text": "7"
+      },
+      {
+        "slide": 8,
+        "text": "8"
+      },
+      {
+        "slide": 9,
+        "text": "9"
+      },
+      {
+        "slide": 10,
+        "text": "10"
+      },
+      {
+        "slide": 11,
+        "text": "11"
+      },
+      {
+        "slide": 12,
+        "text": "12"
+      },
+      {
+        "slide": 13,
+        "text": "13"
+      },
+      {
+        "slide": 14,
+        "text": "14"
+      },
+      {
+        "slide": 15,
+        "text": "Wait | 15"
+      },
+      {
+        "slide": 16,
+        "text": "16"
+      }
+    ],
+    "count": 16
+  },
+  "recovered": {
+    "sha256": "9b0fca0549c58027afc9d36b68464ad211c8af403f40e55e5f4028a35ec20f48",
+    "slides": [
+      {
+        "slide": 1,
+        "text": "Stimulus Presentation | Created by: The Ghostbusters | 1"
+      },
+      {
+        "slide": 2,
+        "text": "Each Phoneme will appear 5 times. | For each slide think of the phoneme only once. | NOTE: If you must move or shift during the test make sure it is during  | the wait  | or the  | sounds slides. | 2 | Rules"
+      },
+      {
+        "slide": 3,
+        "text": "i: | F | ee | l | R | ea | d | 3"
+      },
+      {
+        "slide": 4,
+        "text": "I | Un | i | t | W | i | nd | 4"
+      },
+      {
+        "slide": 5,
+        "text": "ʊ | P | u | t | L | oo | k | 5"
+      },
+      {
+        "slide": 6,
+        "text": "u: | N | oo | n | Bl | u | e | 6"
+      },
+      {
+        "slide": 7,
+        "text": "e | B | e | d | D | e | sk | 7"
+      },
+      {
+        "slide": 8,
+        "text": "ᵊ | A | gain | Und | e | r | 8"
+      },
+      {
+        "slide": 9,
+        "text": "3: | W | or | k | B | ur | n | 9"
+      },
+      {
+        "slide": 10,
+        "text": "ɔː | R | oa | r | M | o | rning | 10"
+      },
+      {
+        "slide": 11,
+        "text": "æ | B | a | d | L | au | gh | 11"
+      },
+      {
+        "slide": 12,
+        "text": "ᴧ | N | u | t | C | u | t | 12"
+      },
+      {
+        "slide": 13,
+        "text": "ɑː | D | ar | k | Ar | e | 13"
+      },
+      {
+        "slide": 14,
+        "text": "ɒ | N | o | t | W | a | sh | 14"
+      },
+      {
+        "slide": 15,
+        "text": "ɪə | R | ea | l | B | ee | r | 15"
+      },
+      {
+        "slide": 16,
+        "text": "eɪ | S | a | y | T | a | ble | 16"
+      },
+      {
+        "slide": 17,
+        "text": "ʊə | T | ou | r | J | u | ry | 17"
+      },
+      {
+        "slide": 18,
+        "text": "ɔɪ | B | oy | N | oi | se | 18"
+      },
+      {
+        "slide": 19,
+        "text": "əʊ | C | oa | t | Fl | ow | 19"
+      },
+      {
+        "slide": 20,
+        "text": "eə | Wh | ere | Th | eir | 20"
+      },
+      {
+        "slide": 21,
+        "text": "aɪ | F | i | ve | M | y | 21"
+      },
+      {
+        "slide": 22,
+        "text": "aʊ | H | ow | Cl | ou | d | 22"
+      },
+      {
+        "slide": 23,
+        "text": "p | P | en | Hel | p | 23"
+      },
+      {
+        "slide": 24,
+        "text": "f | F | ine | Gi | f | t | 24"
+      },
+      {
+        "slide": 25,
+        "text": "t | Ho | t | el | T | ree | 25"
+      },
+      {
+        "slide": 26,
+        "text": "ɵ | Th | ink | No | th | ing | 26"
+      },
+      {
+        "slide": 27,
+        "text": "ʧ | Ea | ch | Mu | ch | 27"
+      },
+      {
+        "slide": 28,
+        "text": "s | S | it | Pla | c | e | 28"
+      },
+      {
+        "slide": 29,
+        "text": "ʃ | Sh | ip | Fi | sh | 29"
+      },
+      {
+        "slide": 30,
+        "text": "k | C | old | Par | k | 30"
+      },
+      {
+        "slide": 31,
+        "text": "b | B | eef | B | ath | 31"
+      },
+      {
+        "slide": 32,
+        "text": "v | V | ery | Se | v | en | 32"
+      },
+      {
+        "slide": 33,
+        "text": "d | D | ay | Kin | d | 33"
+      },
+      {
+        "slide": 34,
+        "text": "ð | The | n | Wea | the | r | 34"
+      },
+      {
+        "slide": 35,
+        "text": "ʤ | A | g | e | Langua | g | e | 35"
+      },
+      {
+        "slide": 36,
+        "text": "z | Z | ero | Z | oo | 36"
+      },
+      {
+        "slide": 37,
+        "text": "ʒ | Plea | s | ure | Mea | s | ure | 37"
+      },
+      {
+        "slide": 38,
+        "text": "ɡ | G | old | Ba | g | 38"
+      },
+      {
+        "slide": 39,
+        "text": "h | H | is | H | ere | 39"
+      },
+      {
+        "slide": 40,
+        "text": "m | M | an | Swi | m | 40"
+      },
+      {
+        "slide": 41,
+        "text": "n | N | ame | Fi | n | ish | 41"
+      },
+      {
+        "slide": 42,
+        "text": "ŋ | Si | ng | Thi | ng | 42"
+      },
+      {
+        "slide": 43,
+        "text": "r | R | ed | Ve | r | y | 43"
+      },
+      {
+        "slide": 44,
+        "text": "l | L | ong | Fu | ll | 44"
+      },
+      {
+        "slide": 45,
+        "text": "w | W | ill | W | indow | 45"
+      },
+      {
+        "slide": 46,
+        "text": "j | Y | ear | Y | es | 46"
+      },
+      {
+        "slide": 47,
+        "text": "Wait | 47"
+      },
+      {
+        "slide": 48,
+        "text": "i: | F | ee | l | R | ea | d | 48"
+      },
+      {
+        "slide": 49,
+        "text": "I | Un | i | t | W | i | nd | 49"
+      },
+      {
+        "slide": 50,
+        "text": "ʊ | P | u | t | L | oo | k | 50"
+      },
+      {
+        "slide": 51,
+        "text": "u: | N | oo | n | Bl | u | e | 51"
+      },
+      {
+        "slide": 52,
+        "text": "e | B | e | d | D | e | sk | 52"
+      },
+      {
+        "slide": 53,
+        "text": "ᵊ | A | gain | Und | e | r | 53"
+      },
+      {
+        "slide": 54,
+        "text": "3: | W | or | k | B | ur | n | 54"
+      },
+      {
+        "slide": 55,
+        "text": "ɔː | R | oa | r | M | o | rning | 55"
+      },
+      {
+        "slide": 56,
+        "text": "æ | B | a | d | L | au | gh | 56"
+      },
+      {
+        "slide": 57,
+        "text": "ᴧ | N | u | t | C | u | t | 57"
+      },
+      {
+        "slide": 58,
+        "text": "ɑː | D | ar | k | Ar | e | 58"
+      },
+      {
+        "slide": 59,
+        "text": "ɒ | N | o | t | W | a | sh | 59"
+      },
+      {
+        "slide": 60,
+        "text": "ɪə | R | ea | l | B | ee | r | 60"
+      },
+      {
+        "slide": 61,
+        "text": "eɪ | S | a | y | T | a | ble | 61"
+      },
+      {
+        "slide": 62,
+        "text": "ʊə | T | ou | r | J | u | ry | 62"
+      },
+      {
+        "slide": 63,
+        "text": "ɔɪ | B | oy | N | oi | se | 63"
+      },
+      {
+        "slide": 64,
+        "text": "əʊ | C | oa | t | Fl | ow | 64"
+      },
+      {
+        "slide": 65,
+        "text": "eə | Wh | ere | Th | eir | 65"
+      },
+      {
+        "slide": 66,
+        "text": "aɪ | F | i | ve | M | y | 66"
+      },
+      {
+        "slide": 67,
+        "text": "aʊ | H | ow | Cl | ou | d | 67"
+      },
+      {
+        "slide": 68,
+        "text": "p | P | en | Hel | p | 68"
+      },
+      {
+        "slide": 69,
+        "text": "f | F | ine | Gi | f | t | 69"
+      },
+      {
+        "slide": 70,
+        "text": "t | Ho | t | el | T | ree | 70"
+      },
+      {
+        "slide": 71,
+        "text": "ɵ | Th | ink | No | th | ing | 71"
+      },
+      {
+        "slide": 72,
+        "text": "ʧ | Ea | ch | Mu | ch | 72"
+      },
+      {
+        "slide": 73,
+        "text": "s | S | it | Pla | c | e | 73"
+      },
+      {
+        "slide": 74,
+        "text": "ʃ | Sh | ip | Fi | sh | 74"
+      },
+      {
+        "slide": 75,
+        "text": "k | C | old | Par | k | 75"
+      },
+      {
+        "slide": 76,
+        "text": "b | B | eef | B | ath | 76"
+      },
+      {
+        "slide": 77,
+        "text": "v | V | ery | Se | v | en | 77"
+      },
+      {
+        "slide": 78,
+        "text": "d | D | ay | Kin | d | 78"
+      },
+      {
+        "slide": 79,
+        "text": "ð | The | n | Wea | the | r | 79"
+      },
+      {
+        "slide": 80,
+        "text": "ʤ | A | g | e | Langua | g | e | 80"
+      },
+      {
+        "slide": 81,
+        "text": "z | Z | ero | Z | oo | 81"
+      },
+      {
+        "slide": 82,
+        "text": "ʒ | Plea | s | ure | Mea | s | ure | 82"
+      },
+      {
+        "slide": 83,
+        "text": "ɡ | G | old | Ba | g | 83"
+      },
+      {
+        "slide": 84,
+        "text": "h | H | is | H | ere | 84"
+      },
+      {
+        "slide": 85,
+        "text": "m | M | an | Swi | m | 85"
+      },
+      {
+        "slide": 86,
+        "text": "n | N | ame | Fi | n | ish | 86"
+      },
+      {
+        "slide": 87,
+        "text": "ŋ | Si | ng | Thi | ng | 87"
+      },
+      {
+        "slide": 88,
+        "text": "r | R | ed | Ve | r | y | 88"
+      },
+      {
+        "slide": 89,
+        "text": "l | L | ong | Fu | ll | 89"
+      },
+      {
+        "slide": 90,
+        "text": "w | W | ill | W | indow | 90"
+      },
+      {
+        "slide": 91,
+        "text": "j | Y | ear | Y | es | 91"
+      }
+    ],
+    "count": 91
+  },
+  "script_sha256": "8912ba288823798d27e1738bcbd9708c99a8635598179c2d9ba4045e6aa26a96",
+  "script_expected_max_slide": 91
+}

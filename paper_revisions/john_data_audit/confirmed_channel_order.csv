@@ -1,0 +1,17 @@
+python_column,electrode,previous_sphere_label,changed,source
+1,Fp1,Fp1,False,Frontiers section2.4; author says paragraph order is recording order
+2,Fp2,Fp2,False,Frontiers section2.4; author says paragraph order is recording order
+3,F7,F3,True,Frontiers section2.4; author says paragraph order is recording order
+4,F3,F4,True,Frontiers section2.4; author says paragraph order is recording order
+5,F4,T5,True,Frontiers section2.4; author says paragraph order is recording order
+6,F8,T6,True,Frontiers section2.4; author says paragraph order is recording order
+7,T3,O1,True,Frontiers section2.4; author says paragraph order is recording order
+8,C3,O2,True,Frontiers section2.4; author says paragraph order is recording order
+9,C4,F7,True,Frontiers section2.4; author says paragraph order is recording order
+10,T4,F8,True,Frontiers section2.4; author says paragraph order is recording order
+11,T5,C3,True,Frontiers section2.4; author says paragraph order is recording order
+12,T6,C4,True,Frontiers section2.4; author says paragraph order is recording order
+13,P3,T3,True,Frontiers section2.4; author says paragraph order is recording order
+14,P4,T4,True,Frontiers section2.4; author says paragraph order is recording order
+15,O1,P3,True,Frontiers section2.4; author says paragraph order is recording order
+16,O2,P4,True,Frontiers section2.4; author says paragraph order is recording order

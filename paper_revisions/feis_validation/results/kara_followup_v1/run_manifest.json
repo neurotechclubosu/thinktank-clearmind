@@ -1,0 +1,36 @@
+{
+  "started_utc": "2026-10-04T02:40:26.227408+00:00",
+  "status": "audit_failed_no_classification",
+  "participants": [
+    "MM08",
+    "MM09",
+    "MM10",
+    "MM11",
+    "MM12",
+    "MM14",
+    "MM15",
+    "MM16",
+    "MM18",
+    "MM19",
+    "MM20",
+    "MM21",
+    "P02"
+  ],
+  "excluded_format_pilot": "MM05",
+  "source_sha256": {
+    "kara_benchmark.py": "dba0948b8509859801b0328fa857d7928c8dd9f8ee243613befec572066c5f0b",
+    "kara_data.py": "4738b25cfffe5fa6e936cc8a35ef4c9299b1e1173030939e0f67767a7602a19a",
+    "followup_models.py": "a76878e2a90ae3f21a504ac1d59d171365216244139c956f68adb1aa71b482d4",
+    "FOLLOWUP_PROTOCOL.md": "9359b8189c717adeb5e3787136135a7535e16fe123c64e646275fe95c7d116f6",
+    "KARA_PARSER_PLAN.md": "fda8c1ce41efb7bd632bcb7976374371ca3cdaf91d734a03cc9a908ebec9ed72"
+  },
+  "python": "3.11.0",
+  "numpy": "2.4.3",
+  "torch": "2.10.0+cu128",
+  "large_evidence_root": "D:\\ResearchData\\thinktank-clearmind\\KaraOne\\analysis\\kara_followup_v1",
+  "completed": [],
+  "acquisition_audit_failures": {
+    "MM21": "Task sensor found 135 complete imagery phases for 133 delivered prompts",
+    "P02": "Missing/ambiguous native delivered-prompt log"
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "verified_at_utc": "2026-10-05T22:36:52.114593+00:00",
+  "nominal_fs": 250,
+  "recordings": 704,
+  "events": 3510,
+  "subject_count": 4,
+  "subjects": [
+    {
+      "subject": "GTP000",
+      "recordings": 308,
+      "phonemes": 44,
+      "blocks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "files_per_phoneme": {
+        "7": 44
+      },
+      "paired_events": 1540,
+      "samples": 1566158,
+      "recording_hours": 1.5681063865953022,
+      "original_matches": 44,
+      "event_duration": {
+        "n": 1540,
+        "min": 1.921579122543335,
+        "p05": 1.9948073625564575,
+        "median": 1.9971065521240234,
+        "p95": 2.0076787948608397,
+        "max": 2.044064998626709
+      },
+      "event_samples": {
+        "n": 1540,
+        "min": 475.0,
+        "p05": 497.0,
+        "median": 499.0,
+        "p95": 502.0,
+        "max": 511.0
+      },
+      "event_rate": {
+        "n": 1540,
+        "min": 236.55261734339373,
+        "p05": 248.86544939384214,
+        "median": 249.67493634432176,
+        "p95": 250.47950701017746,
+        "max": 256.4559315706246
+      },
+      "line60": {
+        "n": 1540,
+        "min": 0.0005779056058304475,
+        "p05": 0.011212975732824846,
+        "median": 0.0690496858827764,
+        "p95": 0.09175361602579868,
+        "max": 0.10492901145592182
+      },
+      "line50": {
+        "n": 1540,
+        "min": 1.9339953537042927e-05,
+        "p05": 0.017719993843422904,
+        "median": 0.0804114180244199,
+        "p95": 0.10883609638545899,
+        "max": 0.1287915332067881
+      },
+      "gamma": {
+        "n": 1540,
+        "min": 0.0007768117839322898,
+        "p05": 0.20124020976680163,
+        "median": 0.5442416459491677,
+        "p95": 0.6048392120932262,
+        "max": 0.6505396620920267
+      },
+      "eeg_std": {
+        "n": 1540,
+        "min": 533.3058004616462,
+        "p05": 917.4670162535015,
+        "median": 5120.869232902041,
+        "p95": 11500.608636799125,
+        "max": 20049.089540624707
+      },
+      "common_mode": {
+        "n": 1540,
+        "min": 0.013552060670787708,
+        "p05": 0.38354196257623147,
+        "median": 0.7182821887833966,
+        "p95": 0.8111626956332987,
+        "max": 0.8653120902317489
+      },
+      "counter_nonunit_steps": 305,
+      "files_with_timestamp_nonpositive": 0,
+      "flat_trial_channels": 0
+    },
+    {
+      "subject": "GTP003",
+      "recordings": 132,
+      "phonemes": 44,
+      "blocks": [
+        1,
+        2,
+        3
+      ],
+      "files_per_phoneme": {
+        "3": 44
+      },
+      "paired_events": 655,
+      "samples": 681826,
+      "recording_hours": 0.679974339471923,
+      "original_matches": 0,
+      "event_duration": {
+        "n": 655,
+        "min": 1.9422461986541748,
+        "p05": 1.9962154150009155,
+        "median": 2.0065720081329346,
+        "p95": 2.0170260190963747,
+        "max": 2.1236209869384766
+      },
+      "event_samples": {
+        "n": 655,
+        "min": 486.0,
+        "p05": 498.0,
+        "median": 501.0,
+        "p95": 505.0,
+        "max": 531.0
+      },
+      "event_rate": {
+        "n": 655,
+        "min": 228.854396801118,
+        "p05": 248.9641539931028,
+        "median": 249.7093111606777,
+        "p95": 250.46944037990352,
+        "max": 262.0374368467929
+      },
+      "line60": {
+        "n": 655,
+        "min": 0.000197371720069769,
+        "p05": 0.012170358171090244,
+        "median": 0.08745064473533988,
+        "p95": 0.1994563793940605,
+        "max": 0.41185396567974625
+      },
+      "line50": {
+        "n": 655,
+        "min": 2.2043374212586786e-05,
+        "p05": 0.0004894891738712289,
+        "median": 0.07990558243040677,
+        "p95": 0.10956466602775532,
+        "max": 0.12046837843958891
+      },
+      "gamma": {
+        "n": 655,
+        "min": 0.0007025689755321593,
+        "p05": 0.02243955021820279,
+        "median": 0.544084728946673,
+        "p95": 0.607857900514226,
+        "max": 0.6251540262024877
+      },
+      "eeg_std": {
+        "n": 655,
+        "min": 156.96563804510828,
+        "p05": 249.5987723435174,
+        "median": 1178.379738859304,
+        "p95": 4129.3981174737155,
+        "max": 8134.536019753432
+      },
+      "common_mode": {
+        "n": 655,
+        "min": 0.007214947168985493,
+        "p05": 0.07023365500992648,
+        "median": 0.6276802495074891,
+        "p95": 0.8049307905045966,
+        "max": 0.8461653005794133
+      },
+      "counter_nonunit_steps": 127,
+      "files_with_timestamp_nonpositive": 0,
+      "flat_trial_channels": 0
+    },
+    {
+      "subject": "GTP004",
+      "recordings": 132,
+      "phonemes": 44,
+      "blocks": [
+        1,
+        2,
+        3
+      ],
+      "files_per_phoneme": {
+        "3": 44
+      },
+      "paired_events": 655,
+      "samples": 679751,
+      "recording_hours": 0.679946163892746,
+      "original_matches": 0,
+      "event_duration": {
+        "n": 655,
+        "min": 1.9321930408477783,
+        "p05": 1.996128749847412,
+        "median": 2.0066168308258057,
+        "p95": 2.0170775413513184,
+        "max": 2.076507091522217
+      },
+      "event_samples": {
+        "n": 655,
+        "min": 486.0,
+        "p05": 498.0,
+        "median": 501.0,
+        "p95": 505.0,
+        "max": 529.0
+      },
+      "event_rate": {
+        "n": 655,
+        "min": 239.16399034628623,
+        "p05": 248.91422248149337,
+        "median": 249.6923686220857,
+        "p95": 250.48272617290016,
+        "max": 263.82320512982426
+      },
+      "line60": {
+        "n": 655,
+        "min": 0.00012105555114485457,
+        "p05": 0.002745106820945937,
+        "median": 0.0867726314108152,
+        "p95": 0.142465876716628,
+        "max": 0.3290480498018626
+      },
+      "line50": {
+        "n": 655,
+        "min": 1.0230022796619876e-05,
+        "p05": 0.000212978867681174,
+        "median": 0.0375315138028203,
+        "p95": 0.10818113572536266,
+        "max": 0.11320232282561812
+      },
+      "gamma": {
+        "n": 655,
+        "min": 0.00024887793898901664,
+        "p05": 0.005361725013396726,
+        "median": 0.563511558012451,
+        "p95": 0.6044864233632417,
+        "max": 0.6220935930164044
+      },
+      "eeg_std": {
+        "n": 655,
+        "min": 124.94102399708791,
+        "p05": 180.48612314482966,
+        "median": 619.3798264201502,
+        "p95": 2519.32395016603,
+        "max": 8285.036074859905
+      },
+      "common_mode": {
+        "n": 655,
+        "min": 0.00019768649894018648,
+        "p05": 0.008174935451447918,
+        "median": 0.23013993502989366,
+        "p95": 0.7199852793365784,
+        "max": 0.7789040327484542
+      },
+      "counter_nonunit_steps": 130,
+      "files_with_timestamp_nonpositive": 0,
+      "flat_trial_channels": 0
+    },
+    {
+      "subject": "GTP007",
+      "recordings": 132,
+      "phonemes": 44,
+      "blocks": [
+        1,
+        2,
+        3
+      ],
+      "files_per_phoneme": {
+        "3": 44
+      },
+      "paired_events": 660,
+      "samples": 670653,
+      "recording_hours": 0.6716040980815887,
+      "original_matches": 0,
+      "event_duration": {
+        "n": 660,
+        "min": 1.9603021144866943,
+        "p05": 1.994965171813965,
+        "median": 1.9971519708633423,
+        "p95": 2.0075360417366026,
+        "max": 2.0363810062408447
+      },
+      "event_samples": {
+        "n": 660,
+        "min": 487.0,
+        "p05": 497.0,
+        "median": 499.0,
+        "p95": 502.0,
+        "max": 511.0
+      },
+      "event_rate": {
+        "n": 660,
+        "min": 242.320491989978,
+        "p05": 248.90906640757774,
+        "median": 249.68833361040313,
+        "p95": 250.44598276797237,
+        "max": 256.1041580657916
+      },
+      "line60": {
+        "n": 660,
+        "min": 0.001202797221831305,
+        "p05": 0.019335324853731448,
+        "median": 0.08372879683835024,
+        "p95": 0.09363081543000233,
+        "max": 0.10167077377820957
+      },
+      "line50": {
+        "n": 660,
+        "min": 0.0008432460254791782,
+        "p05": 0.022934766626458387,
+        "median": 0.09299679570624104,
+        "p95": 0.10951066050945789,
+        "max": 0.12983542142464882
+      },
+      "gamma": {
+        "n": 660,
+        "min": 0.004823443466701606,
+        "p05": 0.25813850666834603,
+        "median": 0.5876923207364018,
+        "p95": 0.6117470534623106,
+        "max": 0.6318217351274675
+      },
+      "eeg_std": {
+        "n": 660,
+        "min": 643.753649871546,
+        "p05": 795.6232824315169,
+        "median": 3480.003435517838,
+        "p95": 7211.285490027832,
+        "max": 11332.292799819854
+      },
+      "common_mode": {
+        "n": 660,
+        "min": 0.05313113233202558,
+        "p05": 0.3199271204267656,
+        "median": 0.7304579074884354,
+        "p95": 0.8229804766560139,
+        "max": 0.8463191051363584
+      },
+      "counter_nonunit_steps": 135,
+      "files_with_timestamp_nonpositive": 0,
+      "flat_trial_channels": 0
+    }
+  ],
+  "exceptions": [
+    {
+      "file": "GTP003_18_3.txt",
+      "error": "Missing or unexpected marker IDs",
+      "observed": []
+    },
+    {
+      "file": "GTP004_11_2.txt",
+      "error": "Missing or unexpected marker IDs",
+      "observed": []
+    }
+  ],
+  "extra_files": [
+    {
+      "path": "extracted\\gtp000\\mapo.txt",
+      "bytes": 1550532,
+      "sha256": "4e6460d02edd6b8ccb2dcf97ebe727b068cf4acc3faedfaa2d4ea96da078c155",
+      "lf_sha256": "4e6460d02edd6b8ccb2dcf97ebe727b068cf4acc3faedfaa2d4ea96da078c155",
+      "rows": 3814,
+      "columns": 32,
+      "finite": true,
+      "marker_counts": {
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 1
+      },
+      "span_seconds": 17.66046714782715,
+      "matches_named_files": []
+    }
+  ],
+  "duplicate_file_groups": 1,
+  "duplicate_full_eeg_groups": 1,
+  "duplicate_trial_groups": 10,
+  "duplicate_full_task_groups": 10,
+  "unique_full_task_signals": 3500,
+  "supplied_deck_slides": 16,
+  "recovered_deck_slides": 91,
+  "source_code_sha256": "863acf92236dfed4bc252d9363fc3cd21af9eb9b43eda491c0ff0685cd9d7d64",
+  "notes": [
+    "16 candidate EEG columns (1..16); physical montage, gain, reference and units need confirmation.",
+    "Paired marker endpoints indicate instructed intervals; duration is measured from timestamp column30.",
+    "Metrics descriptive, unfiltered, at nominal250Hz, and not automatic quality rejection thresholds.",
+    "Auxiliary columns not identified as independent EMG/EOG or physiological recordings.",
+    "File suffix is a block identifier; session/day semantics require verification."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "status": "complete",
+  "exploratory": true,
+  "nominal_chance": 0.0625,
+  "families": [
+    {
+      "model": "covariance",
+      "mean": 0.055555555555555504,
+      "participant_ci": [
+        0.040674603174603134,
+        0.07142857142857138
+      ],
+      "conditional_permutation_p": 0.835,
+      "conditional_null_mean": 0.06242651381540267,
+      "holm_p": 1.0,
+      "signal_gate": false
+    },
+    {
+      "model": "eegnet_style",
+      "mean": 0.06051587301587298,
+      "participant_ci": [
+        0.04563492063492062,
+        0.07539682539682536
+      ],
+      "conditional_permutation_p": 0.608,
+      "conditional_null_mean": 0.062327208160541464,
+      "holm_p": 1.0,
+      "signal_gate": false
+    }
+  ],
+  "thinking_rest_comparisons": [
+    {
+      "model": "covariance",
+      "thinking_minus_rest": -0.002976190476190491,
+      "participant_ci": [
+        -0.023809523809523815,
+        0.01686507936507936
+      ]
+    },
+    {
+      "model": "eegnet_style",
+      "thinking_minus_rest": -0.016865079365079354,
+      "participant_ci": [
+        -0.0347222222222222,
+        2.8499028533903484e-17
+      ]
+    },
+    {
+      "model": "nuisance",
+      "thinking_minus_rest": 0.00793650793650794,
+      "participant_ci": [
+        -0.018849206349206334,
+        0.0367063492063492
+      ]
+    }
+  ],
+  "augmentation_authorized_by_signal_gate": false,
+  "interpretation": "Signal gate is conditional feasibility only; artifact and task specificity still require review."
+}

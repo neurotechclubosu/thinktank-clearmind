@@ -1,0 +1,9 @@
+file,scope,reason
+GTP003_18_3.txt,file,Truncated file: no paired recalls; author authorized glitch exclusion.
+GTP004_11_2.txt,file,Truncated file: no paired recalls; author authorized glitch exclusion.
+DLR_27_2.txt,file,Duplicate task data/timestamps from DLR_27_3.txt; outside its own session peer time range.
+GTP003_2_3.txt,file,Duplicate task data/timestamps from GTP003_2_2.txt; outside its own session peer time range.
+mapo.txt,file,Author identified as useless dummy file; excluded.
+GTP000 session 2,session,Whole-session analysis excludes incomplete run; originals preserved.
+GTP003 session 3,session,Whole-session analysis excludes incomplete run; originals preserved.
+GTP004 session 2,session,Whole-session analysis excludes incomplete run; originals preserved.

@@ -1,0 +1,14 @@
+{
+  "file": "thinkTankReply2.doc",
+  "sha256": "184c15044add7a3de65c636ee4ededf67a2916436fbe9b4066a48d93f12e2332",
+  "nFib": 257,
+  "streams": [
+    "\u0001CompObj",
+    "\u0001Ole",
+    "1Table",
+    "\u0005SummaryInformation",
+    "WordDocument",
+    "\u0005DocumentSummaryInformation"
+  ],
+  "extraction": "Word piece table"
+}

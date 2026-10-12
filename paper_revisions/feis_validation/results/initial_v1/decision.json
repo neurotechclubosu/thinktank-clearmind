@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "design": "Within-person later-trial-block evaluation; no verified session separation",
+  "primary_comparison": {
+    "phase": "thinking",
+    "screening": "primary",
+    "feature_family": "multiband",
+    "comparator": "same_label_feature_mixup",
+    "participants": 21,
+    "mean_difference": 0.0016534391534391627,
+    "ci_low": -0.00826719576719576,
+    "ci_high": 0.011913029100529007,
+    "participants_improved": 11,
+    "participants_worse": 9
+  },
+  "provisional_two_percentage_point_gate_passed": false,
+  "chance_balanced_accuracy": 0.0625,
+  "seed_replicates_are_not_independent_participants": true,
+  "shuffle_vs_duplicate_max_balanced_accuracy_difference": 0.0,
+  "total_imagined_original_trials": 3312,
+  "total_imagined_kept_trials": 3293,
+  "total_imagined_test_trials": 1008,
+  "limitations": [
+    "Phoneme augmentation, not sentence reconstruction",
+    "No verified session separation or new-person transfer",
+    "No independent eye/mouth artifact measurements in this analysis",
+    "Rest follows spoken trials and may retain label carryover",
+    "No metabolic calibration",
+    "One fixed feature/classifier design; negative results do not rule out every algorithm"
+  ]
+}

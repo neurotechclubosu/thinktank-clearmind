@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Runtime-generated output (existing committed artifacts remain tracked)
+outputs/eeg_culmination_txt/
+outputs/eeg_culmination_csv/
+outputs/brain_videos/
+outputs/metabolic_videos/
+
+# Manuscript drafts and confidential peer-review material (not part of the software)
+*.docx
+ISR.pdf
+*peer review*.pdf

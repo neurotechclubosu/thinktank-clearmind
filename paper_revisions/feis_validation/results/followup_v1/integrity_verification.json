@@ -1,0 +1,319 @@
+{
+  "participant_phase_runs": 44,
+  "score_rows": 352,
+  "real_prediction_rows": 16814,
+  "max_score_reconstruction_error": 8.326672684688674e-17,
+  "all_checks_pass": true,
+  "checks": [
+    {
+      "identifier": "01_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "01_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "02_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "02_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "03_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "03_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "04_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "04_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "05_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "05_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "06_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "06_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "07_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "07_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "08_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "08_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "09_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "09_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "10_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "10_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "11_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "11_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "12_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "12_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "13_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "13_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "14_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "14_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "15_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "15_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "16_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "16_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "17_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "17_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "18_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "18_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "19_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "19_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "20_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "20_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "21_thinking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "21_resting",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "01_stimuli",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    },
+    {
+      "identifier": "01_speaking",
+      "train_test_disjoint": true,
+      "nested_folds_train_only": true,
+      "real_prediction_labels_verified": true,
+      "processed_cache_hash_verified": true
+    }
+  ],
+  "source_snapshot_verified": true,
+  "original_primary_results_modified": false
+}

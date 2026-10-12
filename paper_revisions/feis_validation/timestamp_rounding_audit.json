@@ -1,0 +1,244 @@
+[
+  {
+    "participant": "04",
+    "phase": "thinking",
+    "affected_trials": [
+      {
+        "trial_id": 45,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500000265281415e-07,
+        "max_grid_deviation_seconds": 5.000000555810402e-07
+      },
+      {
+        "trial_id": 46,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 47,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 48,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 49,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 50,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 51,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 52,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 53,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 54,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 55,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 56,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 57,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 58,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 59,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 60,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 61,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 62,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 63,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      }
+    ],
+    "interpretation": "All affected trials retain1280 samples and differ from a256Hz grid by at most decimal-rounding scale. Initial tolerance was overly conservative. Evaluate retaining these trials only in a labelled sensitivity."
+  },
+  {
+    "participant": "04",
+    "phase": "resting",
+    "affected_trials": [
+      {
+        "trial_id": 45,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500000265281415e-07,
+        "max_grid_deviation_seconds": 5.000000555810402e-07
+      },
+      {
+        "trial_id": 46,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 47,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 48,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 49,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 50,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 51,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 52,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 53,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 54,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 55,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 56,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 57,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 58,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 59,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 60,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 61,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 62,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      },
+      {
+        "trial_id": 63,
+        "samples": 1280,
+        "max_step_deviation_seconds": 7.500002539018169e-07,
+        "max_grid_deviation_seconds": 5.000001692678779e-07
+      }
+    ],
+    "interpretation": "All affected trials retain1280 samples and differ from a256Hz grid by at most decimal-rounding scale. Initial tolerance was overly conservative. Evaluate retaining these trials only in a labelled sensitivity."
+  }
+]

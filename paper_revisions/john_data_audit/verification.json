@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "recordings": 704,
+  "paired_events": 3510,
+  "extracted_file_hashes_verified": 705,
+  "original_lf_matches": 44,
+  "example_marker_hashes_verified": 4,
+  "examples": [
+    {
+      "subject": "GTP000",
+      "file": "DLR_0_1.txt",
+      "marker": 1
+    },
+    {
+      "subject": "GTP003",
+      "file": "GTP003_0_1.txt",
+      "marker": 1
+    },
+    {
+      "subject": "GTP004",
+      "file": "GTP004_0_1.txt",
+      "marker": 1
+    },
+    {
+      "subject": "GTP007",
+      "file": "GT007_0_1.txt",
+      "marker": 1
+    }
+  ],
+  "notes": "All marker intervals are counted descriptively, not approved for biological analysis."
+}

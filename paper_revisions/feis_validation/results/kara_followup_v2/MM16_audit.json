@@ -1,0 +1,1762 @@
+{
+  "participant": "MM16",
+  "native_sampling_rate_hz": 1000,
+  "scalp_channels": [
+    "FP1",
+    "FPZ",
+    "FP2",
+    "AF3",
+    "AF4",
+    "F7",
+    "F5",
+    "F3",
+    "F1",
+    "FZ",
+    "F2",
+    "F4",
+    "F6",
+    "F8",
+    "FT7",
+    "FC5",
+    "FC3",
+    "FC1",
+    "FCZ",
+    "FC2",
+    "FC4",
+    "FC6",
+    "FT8",
+    "T7",
+    "C5",
+    "C3",
+    "C1",
+    "CZ",
+    "C2",
+    "C4",
+    "C6",
+    "T8",
+    "TP7",
+    "CP5",
+    "CP3",
+    "CP1",
+    "CPZ",
+    "CP2",
+    "CP4",
+    "CP6",
+    "TP8",
+    "P7",
+    "P5",
+    "P3",
+    "P1",
+    "PZ",
+    "P2",
+    "P4",
+    "P6",
+    "P8",
+    "PO7",
+    "PO5",
+    "PO3",
+    "POZ",
+    "PO4",
+    "PO6",
+    "PO8",
+    "CB1",
+    "O1",
+    "OZ",
+    "O2",
+    "CB2"
+  ],
+  "native_bad_channels": [
+    "Trigger"
+  ],
+  "native_recording_datetime_available": true,
+  "eye_channels": [
+    "VEO",
+    "HEO"
+  ],
+  "scalp_channel_count": 62,
+  "total_supplied_imagery_trials": 132,
+  "imagery_duration_seconds_range": [
+    4.982,
+    5.0
+  ],
+  "word_counts": {
+    "gnaw": 12,
+    "knew": 12,
+    "pat": 12,
+    "pot": 12
+  },
+  "label_alignment": "labels.txt equals integrated all_features.prompts; thinking_feats and imagery intervals have identical trial count; native delivered prompts have direct or unique monotone alignment",
+  "accepted_to_delivered_prompt_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131
+  ],
+  "delivered_log_sha256": "a40635b3025cfd1b2c80f7facab6179a7b740fbf9612d6318bbdb8da1f3b5672",
+  "delivered_prompt_log_copies": [
+    {
+      "path": "D:\\ResearchData\\thinktank-clearmind\\KaraOne\\extracted\\MM16\\p\\spoclab\\users\\szhao\\EEG\\data\\MM16\\kinect_data\\MM16_p.txt",
+      "sha256": "a40635b3025cfd1b2c80f7facab6179a7b740fbf9612d6318bbdb8da1f3b5672"
+    }
+  ],
+  "native_delivered_prompt_count": 132,
+  "task_marker_alignment": {
+    "method": "direct or unique monotone delivered-prompt match"
+  },
+  "source_cnt_sha256": "746f900807fcd19ed0d356ff225507f4d6bf774ffff1b06eaed0cf237ed714d8",
+  "source_indices_sha256": "c9aa9c91b6297eab57b3b8c56167bd553af12049a3955e92f5e9a1a26c7de2cf",
+  "source_label_sha256": "a40635b3025cfd1b2c80f7facab6179a7b740fbf9612d6318bbdb8da1f3b5672",
+  "source_integrated_metadata_sha256": "29d52bdfa5fd6cc22c2b2413b2f3c9b0ef1d5d04ee6a5e770210e25a5b1211c5",
+  "physical_units": "MNE CNT calibration output; recording gain not independently calibrated by us",
+  "EMG_channel": "Colour sensor per official release; excluded, not muscle signal",
+  "trials": [
+    {
+      "trial_id": 0,
+      "prompt": "/piy/",
+      "start_sample": 12300,
+      "end_sample_exclusive": 17300,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 1,
+      "prompt": "/uw/",
+      "start_sample": 26692,
+      "end_sample_exclusive": 31688,
+      "duration_seconds": 4.996,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 2,
+      "prompt": "/piy/",
+      "start_sample": 41313,
+      "end_sample_exclusive": 46313,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 3,
+      "prompt": "/tiy/",
+      "start_sample": 55557,
+      "end_sample_exclusive": 60557,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 4,
+      "prompt": "/diy/",
+      "start_sample": 69656,
+      "end_sample_exclusive": 74656,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 5,
+      "prompt": "/piy/",
+      "start_sample": 84405,
+      "end_sample_exclusive": 89403,
+      "duration_seconds": 4.998,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 6,
+      "prompt": "/m/",
+      "start_sample": 98704,
+      "end_sample_exclusive": 103702,
+      "duration_seconds": 4.998,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 7,
+      "prompt": "/diy/",
+      "start_sample": 113089,
+      "end_sample_exclusive": 118089,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 8,
+      "prompt": "/m/",
+      "start_sample": 127590,
+      "end_sample_exclusive": 132590,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 9,
+      "prompt": "/n/",
+      "start_sample": 141738,
+      "end_sample_exclusive": 146738,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 10,
+      "prompt": "/piy/",
+      "start_sample": 156202,
+      "end_sample_exclusive": 161202,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 11,
+      "prompt": "/piy/",
+      "start_sample": 170767,
+      "end_sample_exclusive": 175766,
+      "duration_seconds": 4.999,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 12,
+      "prompt": "/n/",
+      "start_sample": 185170,
+      "end_sample_exclusive": 190170,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 13,
+      "prompt": "/n/",
+      "start_sample": 199438,
+      "end_sample_exclusive": 204438,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 14,
+      "prompt": "/n/",
+      "start_sample": 213638,
+      "end_sample_exclusive": 218638,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 15,
+      "prompt": "/m/",
+      "start_sample": 228266,
+      "end_sample_exclusive": 233266,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 16,
+      "prompt": "/uw/",
+      "start_sample": 242779,
+      "end_sample_exclusive": 247778,
+      "duration_seconds": 4.999,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 17,
+      "prompt": "/n/",
+      "start_sample": 257653,
+      "end_sample_exclusive": 262653,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 18,
+      "prompt": "/m/",
+      "start_sample": 272429,
+      "end_sample_exclusive": 277429,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 19,
+      "prompt": "/iy/",
+      "start_sample": 286602,
+      "end_sample_exclusive": 291602,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 20,
+      "prompt": "/iy/",
+      "start_sample": 301032,
+      "end_sample_exclusive": 306032,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 21,
+      "prompt": "/tiy/",
+      "start_sample": 315427,
+      "end_sample_exclusive": 320411,
+      "duration_seconds": 4.984,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 22,
+      "prompt": "/m/",
+      "start_sample": 330114,
+      "end_sample_exclusive": 335114,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 23,
+      "prompt": "/diy/",
+      "start_sample": 344429,
+      "end_sample_exclusive": 349429,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 24,
+      "prompt": "/diy/",
+      "start_sample": 358831,
+      "end_sample_exclusive": 363831,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 25,
+      "prompt": "/tiy/",
+      "start_sample": 373111,
+      "end_sample_exclusive": 378111,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 26,
+      "prompt": "/tiy/",
+      "start_sample": 387915,
+      "end_sample_exclusive": 392915,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 27,
+      "prompt": "/n/",
+      "start_sample": 402709,
+      "end_sample_exclusive": 407709,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 28,
+      "prompt": "/m/",
+      "start_sample": 417676,
+      "end_sample_exclusive": 422676,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 29,
+      "prompt": "/n/",
+      "start_sample": 432081,
+      "end_sample_exclusive": 437081,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 30,
+      "prompt": "/tiy/",
+      "start_sample": 446931,
+      "end_sample_exclusive": 451931,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 31,
+      "prompt": "/uw/",
+      "start_sample": 461743,
+      "end_sample_exclusive": 466743,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 32,
+      "prompt": "/diy/",
+      "start_sample": 476428,
+      "end_sample_exclusive": 481428,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 33,
+      "prompt": "/uw/",
+      "start_sample": 490764,
+      "end_sample_exclusive": 495764,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 34,
+      "prompt": "/uw/",
+      "start_sample": 504929,
+      "end_sample_exclusive": 509929,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 35,
+      "prompt": "/piy/",
+      "start_sample": 519245,
+      "end_sample_exclusive": 524245,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 36,
+      "prompt": "/tiy/",
+      "start_sample": 533845,
+      "end_sample_exclusive": 538845,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 37,
+      "prompt": "/n/",
+      "start_sample": 548575,
+      "end_sample_exclusive": 553575,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 38,
+      "prompt": "/tiy/",
+      "start_sample": 563153,
+      "end_sample_exclusive": 568153,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 39,
+      "prompt": "/uw/",
+      "start_sample": 577874,
+      "end_sample_exclusive": 582874,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 40,
+      "prompt": "/piy/",
+      "start_sample": 592393,
+      "end_sample_exclusive": 597393,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 41,
+      "prompt": "/m/",
+      "start_sample": 659897,
+      "end_sample_exclusive": 664897,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 42,
+      "prompt": "/m/",
+      "start_sample": 674461,
+      "end_sample_exclusive": 679461,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 43,
+      "prompt": "/iy/",
+      "start_sample": 689213,
+      "end_sample_exclusive": 694213,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 44,
+      "prompt": "/tiy/",
+      "start_sample": 703612,
+      "end_sample_exclusive": 708612,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 45,
+      "prompt": "/uw/",
+      "start_sample": 718274,
+      "end_sample_exclusive": 723274,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 46,
+      "prompt": "/tiy/",
+      "start_sample": 732727,
+      "end_sample_exclusive": 737727,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 47,
+      "prompt": "/iy/",
+      "start_sample": 746994,
+      "end_sample_exclusive": 751994,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 48,
+      "prompt": "/piy/",
+      "start_sample": 761393,
+      "end_sample_exclusive": 766393,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 49,
+      "prompt": "/piy/",
+      "start_sample": 776009,
+      "end_sample_exclusive": 781009,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 50,
+      "prompt": "/diy/",
+      "start_sample": 790291,
+      "end_sample_exclusive": 795291,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 51,
+      "prompt": "/piy/",
+      "start_sample": 804449,
+      "end_sample_exclusive": 809449,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 52,
+      "prompt": "/iy/",
+      "start_sample": 819139,
+      "end_sample_exclusive": 824139,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 53,
+      "prompt": "/iy/",
+      "start_sample": 833589,
+      "end_sample_exclusive": 838589,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 54,
+      "prompt": "/diy/",
+      "start_sample": 847852,
+      "end_sample_exclusive": 852852,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 55,
+      "prompt": "/iy/",
+      "start_sample": 862388,
+      "end_sample_exclusive": 867388,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 56,
+      "prompt": "/diy/",
+      "start_sample": 876803,
+      "end_sample_exclusive": 881803,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 57,
+      "prompt": "/iy/",
+      "start_sample": 893621,
+      "end_sample_exclusive": 898621,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 58,
+      "prompt": "/m/",
+      "start_sample": 908241,
+      "end_sample_exclusive": 913241,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 59,
+      "prompt": "/tiy/",
+      "start_sample": 922518,
+      "end_sample_exclusive": 927518,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 60,
+      "prompt": "/m/",
+      "start_sample": 937207,
+      "end_sample_exclusive": 942207,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 61,
+      "prompt": "/piy/",
+      "start_sample": 952218,
+      "end_sample_exclusive": 957218,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 62,
+      "prompt": "/diy/",
+      "start_sample": 967152,
+      "end_sample_exclusive": 972152,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 63,
+      "prompt": "/tiy/",
+      "start_sample": 981518,
+      "end_sample_exclusive": 986518,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 64,
+      "prompt": "/diy/",
+      "start_sample": 995918,
+      "end_sample_exclusive": 1000918,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 65,
+      "prompt": "/n/",
+      "start_sample": 1010398,
+      "end_sample_exclusive": 1015398,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 66,
+      "prompt": "/diy/",
+      "start_sample": 1025072,
+      "end_sample_exclusive": 1030072,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 67,
+      "prompt": "/m/",
+      "start_sample": 1040139,
+      "end_sample_exclusive": 1045139,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 68,
+      "prompt": "/tiy/",
+      "start_sample": 1054923,
+      "end_sample_exclusive": 1059923,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 69,
+      "prompt": "/m/",
+      "start_sample": 1069622,
+      "end_sample_exclusive": 1074622,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 70,
+      "prompt": "/uw/",
+      "start_sample": 1084370,
+      "end_sample_exclusive": 1089370,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 71,
+      "prompt": "/uw/",
+      "start_sample": 1099139,
+      "end_sample_exclusive": 1104139,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 72,
+      "prompt": "/iy/",
+      "start_sample": 1113606,
+      "end_sample_exclusive": 1118606,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 73,
+      "prompt": "/piy/",
+      "start_sample": 1128300,
+      "end_sample_exclusive": 1133300,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 74,
+      "prompt": "/uw/",
+      "start_sample": 1143167,
+      "end_sample_exclusive": 1148167,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 75,
+      "prompt": "/n/",
+      "start_sample": 1157682,
+      "end_sample_exclusive": 1162682,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 76,
+      "prompt": "/uw/",
+      "start_sample": 1172270,
+      "end_sample_exclusive": 1177270,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 77,
+      "prompt": "/iy/",
+      "start_sample": 1187405,
+      "end_sample_exclusive": 1192405,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 78,
+      "prompt": "/iy/",
+      "start_sample": 1201872,
+      "end_sample_exclusive": 1206872,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 79,
+      "prompt": "/iy/",
+      "start_sample": 1216366,
+      "end_sample_exclusive": 1221366,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 80,
+      "prompt": "/uw/",
+      "start_sample": 1231298,
+      "end_sample_exclusive": 1236298,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 81,
+      "prompt": "/n/",
+      "start_sample": 1281363,
+      "end_sample_exclusive": 1286363,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 82,
+      "prompt": "/diy/",
+      "start_sample": 1296135,
+      "end_sample_exclusive": 1301135,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 83,
+      "prompt": "/n/",
+      "start_sample": 1310516,
+      "end_sample_exclusive": 1315516,
+      "duration_seconds": 5.0,
+      "used_four_word_task": false
+    },
+    {
+      "trial_id": 84,
+      "prompt": "gnaw",
+      "start_sample": 1325418,
+      "end_sample_exclusive": 1330418,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 85,
+      "prompt": "gnaw",
+      "start_sample": 1339767,
+      "end_sample_exclusive": 1344767,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 86,
+      "prompt": "knew",
+      "start_sample": 1354213,
+      "end_sample_exclusive": 1359213,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 87,
+      "prompt": "gnaw",
+      "start_sample": 1368495,
+      "end_sample_exclusive": 1373495,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 88,
+      "prompt": "pat",
+      "start_sample": 1382911,
+      "end_sample_exclusive": 1387911,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 89,
+      "prompt": "knew",
+      "start_sample": 1397514,
+      "end_sample_exclusive": 1402514,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 90,
+      "prompt": "gnaw",
+      "start_sample": 1412190,
+      "end_sample_exclusive": 1417189,
+      "duration_seconds": 4.999,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 91,
+      "prompt": "pot",
+      "start_sample": 1427182,
+      "end_sample_exclusive": 1432182,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 92,
+      "prompt": "knew",
+      "start_sample": 1442399,
+      "end_sample_exclusive": 1447399,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 93,
+      "prompt": "pot",
+      "start_sample": 1457211,
+      "end_sample_exclusive": 1462211,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 94,
+      "prompt": "pat",
+      "start_sample": 1471982,
+      "end_sample_exclusive": 1476982,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 95,
+      "prompt": "pat",
+      "start_sample": 1486564,
+      "end_sample_exclusive": 1491564,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 96,
+      "prompt": "pat",
+      "start_sample": 1501126,
+      "end_sample_exclusive": 1506126,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 97,
+      "prompt": "pot",
+      "start_sample": 1515648,
+      "end_sample_exclusive": 1520648,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 98,
+      "prompt": "gnaw",
+      "start_sample": 1531832,
+      "end_sample_exclusive": 1536832,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 99,
+      "prompt": "gnaw",
+      "start_sample": 1546381,
+      "end_sample_exclusive": 1551381,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 100,
+      "prompt": "pat",
+      "start_sample": 1560800,
+      "end_sample_exclusive": 1565800,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 101,
+      "prompt": "gnaw",
+      "start_sample": 1575349,
+      "end_sample_exclusive": 1580349,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 102,
+      "prompt": "pot",
+      "start_sample": 1589697,
+      "end_sample_exclusive": 1594697,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 103,
+      "prompt": "knew",
+      "start_sample": 1604115,
+      "end_sample_exclusive": 1609115,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 104,
+      "prompt": "pot",
+      "start_sample": 1618581,
+      "end_sample_exclusive": 1623581,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 105,
+      "prompt": "knew",
+      "start_sample": 1633148,
+      "end_sample_exclusive": 1638148,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 106,
+      "prompt": "gnaw",
+      "start_sample": 1647493,
+      "end_sample_exclusive": 1652493,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 107,
+      "prompt": "pot",
+      "start_sample": 1662291,
+      "end_sample_exclusive": 1667291,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 108,
+      "prompt": "knew",
+      "start_sample": 1676622,
+      "end_sample_exclusive": 1681621,
+      "duration_seconds": 4.999,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 109,
+      "prompt": "pat",
+      "start_sample": 1692330,
+      "end_sample_exclusive": 1697330,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 110,
+      "prompt": "pot",
+      "start_sample": 1706914,
+      "end_sample_exclusive": 1711914,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 111,
+      "prompt": "knew",
+      "start_sample": 1721305,
+      "end_sample_exclusive": 1726304,
+      "duration_seconds": 4.999,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 112,
+      "prompt": "pat",
+      "start_sample": 1735828,
+      "end_sample_exclusive": 1740828,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 113,
+      "prompt": "pot",
+      "start_sample": 1750463,
+      "end_sample_exclusive": 1755463,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 114,
+      "prompt": "pat",
+      "start_sample": 1765258,
+      "end_sample_exclusive": 1770258,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 115,
+      "prompt": "pot",
+      "start_sample": 1779922,
+      "end_sample_exclusive": 1784904,
+      "duration_seconds": 4.982,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 116,
+      "prompt": "pot",
+      "start_sample": 1794578,
+      "end_sample_exclusive": 1799578,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 117,
+      "prompt": "knew",
+      "start_sample": 1808811,
+      "end_sample_exclusive": 1813811,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 118,
+      "prompt": "pat",
+      "start_sample": 1823287,
+      "end_sample_exclusive": 1828285,
+      "duration_seconds": 4.998,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 119,
+      "prompt": "knew",
+      "start_sample": 1838527,
+      "end_sample_exclusive": 1843527,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 120,
+      "prompt": "pot",
+      "start_sample": 1852921,
+      "end_sample_exclusive": 1857921,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 121,
+      "prompt": "gnaw",
+      "start_sample": 1893798,
+      "end_sample_exclusive": 1898798,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 122,
+      "prompt": "knew",
+      "start_sample": 1908018,
+      "end_sample_exclusive": 1913018,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 123,
+      "prompt": "gnaw",
+      "start_sample": 1922034,
+      "end_sample_exclusive": 1927034,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 124,
+      "prompt": "pat",
+      "start_sample": 1936750,
+      "end_sample_exclusive": 1941750,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 125,
+      "prompt": "knew",
+      "start_sample": 1951297,
+      "end_sample_exclusive": 1956297,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 126,
+      "prompt": "gnaw",
+      "start_sample": 1965742,
+      "end_sample_exclusive": 1970741,
+      "duration_seconds": 4.999,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 127,
+      "prompt": "pat",
+      "start_sample": 1980110,
+      "end_sample_exclusive": 1985110,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 128,
+      "prompt": "pot",
+      "start_sample": 1994389,
+      "end_sample_exclusive": 1999389,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 129,
+      "prompt": "knew",
+      "start_sample": 2008914,
+      "end_sample_exclusive": 2013914,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 130,
+      "prompt": "pat",
+      "start_sample": 2023514,
+      "end_sample_exclusive": 2028514,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    },
+    {
+      "trial_id": 131,
+      "prompt": "gnaw",
+      "start_sample": 2038079,
+      "end_sample_exclusive": 2043079,
+      "duration_seconds": 5.0,
+      "used_four_word_task": true
+    }
+  ],
+  "train_ids": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    117
+  ],
+  "test_ids": [
+    115,
+    116,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131
+  ],
+  "inner_folds": [
+    {
+      "train_ids": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109
+      ],
+      "validation_ids": [
+        101,
+        110,
+        111,
+        112
+      ]
+    },
+    {
+      "train_ids": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112
+      ],
+      "validation_ids": [
+        106,
+        113,
+        114,
+        117
+      ]
+    }
+  ],
+  "cross_class_chronology_overlap": true,
+  "cache_sha256": "0d26b5292b547a11560bf78d6323056aef41a39e5d20c1ca37285d4e85d4d346",
+  "strict": {
+    "train_ids": [
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      117
+    ],
+    "test_ids": [
+      115,
+      116,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131
+    ],
+    "excluded_ids": []
+  },
+  "global_chronology": {
+    "train_ids": [
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115
+    ],
+    "test_ids": [
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131
+    ],
+    "selected": {
+      "C": 0.01,
+      "epochs": 30
+    },
+    "selection": {
+      "covariance": [
+        {
+          "C": 0.01,
+          "fold_scores": [
+            0.5,
+            0.25
+          ],
+          "mean": 0.375
+        },
+        {
+          "C": 0.1,
+          "fold_scores": [
+            0.5,
+            0.25
+          ],
+          "mean": 0.375
+        },
+        {
+          "C": 1.0,
+          "fold_scores": [
+            0.5,
+            0.25
+          ],
+          "mean": 0.375
+        }
+      ],
+      "eegnet_style": [
+        {
+          "epochs": 30,
+          "fold_scores": [
+            0.0,
+            0.25
+          ],
+          "mean": 0.125
+        },
+        {
+          "epochs": 60,
+          "fold_scores": [
+            0.25,
+            0.0
+          ],
+          "mean": 0.125
+        }
+      ]
+    },
+    "inner_folds": [
+      {
+        "train_ids": [
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          102,
+          103,
+          104,
+          105,
+          107,
+          109,
+          110
+        ],
+        "validation_ids": [
+          101,
+          108,
+          112,
+          113
+        ]
+      },
+      {
+        "train_ids": [
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          107,
+          108,
+          109,
+          110,
+          112,
+          113
+        ],
+        "validation_ids": [
+          106,
+          111,
+          114,
+          115
+        ]
+      }
+    ]
+  },
+  "selected": {
+    "covariance": 0.01,
+    "eegnet_style": 60
+  },
+  "selection": {
+    "covariance": [
+      {
+        "C": 0.01,
+        "fold_scores": [
+          0.0,
+          0.75
+        ],
+        "mean": 0.375
+      },
+      {
+        "C": 0.1,
+        "fold_scores": [
+          0.0,
+          0.75
+        ],
+        "mean": 0.375
+      },
+      {
+        "C": 1.0,
+        "fold_scores": [
+          0.0,
+          0.75
+        ],
+        "mean": 0.375
+      }
+    ],
+    "eegnet_style": [
+      {
+        "epochs": 30,
+        "fold_scores": [
+          0.0,
+          0.25
+        ],
+        "mean": 0.125
+      },
+      {
+        "epochs": 60,
+        "fold_scores": [
+          0.0,
+          0.5
+        ],
+        "mean": 0.25
+      }
+    ],
+    "eye_only": [
+      {
+        "C": 0.01,
+        "fold_scores": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0
+      },
+      {
+        "C": 0.1,
+        "fold_scores": [
+          0.0,
+          0.0
+        ],
+        "mean": 0.0
+      },
+      {
+        "C": 1.0,
+        "fold_scores": [
+          0.25,
+          0.0
+        ],
+        "mean": 0.125
+      }
+    ],
+    "amplitude_nuisance": [
+      {
+        "C": 0.01,
+        "fold_scores": [
+          0.0,
+          0.5
+        ],
+        "mean": 0.25
+      },
+      {
+        "C": 0.1,
+        "fold_scores": [
+          0.0,
+          0.5
+        ],
+        "mean": 0.25
+      },
+      {
+        "C": 1.0,
+        "fold_scores": [
+          0.5,
+          0.25
+        ],
+        "mean": 0.375
+      }
+    ]
+  },
+  "eye_regression_coefficients_sha256": "e71ff57e631aa540840a0d0a3c92dd62695e80d5276dcbd509faebb654f841e1"
+}
